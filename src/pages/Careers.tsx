@@ -22,7 +22,7 @@ const Careers = () => {
         api.jobs.getAll().then(data => {
             if (!cancelled) setJobs(data);
         }).catch(() => {
-            // Jobs API unavailable — empty list shown
+            // Jobs API unavailable - empty list shown
         });
         return () => { cancelled = true; };
     }, []);

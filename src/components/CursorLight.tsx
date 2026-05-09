@@ -19,7 +19,7 @@ export const CursorLight = () => {
           div.style.opacity = "0";
           return;
         }
-        // Use transform instead of re-rendering gradient — GPU composited, no repaint
+        // Use transform instead of re-rendering gradient - GPU composited, no repaint
         div.style.transform = `translate3d(${e.clientX - 250}px, ${e.clientY - 250}px, 0)`;
         div.style.opacity = "1";
       });

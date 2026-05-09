@@ -1,7 +1,7 @@
 import { useRef, useCallback, useEffect } from "react";
 import { useInView } from "framer-motion";
 
-/** Mouse-tracking glow card — zero re-renders, direct DOM writes */
+/** Mouse-tracking glow card - zero re-renders, direct DOM writes */
 export const GlowCard = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const glowRef = useRef<HTMLDivElement>(null);
@@ -36,7 +36,7 @@ export const GlowCard = ({ children, className = "" }: { children: React.ReactNo
   );
 };
 
-/** RAF-based counter — writes directly to the DOM, no re-renders */
+/** RAF-based counter - writes directly to the DOM, no re-renders */
 export const CountUp = ({ value, suffix = "", delay = 0 }: { value: string; suffix?: string; delay?: number }) => {
   const ref = useRef<HTMLSpanElement>(null);
   const hasRun = useRef(false);

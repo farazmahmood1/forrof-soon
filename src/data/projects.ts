@@ -155,7 +155,7 @@ export const projectsData = [
       `${import.meta.env.VITE_SERVER}/olio/olio-phone%20(11).png`,
     ],
     challenge:
-      "The main challenge was creating an intuitive mobile experience that encourages community participation while addressing trust and safety concerns. Users needed to easily understand how to share food, verify authenticity, and arrange logistics—all within a simple, engaging interface.",
+      "The main challenge was creating an intuitive mobile experience that encourages community participation while addressing trust and safety concerns. Users needed to easily understand how to share food, verify authenticity, and arrange logistics-all within a simple, engaging interface.",
     impact:
       "Since launch, Olio has helped divert thousands of tonnes of food from landfills, creating an active community of sharers across multiple regions. The app has achieved a 4.8-star rating with users praising its ease of use and positive environmental impact.",
     gallery: [`${import.meta.env.VITE_SERVER}/olio/cover.png`],

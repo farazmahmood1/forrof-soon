@@ -4,11 +4,11 @@ import * as THREE from "three";
 import { Stars, Preload } from "@react-three/drei";
 import { EarthScene } from "./Earth3D";
 
-// Module-level visibility — bridges the React/Canvas boundary
+// Module-level visibility - bridges the React/Canvas boundary
 let _globeVisible = true;
 let _startLoop: (() => void) | null = null;
 
-// Lives inside Canvas — self-scheduling loop that fully stops when off-screen.
+// Lives inside Canvas - self-scheduling loop that fully stops when off-screen.
 // Unlike useFrame (fires every rAF even when idle), this schedules zero callbacks
 // when the globe scrolls out of view, freeing the main thread for CSS animations.
 const FrameDriver: React.FC = () => {
@@ -23,7 +23,7 @@ const FrameDriver: React.FC = () => {
         const tick = () => {
             if (!active || !_globeVisible) {
                 running.current = false;
-                return; // fully stops — no more rAF scheduling
+                return; // fully stops - no more rAF scheduling
             }
             const now = performance.now();
             if (now - lastRender.current >= 33) { // ~30fps cap
@@ -82,7 +82,7 @@ const HeroGlobeScene: React.FC = () => {
             if (y === lastScroll) return;
             lastScroll = y;
 
-            if (y > endPx) return; // past hero — skip entirely
+            if (y > endPx) return; // past hero - skip entirely
 
             const progress = Math.min(1, Math.max(0, y / endPx));
             const proxy = scrollProxy.current;
@@ -101,15 +101,15 @@ const HeroGlobeScene: React.FC = () => {
         <>
             <EarthScene proxy={scrollProxy} showMarkers={_showMarkers} />
 
-            {/* Sun from the right — matches shader SUN_DIR [6,2,2] */}
+            {/* Sun from the right - matches shader SUN_DIR [6,2,2] */}
             <ambientLight intensity={0.10} />
             <directionalLight position={[6, 2, 2]} intensity={2.2} color="#fff5e8" />
 
-            {/* Dense starfield — reduced counts for scroll performance */}
+            {/* Dense starfield - reduced counts for scroll performance */}
             <Stars
                 radius={80}
                 depth={60}
-                count={isMobileGlobe ? 800 : 3000}
+                count={isMobileGlobe ? 500 : 1200}
                 factor={5}
                 saturation={0}
                 fade
@@ -119,7 +119,7 @@ const HeroGlobeScene: React.FC = () => {
             <Stars
                 radius={150}
                 depth={100}
-                count={isMobileGlobe ? 600 : 2500}
+                count={isMobileGlobe ? 400 : 800}
                 factor={3}
                 saturation={0}
                 fade
@@ -131,7 +131,16 @@ const HeroGlobeScene: React.FC = () => {
 
 const Loader: React.FC = () => null;
 
-export const HeroGlobe: React.FC<{ className?: string; disableScrollEffect?: boolean; showMarkers?: boolean }> = ({ className, disableScrollEffect, showMarkers }) => {
+// Fires `onReady` once the parent <Suspense> has resolved all textures
+// (this component only mounts when Suspense's children render, i.e. after load).
+const ReadySignal: React.FC<{ onReady?: () => void }> = ({ onReady }) => {
+    useEffect(() => {
+        if (onReady) onReady();
+    }, [onReady]);
+    return null;
+};
+
+export const HeroGlobe: React.FC<{ className?: string; disableScrollEffect?: boolean; showMarkers?: boolean; onReady?: () => void }> = ({ className, disableScrollEffect, showMarkers, onReady }) => {
     const divRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -141,7 +150,7 @@ export const HeroGlobe: React.FC<{ className?: string; disableScrollEffect?: boo
     }, [disableScrollEffect, showMarkers]);
 
     // Stop Three.js rendering completely when the globe scrolls out of view.
-    // When hidden: zero rAF callbacks, zero GPU draws — frees main thread for CSS animations.
+    // When hidden: zero rAF callbacks, zero GPU draws - frees main thread for CSS animations.
     useEffect(() => {
         const el = divRef.current;
         if (!el) return;
@@ -175,6 +184,7 @@ export const HeroGlobe: React.FC<{ className?: string; disableScrollEffect?: boo
                     <FrameDriver />
                     <HeroGlobeScene />
                     <Preload all />
+                    <ReadySignal onReady={onReady} />
                 </Suspense>
             </Canvas>
         </div>

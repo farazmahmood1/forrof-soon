@@ -21,7 +21,7 @@ const valueProps = [
   { title: "Fast Delivery", desc: "We move quickly without cutting corners. Most projects launch in weeks, not months, so you start seeing results sooner." },
   { title: "Clear Communication", desc: "No jargon, no ghosting. You get regular updates, honest timelines, and a single point of contact who actually listens." },
   { title: "Affordable & Flexible", desc: "Fixed-scope pricing, transparent estimates, and flexible engagement models designed for real small business budgets." },
-  { title: "Expert Guidance", desc: "We don't just build what you ask for — we help you figure out the smartest approach based on your goals and budget." },
+  { title: "Expert Guidance", desc: "We don't just build what you ask for - we help you figure out the smartest approach based on your goals and budget." },
   { title: "Reliable Partnership", desc: "We stick around after launch. Ongoing support, quick fixes, and proactive improvements keep your systems running smoothly." },
 ];
 
@@ -34,7 +34,7 @@ const challenges = [
 ];
 
 const processSteps = [
-  { num: "01", title: "Intro Call & Discovery", desc: "We learn about your business, goals, and pain points. No commitment — just a clear conversation about what's possible and what makes sense for your budget." },
+  { num: "01", title: "Intro Call & Discovery", desc: "We learn about your business, goals, and pain points. No commitment - just a clear conversation about what's possible and what makes sense for your budget." },
   { num: "02", title: "Plan & Estimate", desc: "We define the scope, timeline, and cost upfront. You get a transparent proposal with no hidden fees so you can make an informed decision." },
   { num: "03", title: "Design & Build", desc: "Our team designs, develops, and tests your solution in short sprints. You see progress every week and can give feedback along the way." },
   { num: "04", title: "Launch & Feedback", desc: "We deploy your solution, monitor performance, and gather real user feedback to make sure everything works as expected." },
@@ -42,18 +42,18 @@ const processSteps = [
 ];
 
 const services = [
-  { title: "Website Development", desc: "Custom websites and landing pages built for speed, SEO, and conversions — designed to represent your brand and drive results." },
+  { title: "Website Development", desc: "Custom websites and landing pages built for speed, SEO, and conversions - designed to represent your brand and drive results." },
   { title: "Mobile Solutions", desc: "Native and cross-platform mobile apps that keep your customers engaged and your operations accessible from anywhere." },
   { title: "Automation Tools", desc: "Workflow automations that eliminate repetitive tasks, reduce errors, and free up your team to focus on what matters." },
   { title: "Custom Solutions", desc: "Tailored platforms, dashboards, and internal tools built specifically for your business processes and goals." },
   { title: "Branding/UX/UI & Design", desc: "Professional branding, user experience design, and interface design that make your business look credible and feel intuitive." },
-  { title: "AI-Driven Services", desc: "Smart features powered by AI — from chatbots and recommendations to data analysis and predictive insights." },
+  { title: "AI-Driven Services", desc: "Smart features powered by AI - from chatbots and recommendations to data analysis and predictive insights." },
   { title: "Maintenance & Support", desc: "Ongoing technical support, performance monitoring, security updates, and continuous improvements to keep your systems healthy." },
 ];
 
 const engagementOptions = [
   { title: "Project-Based Work", desc: "A clearly scoped project with a fixed timeline and budget. Ideal for one-time builds like a website, app, or automation." },
-  { title: "Ongoing Partnership", desc: "A retainer-based relationship where we handle your IT needs month-to-month — from updates and support to new feature development." },
+  { title: "Ongoing Partnership", desc: "A retainer-based relationship where we handle your IT needs month-to-month - from updates and support to new feature development." },
   { title: "Extended Team", desc: "We embed developers, designers, or QA engineers directly into your workflow. You manage priorities; we deliver the work." },
   { title: "Consulting-First Model", desc: "Not sure what you need? We start with a paid discovery session to audit your tech, define priorities, and build a roadmap." },
 ];
@@ -140,7 +140,7 @@ export default function SmallBusinessPage() {
         </div>
       </motion.section>
 
-      {/* ═══════════ SEC 1 — Who We Work With (accordion with numbered indicators, light) ═══════════ */}
+      {/* ═══════════ SEC 1 - Who We Work With (accordion with numbered indicators, light) ═══════════ */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec1InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -181,7 +181,7 @@ export default function SmallBusinessPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 2 — Value Props (hover-expand list, dark) ═══════════ */}
+      {/* ═══════════ SEC 2 - Value Props (hover-expand list, dark) ═══════════ */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec2InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -212,7 +212,7 @@ export default function SmallBusinessPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 3 — Challenges (click-to-select with detail panel, light) ═══════════ */}
+      {/* ═══════════ SEC 3 - Challenges (click-to-select with detail panel, light) ═══════════ */}
       <section ref={sec3Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec3InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -264,14 +264,14 @@ export default function SmallBusinessPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 4 — Process (scroll-driven timeline, dark) ═══════════ */}
+      {/* ═══════════ SEC 4 - Process (scroll-driven timeline, dark) ═══════════ */}
       <section ref={sec4Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <ProcessTimeline steps={processSteps} inView={sec4InView} sectionLabel="/04" title="Simple IT Services Workflow" labelText="Process" />
         </div>
       </section>
 
-      {/* ═══════════ SEC 5 — Services (vertical tabs with layoutId, light) ═══════════ */}
+      {/* ═══════════ SEC 5 - Services (vertical tabs with layoutId, light) ═══════════ */}
       <section ref={sec5Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec5InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -322,7 +322,7 @@ export default function SmallBusinessPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 6 — Engagement Options (glow cards, dark) ═══════════ */}
+      {/* ═══════════ SEC 6 - Engagement Options (glow cards, dark) ═══════════ */}
       <section ref={sec6Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec6InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -351,7 +351,7 @@ export default function SmallBusinessPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 7 — Why Us (animated checks, light) ═══════════ */}
+      {/* ═══════════ SEC 7 - Why Us (animated checks, light) ═══════════ */}
       <section ref={sec7Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec7InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>

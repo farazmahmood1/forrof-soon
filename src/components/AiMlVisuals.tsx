@@ -4,7 +4,7 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 
 
-/* ─── Intersection-aware Canvas wrapper — 30fps cap for performance ─── */
+/* ─── Intersection-aware Canvas wrapper - 30fps cap for performance ─── */
 const FrameThrottle = () => {
   const { invalidate } = useThree();
   useEffect(() => {
@@ -56,7 +56,7 @@ const LazyCanvas = ({ children, className = "" }: { children: React.ReactNode; c
 };
 
 
-/* ─── 3D Neural Brain — rotating particle sphere with connections ─── */
+/* ─── 3D Neural Brain - rotating particle sphere with connections ─── */
 const NeuralBrainMesh = () => {
   const groupRef = useRef<THREE.Group>(null);
   const linesRef = useRef<THREE.LineSegments>(null);
@@ -137,7 +137,7 @@ export const NeuralBrain3D = ({ className = "" }: { className?: string }) => (
 );
 
 
-/* ─── 3D Floating Data Cube — wireframe with inner particles ─── */
+/* ─── 3D Floating Data Cube - wireframe with inner particles ─── */
 const DataCubeMesh = () => {
   const outerRef = useRef<THREE.Group>(null);
   const innerRef = useRef<THREE.Points>(null);
@@ -195,7 +195,7 @@ export const DataCube3D = ({ className = "" }: { className?: string }) => (
 );
 
 
-/* ─── 3D DNA Helix — scroll-driven double helix ─── */
+/* ─── 3D DNA Helix - scroll-driven double helix ─── */
 const HelixMeshRef = ({ progressRef }: { progressRef: React.RefObject<number> }) => {
   const groupRef = useRef<THREE.Group>(null);
 
@@ -258,7 +258,7 @@ const HelixMeshRef = ({ progressRef }: { progressRef: React.RefObject<number> })
   );
 };
 
-// Shared ref bridge — lets scroll update a ref without React re-renders
+// Shared ref bridge - lets scroll update a ref without React re-renders
 const useSmoothScrollProgress = (containerRef: React.RefObject<HTMLDivElement | null>) => {
   const progressRef = useRef(0);
   const { scrollYProgress } = useScroll({
@@ -301,7 +301,7 @@ export const DnaHelix3D = ({ className = "" }: { className?: string }) => {
 };
 
 
-/* ─── 3D Orbiting Rings — atom-like structure ─── */
+/* ─── 3D Orbiting Rings - atom-like structure ─── */
 const OrbitRingsMesh = () => {
   const groupRef = useRef<THREE.Group>(null);
   const ring1Ref = useRef<THREE.Mesh>(null);
@@ -428,7 +428,7 @@ export const WireSphere3D = ({ className = "" }: { className?: string }) => {
 };
 
 
-/* ─── Reusable Particle Network — same quality rendering, different shapes ─── */
+/* ─── Reusable Particle Network - same quality rendering, different shapes ─── */
 const ParticleNetworkMesh = ({
   generatePoints,
   connectionThreshold = 0.9,
@@ -491,7 +491,7 @@ const ParticleNetworkMesh = ({
   );
 };
 
-/* ─── Torus shape — SaaS (cloud/loop) ─── */
+/* ─── Torus shape - SaaS (cloud/loop) ─── */
 const torusPoints = () => {
   const count = 140;
   const pos = new Float32Array(count * 3);
@@ -512,7 +512,7 @@ export const CloudCluster3D = ({ className = "" }: { className?: string }) => (
   </LazyCanvas>
 );
 
-/* ─── Cube lattice — Enterprise (structured/corporate) ─── */
+/* ─── Cube lattice - Enterprise (structured/corporate) ─── */
 const cubePoints = () => {
   const size = 5;
   const count = size * size * size;
@@ -538,7 +538,7 @@ export const GridMatrix3D = ({ className = "" }: { className?: string }) => (
   </LazyCanvas>
 );
 
-/* ─── Double helix — Strategy (DNA/planning) ─── */
+/* ─── Double helix - Strategy (DNA/planning) ─── */
 const helixPoints = () => {
   const count = 120;
   const pos = new Float32Array(count * 3);
@@ -559,7 +559,7 @@ export const StrategyCompass3D = ({ className = "" }: { className?: string }) =>
   </LazyCanvas>
 );
 
-/* ─── Flowing wave — UX Design (creative/organic) ─── */
+/* ─── Flowing wave - UX Design (creative/organic) ─── */
 const wavePoints = () => {
   const count = 150;
   const pos = new Float32Array(count * 3);
@@ -579,7 +579,7 @@ export const DesignMorph3D = ({ className = "" }: { className?: string }) => (
   </LazyCanvas>
 );
 
-/* ─── Cone/rocket — MVP (upward momentum) ─── */
+/* ─── Cone/rocket - MVP (upward momentum) ─── */
 const conePoints = () => {
   const count = 130;
   const pos = new Float32Array(count * 3);
@@ -600,7 +600,7 @@ export const LaunchTrail3D = ({ className = "" }: { className?: string }) => (
   </LazyCanvas>
 );
 
-/* ─── Cylinder — Mobile App (device-like) ─── */
+/* ─── Cylinder - Mobile App (device-like) ─── */
 const cylinderPoints = () => {
   const count = 130;
   const pos = new Float32Array(count * 3);
@@ -621,7 +621,7 @@ export const AppFrame3D = ({ className = "" }: { className?: string }) => (
   </LazyCanvas>
 );
 
-/* ─── Clustered graph — Social Media (network hubs) ─── */
+/* ─── Clustered graph - Social Media (network hubs) ─── */
 const graphPoints = () => {
   const count = 130;
   const pos = new Float32Array(count * 3);
@@ -644,7 +644,7 @@ export const SocialGraph3D = ({ className = "" }: { className?: string }) => (
   </LazyCanvas>
 );
 
-/* ─── Enterprise Architecture Terminal — decorative ─── */
+/* ─── Enterprise Architecture Terminal - decorative ─── */
 export const EnterpriseArchBlock = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
@@ -701,7 +701,7 @@ export const EnterpriseArchBlock = () => {
 };
 
 
-/* ─── SaaS Terminal Block — decorative ─── */
+/* ─── SaaS Terminal Block - decorative ─── */
 export const SaasTerminalBlock = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
@@ -757,7 +757,7 @@ export const SaasTerminalBlock = () => {
   );
 };
 
-/* ─── Strategy Terminal Block — decorative ─── */
+/* ─── Strategy Terminal Block - decorative ─── */
 export const StrategyTerminalBlock = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
@@ -813,7 +813,7 @@ export const StrategyTerminalBlock = () => {
   );
 };
 
-/* ─── UX Terminal Block — decorative ─── */
+/* ─── UX Terminal Block - decorative ─── */
 export const UxTerminalBlock = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
@@ -869,7 +869,7 @@ export const UxTerminalBlock = () => {
   );
 };
 
-/* ─── MVP Terminal Block — decorative ─── */
+/* ─── MVP Terminal Block - decorative ─── */
 export const MvpTerminalBlock = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
@@ -925,7 +925,7 @@ export const MvpTerminalBlock = () => {
   );
 };
 
-/* ─── Mobile Terminal Block — decorative ─── */
+/* ─── Mobile Terminal Block - decorative ─── */
 export const MobileTerminalBlock = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
@@ -981,7 +981,7 @@ export const MobileTerminalBlock = () => {
   );
 };
 
-/* ─── Social Media Terminal Block — decorative ─── */
+/* ─── Social Media Terminal Block - decorative ─── */
 export const SocialMediaTerminalBlock = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
@@ -1038,7 +1038,7 @@ export const SocialMediaTerminalBlock = () => {
 };
 
 
-/* ─── Animated Code Block — decorative ─── */
+/* ─── Animated Code Block - decorative ─── */
 export const AiCodeBlock = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });

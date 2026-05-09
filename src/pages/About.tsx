@@ -1,5 +1,5 @@
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { lazy, Suspense, useRef, useState } from "react";
+import { lazy, Suspense, useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { LineReveal, Reveal } from "@/components/AnimationComponents";
 import { CountUp } from "@/components/InteractiveElements";
@@ -60,7 +60,7 @@ const testimonials = [
   },
   {
     quote:
-      "From the initial wireframes to the final deployment, Forrof treated our project like their own. They didn't just build what we asked for — they challenged our assumptions and made the product better.",
+      "From the initial wireframes to the final deployment, Forrof treated our project like their own. They didn't just build what we asked for - they challenged our assumptions and made the product better.",
     name: "Aisha Malik",
     role: "Product Lead",
     company: "FitReps",
@@ -80,15 +80,16 @@ const MissionCard = ({
   isInView: boolean;
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  const [pos, setPos] = useState({ x: 50, y: 50 });
+  const glowRef = useRef<HTMLDivElement>(null);
 
+  // Direct DOM writes via ref - zero React re-renders during mousemove
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = cardRef.current?.getBoundingClientRect();
-    if (!rect) return;
-    setPos({
-      x: ((e.clientX - rect.left) / rect.width) * 100,
-      y: ((e.clientY - rect.top) / rect.height) * 100,
-    });
+    const glow = glowRef.current;
+    if (!rect || !glow) return;
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    glow.style.background = `radial-gradient(250px circle at ${x}% ${y}%, hsl(var(--accent) / 0.22), transparent 70%)`;
   };
 
   return (
@@ -104,9 +105,10 @@ const MissionCard = ({
     >
       {/* Cursor-tracking glow */}
       <div
+        ref={glowRef}
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: `radial-gradient(250px circle at ${pos.x}% ${pos.y}%, hsl(var(--accent) / 0.22), transparent 70%)`,
+          background: `radial-gradient(250px circle at 50% 50%, hsl(var(--accent) / 0.22), transparent 70%)`,
           transition: "background 0.15s ease",
         }}
       />
@@ -194,9 +196,9 @@ const About = () => {
   useLenis();
 
   usePageMetadata({
-    title: "About Us | Forrof — Full-Service Software Company",
+    title: "About Us | Forrof - Full-Service Software Company",
     description:
-      "Learn about Forrof — a full-service software company helping businesses scale with modern, future-ready technology from AI systems to enterprise platforms.",
+      "Learn about Forrof - a full-service software company helping businesses scale with modern, future-ready technology from AI systems to enterprise platforms.",
     keywords:
       "about forrof, software company, AI development, enterprise solutions, digital agency, Quebec Canada",
   });
@@ -225,7 +227,7 @@ const About = () => {
         }}
         data-no-cursor-light
       >
-        {/* Hero text — top portion */}
+        {/* Hero text - top portion */}
         <div className="relative z-10 min-h-screen flex items-center section-padding pt-28 pb-16">
           <div className="max-w-[1800px] mx-auto w-full">
             <motion.div
@@ -270,19 +272,19 @@ const About = () => {
               transition={{ duration: 1, delay: 0.6 }}
             >
               A full-service software company helping businesses scale with modern,
-              future-ready technology — from AI systems to enterprise platforms.
+              future-ready technology - from AI systems to enterprise platforms.
             </motion.p>
           </div>
         </div>
         </div>
 
-        {/* Globe — full width, pushed down so top doesn't clip */}
+        {/* Globe - full width, pushed down so top doesn't clip */}
         <div id="geographies" className="relative w-full h-screen mt-[-10vh]">
           <Suspense fallback={<div className="w-full h-full bg-[#050a12]" />}>
             <HeroGlobe className="w-full h-full" disableScrollEffect showMarkers />
           </Suspense>
 
-          {/* Location info — right side */}
+          {/* Location info - right side */}
           <div className="absolute right-6 md:right-16 lg:right-24 top-1/2 -translate-y-1/2 z-10">
             <Reveal delay={0.1}>
               <div className="space-y-5">
@@ -344,7 +346,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* ─── 4. CHARTS — Our Work in Numbers ─── */}
+      {/* ─── 4. CHARTS - Our Work in Numbers ─── */}
       <section
         ref={chartsRef}
         className="section-forced-dark section-padding pt-8 pb-32 relative overflow-hidden"
@@ -361,7 +363,7 @@ const About = () => {
           {/* 3-column layout */}
           <div className="grid lg:grid-cols-3 gap-8">
 
-            {/* 1. Projects by Field — Donut */}
+            {/* 1. Projects by Field - Donut */}
             <motion.div
               className="border border-foreground/[0.06] rounded-2xl p-8 bg-foreground/[0.02]"
               initial={{ opacity: 0, y: 40 }}
@@ -416,7 +418,7 @@ const About = () => {
               <p className="text-[11px] text-muted-foreground/60 mt-6">The ranking is based on the predominant domain of a project.</p>
             </motion.div>
 
-            {/* 2. Projects Launched — Bar Chart */}
+            {/* 2. Projects Launched - Bar Chart */}
             <motion.div
               className="border border-foreground/[0.06] rounded-2xl p-8 bg-foreground/[0.02]"
               initial={{ opacity: 0, y: 40 }}
@@ -464,7 +466,7 @@ const About = () => {
                 <span className="text-5xl font-bold text-accent">30</span>
                 <span className="text-xl text-muted-foreground ml-2">/ 48 team members</span>
               </div>
-              {/* Dot grid — 30 filled, 18 empty */}
+              {/* Dot grid - 30 filled, 18 empty */}
               <div className="grid grid-cols-10 gap-2 mb-6">
                 {Array.from({ length: 48 }, (_, i) => (
                   <motion.div
@@ -483,7 +485,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* ─── 5. TESTIMONIALS — Sticky scroll ─── */}
+      {/* ─── 5. TESTIMONIALS - Sticky scroll ─── */}
       <section
         ref={testimonialsRef}
         className="section-forced-light relative section-padding"
@@ -491,7 +493,7 @@ const About = () => {
         <div className="max-w-[1800px] mx-auto relative z-10">
           <div className="lg:flex lg:gap-20">
 
-            {/* Left — Sticky on desktop, compact on mobile */}
+            {/* Left - Sticky on desktop, compact on mobile */}
             <div className="lg:w-[40%] lg:sticky lg:top-28 lg:self-start lg:shrink-0 pt-12 pb-6 lg:py-20">
               <motion.p
                 className="text-xs uppercase tracking-[0.3em] text-muted-foreground/50 mb-4 lg:mb-8 flex items-center gap-3"
@@ -513,7 +515,7 @@ const About = () => {
               </motion.h2>
             </div>
 
-            {/* Mobile — horizontal scroll */}
+            {/* Mobile - horizontal scroll */}
             <div className="lg:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-6 px-6">
               {testimonials.map((t, i) => (
                 <div key={t.name} className="snap-center shrink-0 w-[85vw]">
@@ -538,7 +540,7 @@ const About = () => {
                 </div>
               ))}
             </div>
-            {/* Desktop — scroll-driven cards */}
+            {/* Desktop - scroll-driven cards */}
             <div className="hidden lg:block lg:w-[60%]">
               {testimonials.map((t, i) => (
                 <TestimonialCard key={t.name} t={t} i={i} total={testimonials.length} />
@@ -604,7 +606,7 @@ const About = () => {
               {
                 num: "02",
                 title: "Our Vision",
-                desc: "We envision transforming IT systems into smart, agile, and AI-driven digital assets — shaping a future where technology meets the dynamic demands of a connected world.",
+                desc: "We envision transforming IT systems into smart, agile, and AI-driven digital assets - shaping a future where technology meets the dynamic demands of a connected world.",
                 tags: ["AI-Driven", "Adaptive", "Future-Ready"],
               },
               {

@@ -1,8 +1,8 @@
 /**
- * Pure native scroll — no Lenis, no GSAP.
+ * Pure native scroll - no Lenis, no GSAP.
  */
 export const useLenis = () => {
-  // Intentionally empty — kept for API compatibility.
+  // Intentionally empty - kept for API compatibility.
 };
 
 export const scrollToTop = () => {

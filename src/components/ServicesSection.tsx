@@ -11,7 +11,7 @@ const services = [
   {
     number: "01",
     title: "AI/ML Development",
-    description: "Real‑world AI systems — from document intelligence to custom agents and workflows — integrated directly into your business.",
+    description: "Real‑world AI systems - from document intelligence to custom agents and workflows - integrated directly into your business.",
     image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=600&q=80",
     slug: "ai-ml",
   },
@@ -31,17 +31,17 @@ const services = [
   },
   {
     number: "04",
-    title: "MVP & POC Development",
-    description: "From idea to production‑grade platform — lean MVPs and prototypes that prove your concept and attract investors fast.",
+    title: "Paid Ads",
+    description: "Intent-driven campaigns across Google, Meta, LinkedIn, and TikTok - engineered with API-level tracking and CRO landing pages that turn ad spend into booked revenue.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
-    slug: "mvp",
+    slug: "paid-ads",
   },
   {
     number: "05",
-    title: "Product Architecture & Technical Strategy",
-    description: "System design, AI strategy, and engineering direction that reduces risk and enables smarter decisions at every stage.",
-    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80",
-    slug: "strategy",
+    title: "Social Media Marketing",
+    description: "Data-driven social strategies, content creation, and paid campaigns that grow your audience and turn followers into qualified customers.",
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80",
+    slug: "social-media",
   },
 ];
 
@@ -100,7 +100,7 @@ export const ServicesSection = () => {
                 delay: 0.2,
               }}
             >
-              Tech Solutions for Companies
+              Tech & Growth Solutions for Companies
             </motion.h2>
           </div>
           <motion.div
@@ -110,7 +110,7 @@ export const ServicesSection = () => {
             transition={{ duration: 1, delay: 0.6 }}
           >
             <p className="text-xl text-muted-foreground max-w-md leading-relaxed">
-              We partner with founders and growing teams to build AI‑powered products, intelligent systems, and scalable software platforms.
+              We partner with founders and growing teams to build AI‑powered products, intelligent systems, scalable software platforms, and marketing engines that drive measurable revenue.
             </p>
           </motion.div>
         </div>

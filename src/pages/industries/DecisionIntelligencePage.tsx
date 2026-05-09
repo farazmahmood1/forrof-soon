@@ -241,7 +241,7 @@ export default function DecisionIntelligencePage() {
         </div>
       </motion.section>
 
-      {/* ═══════════ SEC 1 — Pain Points (interactive deep-dive panels) ═══════════ */}
+      {/* ═══════════ SEC 1 - Pain Points (interactive deep-dive panels) ═══════════ */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec1InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -335,7 +335,7 @@ export default function DecisionIntelligencePage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 2 — Case Studies (interactive showcase) ═══════════ */}
+      {/* ═══════════ SEC 2 - Case Studies (interactive showcase) ═══════════ */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec2InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -383,7 +383,7 @@ export default function DecisionIntelligencePage() {
               </div>
 
               <div className="grid lg:grid-cols-2 gap-8">
-                {/* How it works — step-by-step interactive */}
+                {/* How it works - step-by-step interactive */}
                 <div>
                   <span className="text-xs text-accent font-medium uppercase tracking-widest block mb-6">How it works</span>
                   <div className="space-y-0">
@@ -461,7 +461,7 @@ export default function DecisionIntelligencePage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 3 — Solutions (glow cards) ═══════════ */}
+      {/* ═══════════ SEC 3 - Solutions (glow cards) ═══════════ */}
       <section ref={sec3Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec3InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -498,7 +498,7 @@ export default function DecisionIntelligencePage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 4 — Services by Niche (vertical tabs) ═══════════ */}
+      {/* ═══════════ SEC 4 - Services by Niche (vertical tabs) ═══════════ */}
       <section ref={sec4Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec4InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -584,7 +584,7 @@ export default function DecisionIntelligencePage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 5 — Why Choose Us (stat cards) ═══════════ */}
+      {/* ═══════════ SEC 5 - Why Choose Us (stat cards) ═══════════ */}
       <section ref={sec5Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec5InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>

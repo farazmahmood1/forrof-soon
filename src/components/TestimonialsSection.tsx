@@ -48,7 +48,7 @@ export const TestimonialsSection = () => {
   const isInView = useInView(containerRef, { once: true, margin: "-10%" });
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
-  const statsCycle = 0; // Removed 15s re-trigger — was causing cascading re-renders & animation jank
+  const statsCycle = 0; // Removed 15s re-trigger - was causing cascading re-renders & animation jank
 
 
   const next = () => {
@@ -291,7 +291,7 @@ export const TestimonialsSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: statsCycle === 0 ? 1.2 : 0.1, duration: 0.8 }}
         >
-          {/* Donut Chart — Projects by Field */}
+          {/* Donut Chart - Projects by Field */}
           {(() => {
             const bd = statsCycle === 0 ? 1.3 : 0.2;
             const bdMs = statsCycle === 0 ? 1300 : 200;
@@ -361,7 +361,7 @@ export const TestimonialsSection = () => {
             );
           })()}
 
-          {/* Bar Chart — Project Launched */}
+          {/* Bar Chart - Project Launched */}
           {(() => {
             const bd = statsCycle === 0 ? 1.3 : 0.2;
             const bdMs = statsCycle === 0 ? 1300 : 200;
@@ -420,7 +420,7 @@ export const TestimonialsSection = () => {
             );
           })()}
 
-          {/* Team Involvement — dot grid */}
+          {/* Team Involvement - dot grid */}
           {(() => {
             const bd = statsCycle === 0 ? 1.3 : 0.2;
             const bdMs = statsCycle === 0 ? 1300 : 200;
@@ -459,7 +459,7 @@ export const TestimonialsSection = () => {
   );
 };
 
-// Counter — RAF + direct DOM write, zero setState calls during animation
+// Counter - RAF + direct DOM write, zero setState calls during animation
 const CountUp = ({ value, isInView, delay = 0, cycle = 0 }: { value: number; isInView: boolean; delay?: number; cycle?: number }) => {
   const ref = useRef<HTMLSpanElement>(null);
 

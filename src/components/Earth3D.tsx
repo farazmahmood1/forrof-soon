@@ -4,7 +4,7 @@ import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 
-// Sun from the right — creates day/night split matching reference
+// Sun from the right - creates day/night split matching reference
 const SUN_DIR = new THREE.Vector3(1.0, 0.15, 0.2).normalize();
 
 const TEXTURES = {
@@ -51,7 +51,7 @@ const FRAG = /* glsl */ `
     // ── Day/night blend ─────────────────────────────────────────────────
     float day = smoothstep(-0.02, 0.08, NdotL);
 
-    // ── DAY SIDE — vivid, fully lit ─────────────────────────────────────
+    // ── DAY SIDE - vivid, fully lit ─────────────────────────────────────
     vec3  dayTex = texture2D(uDayMap, vUv).rgb;
     float grey   = dot(dayTex, vec3(0.299, 0.587, 0.114));
     dayTex       = mix(vec3(grey), dayTex, 1.35);
@@ -64,7 +64,7 @@ const FRAG = /* glsl */ `
     float spec     = pow(max(dot(N, H), 0.0), 80.0) * specMask;
     dayLit        += vec3(0.9, 0.95, 1.0) * spec * 0.35 * diff;
 
-    // ── NIGHT SIDE — dark blue with golden city lights ──────────────────
+    // ── NIGHT SIDE - dark blue with golden city lights ──────────────────
     // Dark blue base from the day texture
     vec3 nightBase = dayTex * vec3(0.08, 0.10, 0.22);
 
@@ -80,14 +80,14 @@ const FRAG = /* glsl */ `
     // ── Blend day and night ─────────────────────────────────────────────
     vec3 color = mix(nightLit, dayLit, day);
 
-    // ── Cyan atmospheric rim — stronger on night side ───────────────────
+    // ── Cyan atmospheric rim - stronger on night side ───────────────────
     float viewDot = abs(dot(vNormal, vec3(0.0, 0.0, 1.0)));
     float rim     = pow(1.0 - viewDot, 3.5);
     vec3  rimDay   = vec3(0.2, 0.5, 1.0) * 0.4;
     vec3  rimNight = vec3(0.0, 0.7, 1.0) * 0.7;
     color += mix(rimNight, rimDay, day) * rim;
 
-    // ── Natural edge shadow — darken limb for depth ───────────────────
+    // ── Natural edge shadow - darken limb for depth ───────────────────
     float edgeFade = pow(viewDot, 0.4);
     color *= edgeFade;
 
@@ -125,7 +125,7 @@ export const EarthScene: React.FC<EarthSceneProps> = ({ proxy, showMarkers = fal
     [TEXTURES.earth, TEXTURES.night, TEXTURES.clouds, TEXTURES.normal, TEXTURES.specular]
   );
 
-  // Show Asia/Europe — similar to the reference view
+  // Show Asia/Europe - similar to the reference view
   const INITIAL_ROT = -0.5;
 
   const earthUniforms = useMemo(
@@ -138,7 +138,7 @@ export const EarthScene: React.FC<EarthSceneProps> = ({ proxy, showMarkers = fal
     [dayMap, nightMap, specMap]
   );
 
-  useFrame(({ invalidate }) => {
+  useFrame(() => {
     const g = groupRef.current;
     if (!g) return;
     g.rotation.y += 0.0003;
@@ -146,7 +146,7 @@ export const EarthScene: React.FC<EarthSceneProps> = ({ proxy, showMarkers = fal
     const p = activeProxy.current;
     g.scale.setScalar(p.scale);
     g.position.set(p.positionX, p.positionY, p.positionZ);
-    invalidate();
+    // Note: no invalidate() here. FrameDriver already drives the loop at 30fps cap.
   });
 
   return (
@@ -161,7 +161,7 @@ export const EarthScene: React.FC<EarthSceneProps> = ({ proxy, showMarkers = fal
         />
       </mesh>
 
-      {/* Cloud layer — only visible on day side, fully transparent on night */}
+      {/* Cloud layer - only visible on day side, fully transparent on night */}
       <mesh ref={cloudsRef} scale={1.005}>
         <sphereGeometry args={[2.5, 32, 32]} />
         <shaderMaterial
@@ -222,7 +222,7 @@ export const EarthScene: React.FC<EarthSceneProps> = ({ proxy, showMarkers = fal
         })}
       </group>
 
-      {/* Inner atmosphere glow — front-facing ozone layer */}
+      {/* Inner atmosphere glow - front-facing ozone layer */}
       <mesh scale={1.015}>
         <sphereGeometry args={[2.5, 64, 64]} />
         <shaderMaterial
@@ -255,7 +255,7 @@ export const EarthScene: React.FC<EarthSceneProps> = ({ proxy, showMarkers = fal
         />
       </mesh>
 
-      {/* Outer atmosphere glow — backside for wider halo */}
+      {/* Outer atmosphere glow - backside for wider halo */}
       <mesh scale={1.04}>
         <sphereGeometry args={[2.5, 32, 32]} />
         <shaderMaterial

@@ -169,7 +169,7 @@ export default function LegalTechPage() {
         </div>
       </motion.section>
 
-      {/* ═══════════ SEC 1 — Challenges (click-to-select with detail panel) ═══════════ */}
+      {/* ═══════════ SEC 1 - Challenges (click-to-select with detail panel) ═══════════ */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec1InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -238,7 +238,7 @@ export default function LegalTechPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 2 — Who We Serve (accordion with numbered indicators) ═══════════ */}
+      {/* ═══════════ SEC 2 - Who We Serve (accordion with numbered indicators) ═══════════ */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec2InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -287,7 +287,7 @@ export default function LegalTechPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 3 — Services (hover-expand list) ═══════════ */}
+      {/* ═══════════ SEC 3 - Services (hover-expand list) ═══════════ */}
       <section ref={sec3Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec3InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -332,7 +332,7 @@ export default function LegalTechPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 4 — Use Cases (glow cards with hover-expand) ═══════════ */}
+      {/* ═══════════ SEC 4 - Use Cases (glow cards with hover-expand) ═══════════ */}
       <section ref={sec4Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec4InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -366,7 +366,7 @@ export default function LegalTechPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 5 — Technologies & Compliance (three-column checklist) ═══════════ */}
+      {/* ═══════════ SEC 5 - Technologies & Compliance (three-column checklist) ═══════════ */}
       <section ref={sec5Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec5InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -464,7 +464,7 @@ export default function LegalTechPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 6 — Why Choose Us (stat cards with CountUp) ═══════════ */}
+      {/* ═══════════ SEC 6 - Why Choose Us (stat cards with CountUp) ═══════════ */}
       <section ref={sec6Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec6InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>

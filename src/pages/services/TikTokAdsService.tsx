@@ -9,53 +9,53 @@ import { useNavigate } from "react-router-dom";
 import { SocialMediaTerminalBlock } from "@/components/AiMlVisuals";
 
 const services = [
-  { num: "01", title: "Social Media Strategy", desc: "A data-backed playbook built around your brand goals, target audience, and competitive landscape - covering platform mix, content pillars, posting cadence, and measurable KPIs." },
-  { num: "02", title: "Content Creation & Copywriting", desc: "Scroll-stopping visuals, short-form video, carousels, and on-brand copy crafted by specialists who understand how each platform's algorithm rewards authenticity and consistency." },
-  { num: "03", title: "Community Management", desc: "Real-time moderation, comment responses, DM handling, and proactive community building that turns followers into loyal advocates and keeps your brand voice consistent at every touchpoint." },
-  { num: "04", title: "Paid Social Advertising", desc: "Full-funnel paid campaigns across Meta, LinkedIn, TikTok, and more - precision audience targeting, creative testing, budget optimisation, and weekly performance reporting that ties spend directly to revenue." },
-  { num: "05", title: "Analytics & Performance Reporting", desc: "Custom dashboards tracking reach, engagement, follower growth, conversion attribution, and ROI - delivered as clear executive reports that show exactly what is working and what to do next." },
-  { num: "06", title: "Influencer & Partnership Marketing", desc: "End-to-end influencer identification, brief creation, contract management, and campaign tracking to amplify your message through trusted voices your target audience already follows." },
+  { num: "01", title: "Spark Ads", desc: "Boost organic posts (yours or creator partnerships) into paid placements - the highest-performing TikTok format because users see real native content, not corporate ads." },
+  { num: "02", title: "In-Feed Video Ads", desc: "Native short-form video ads that appear between organic content - built natively for TikTok, with strong hooks in the first 2 seconds and platform-trend-aware execution." },
+  { num: "03", title: "Creative Production", desc: "UGC-style, trend-aware video creative produced specifically for TikTok - not repurposed Instagram Reels or YouTube Shorts. Multiple hooks tested in parallel." },
+  { num: "04", title: "Audience Targeting & Pixel", desc: "Custom audiences, lookalikes, and TikTok Pixel + Events API setup - so the algorithm learns from real conversions, not just impressions and clicks." },
+  { num: "05", title: "Influencer & Creator Partnerships", desc: "End-to-end TikTok Creator Marketplace management - from brief to contract to performance tracking, paired with Spark Ads to amplify the best content." },
+  { num: "06", title: "Reporting & Attribution", desc: "Weekly performance reviews tying TikTok spend to leads, sales, and revenue - with multi-touch attribution that captures TikTok's role in the buyer journey." },
 ];
 
-const platforms = [
-  { num: "01", title: "Instagram", desc: "Feed posts, Reels, Stories, and collaborations engineered for visual brands - optimised for both organic reach and paid discovery campaigns." },
-  { num: "02", title: "LinkedIn", desc: "Thought leadership content, executive personal branding, and B2B lead-generation campaigns that position your brand as an authority in your industry." },
-  { num: "03", title: "TikTok", desc: "Trend-aware short-form video production and paid TikTok Ads that reach high-intent audiences with content designed natively for the platform's unique culture." },
-  { num: "04", title: "Facebook", desc: "Community management, targeted Meta ad campaigns, and retargeting funnels that leverage Facebook's unmatched audience segmentation for scalable reach." },
-  { num: "05", title: "X (Twitter)", desc: "Real-time brand presence, reactive content strategy, and conversation monitoring that keeps your brand relevant and visible in fast-moving industry discussions." },
-  { num: "06", title: "YouTube", desc: "Long-form and Shorts strategy, SEO-optimised video production, and YouTube Ads that build a lasting content library driving discovery and retention." },
+const formats = [
+  { num: "01", title: "Spark Ads", desc: "Promote real organic posts as ads - users see native creator-style content, not corporate ads. Highest CTR and conversion of all TikTok formats." },
+  { num: "02", title: "In-Feed Ads", desc: "Native video ads in the For You feed - the workhorse format for direct response and lead generation campaigns." },
+  { num: "03", title: "TopView", desc: "First ad users see when opening the app - premium awareness placement for product launches and brand campaigns." },
+  { num: "04", title: "Brand Takeover", desc: "Full-screen, immediate-impact placement on app open - reserved for high-budget awareness pushes with broad targeting." },
+  { num: "05", title: "Branded Hashtag Challenge", desc: "Sponsor a creative challenge that invites user-generated content at scale - massive organic reach when concept goes viral." },
+  { num: "06", title: "Branded Effects", desc: "Custom AR filters and effects users can apply to their own videos - subtle brand placement with strong organic distribution." },
 ];
 
 const processSteps = [
-  { num: "01", title: "Audit & Strategy", desc: "We analyse your current presence, benchmark against competitors, and deliver a clear social strategy tied to specific business objectives and audience insights." },
-  { num: "02", title: "Content Planning", desc: "Monthly content calendars, platform-specific creative briefs, and campaign timelines planned and approved in advance so execution is always seamless and on schedule." },
-  { num: "03", title: "Execution & Management", desc: "Daily publishing, community engagement, paid campaign management, and creative production handled end-to-end - you stay focused on your business while we run your channels." },
-  { num: "04", title: "Reporting & Optimisation", desc: "Regular performance reviews covering all key metrics with clear interpretation and actionable recommendations to continuously improve results month over month." },
+  { num: "01", title: "Audience & Trend Research", desc: "We map your ideal customer to TikTok's behavioral signals and identify the trending formats and sounds that match your brand voice and offer." },
+  { num: "02", title: "Creative Production", desc: "Multiple UGC-style hooks and edit variants produced in parallel - shot natively for TikTok, not repurposed from other channels. Trend-aware but brand-aligned." },
+  { num: "03", title: "Pixel & Tracking Setup", desc: "TikTok Pixel + Events API server-side integration, custom conversion events, and clean attribution - so the algorithm learns from real conversions." },
+  { num: "04", title: "Test, Scale, Refresh", desc: "Multiple ad sets and creatives tested simultaneously. Winners scale, losers die. Creative refreshes every 1-2 weeks because TikTok creative fatigue is brutal." },
 ];
 
 const whyUsItems = [
   {
     num: "01",
-    title: "Data-Driven Content",
-    desc: "Every creative decision is grounded in analytics - from post timing and format selection to caption length and hashtag strategy. We test, measure, and iterate so your content continuously improves rather than stagnating on gut feel.",
+    title: "Native, Not Repurposed",
+    desc: "Most agencies upload the same creative they ran on Instagram Reels and call it TikTok. We don't. Every video is shot, edited, and timed specifically for TikTok's algorithm and audience expectations - because the platform punishes lazy reuse with terrible CPMs.",
   },
   {
     num: "02",
-    title: "Brand Voice Consistency",
-    desc: "A unified tone, visual identity, and messaging framework applied consistently across every platform, campaign, and community interaction - so your brand feels instantly recognisable whether someone finds you on LinkedIn, TikTok, or anywhere in between.",
+    title: "Creative Velocity",
+    desc: "TikTok rewards fresh content. We produce and test 8-12 new ad creatives per month per account, killing fatigued ones the moment CTR drops. No other platform's algorithm penalizes stale creative this aggressively, so creative volume is the difference between scaling and stalling.",
   },
   {
     num: "03",
-    title: "ROI-Focused Campaigns",
-    desc: "Every post, ad, and campaign is tied back to measurable business outcomes - leads generated, traffic driven, revenue attributed. We are accountable to results, not vanity metrics, and our reporting is structured to prove the value of every pound spent.",
+    title: "Spark Ads From Day One",
+    desc: "Spark Ads (boosted organic content) outperform standard In-Feed ads by 30-50% in most accounts because they look native. We build a steady pipeline of organic posts (yours or creator partnerships) specifically to use as Spark inputs - the secret to scaling TikTok profitably.",
   },
 ];
 
-export default function SocialMediaService() {
+export default function TikTokAdsService() {
   usePageMetadata({
-    title: "Social Media Marketing Services | Forrof",
-    description: "Full-service social media marketing that grows your audience, builds brand authority, and drives measurable business results across Instagram, LinkedIn, TikTok, and beyond.",
-    keywords: "social media marketing, social media strategy, content creation, community management, paid social advertising, influencer marketing, Instagram marketing, LinkedIn marketing, TikTok advertising",
+    title: "TikTok Ads Agency | Spark Ads, Creative & Strategy | Forrof",
+    description: "TikTok Ads management with native creative production, Spark Ads, and Events API tracking - turning short-form video into qualified leads and tracked revenue.",
+    keywords: "tiktok ads agency, tiktok ads management, spark ads, tiktok marketing, short-form video ads, ugc ads, tiktok creative, tiktok pixel, events api, tiktok b2c",
   });
 
   const navigate = useNavigate();
@@ -68,7 +68,6 @@ export default function SocialMediaService() {
   const sec4Ref = useRef(null);
   const ctaRef = useRef(null);
 
-
   const sec1InView = useInView(sec1Ref, { once: true, margin: "-100px" });
   const sec2InView = useInView(sec2Ref, { once: true, margin: "-100px" });
   const sec3InView = useInView(sec3Ref, { once: true, margin: "-100px" });
@@ -78,7 +77,6 @@ export default function SocialMediaService() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
 
-      {/* HERO */}
       <motion.section
         ref={heroRef}
         className="relative min-h-screen flex items-end section-padding pt-28 pb-16 md:pb-24 overflow-hidden"
@@ -101,7 +99,7 @@ export default function SocialMediaService() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              Services / Social Media
+              Services / TikTok Ads
             </motion.span>
             <div className="overflow-hidden mb-6 py-2">
               <motion.h1
@@ -120,7 +118,7 @@ export default function SocialMediaService() {
                   backgroundPosition: { duration: 3, ease: "easeInOut", delay: 1, repeat: Infinity, repeatType: "reverse" },
                 }}
               >
-                Social Media Marketing
+                TikTok Ads Management
               </motion.h1>
             </div>
             <motion.p
@@ -130,12 +128,11 @@ export default function SocialMediaService() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
-              We grow your brand presence, deepen audience engagement, and turn social channels into consistent revenue drivers - with strategy, content, and paid campaigns that actually perform.
+              Short-form video campaigns that engage cold audiences with native, scroll-friendly creative - generating affordable leads from a channel most competitors are still ignoring.
             </motion.p>
         </div>
       </motion.section>
 
-      {/* SECTION 1 - Platforms We Master */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -146,7 +143,7 @@ export default function SocialMediaService() {
           >
             <span className="number-label">/01</span>
             <LineReveal className="h-px bg-border flex-1" delay={0.3} />
-            <span className="text-xs text-muted-foreground uppercase tracking-widest">Platforms We Master</span>
+            <span className="text-xs text-muted-foreground uppercase tracking-widest">Ad Formats</span>
           </motion.div>
 
           <motion.h2
@@ -155,11 +152,11 @@ export default function SocialMediaService() {
             animate={sec1InView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            Every Platform, Mastered
+            Every TikTok Ad Format
           </motion.h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {platforms.map((item, i) => (
+            {formats.map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 40 }}
@@ -183,7 +180,6 @@ export default function SocialMediaService() {
         </div>
       </section>
 
-      {/* SECTION 2 - Services */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -231,7 +227,6 @@ export default function SocialMediaService() {
         </div>
       </section>
 
-      {/* SECTION 3 - Why Us (hover-expand list) */}
       <section ref={sec3Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -269,9 +264,7 @@ export default function SocialMediaService() {
                   <span className="text-xs text-muted-foreground font-medium tracking-widest uppercase min-w-[32px]">
                     {item.num}
                   </span>
-                  <h3
-                    className="text-xl font-semibold transition-transform duration-300 group-hover:translate-x-3"
-                  >
+                  <h3 className="text-xl font-semibold transition-transform duration-300 group-hover:translate-x-3">
                     {item.title}
                   </h3>
                 </div>
@@ -297,7 +290,6 @@ export default function SocialMediaService() {
         </div>
       </section>
 
-      {/* Terminal visual */}
       <section className="section-forced-dark section-padding py-24">
         <div className="max-w-[1800px] mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -308,21 +300,19 @@ export default function SocialMediaService() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold mb-6">Strategy Meets Execution</h3>
-              <p className="text-muted-foreground leading-relaxed">We don't just plan content - we build complete campaign engines with brand guidelines, content calendars, and real-time analytics baked in.</p>
+              <h3 className="text-2xl md:text-3xl font-bold mb-6">Native Creative, Not Repurposed</h3>
+              <p className="text-muted-foreground leading-relaxed">Multiple UGC-style ad creatives produced and tested every week, paired with TikTok Pixel + Events API tracking - so the algorithm learns from real conversions and your CPL drops month over month.</p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 4 - Process (scroll-driven timeline) */}
       <section ref={sec4Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <ProcessTimeline steps={processSteps} inView={sec4InView} sectionLabel="/04" />
         </div>
       </section>
 
-      {/* CTA */}
       <section ref={ctaRef} className="section-forced-dark section-padding py-40 relative overflow-hidden">
         <div className="max-w-[1800px] mx-auto text-center relative z-10">
           <motion.h2
@@ -331,7 +321,7 @@ export default function SocialMediaService() {
             animate={ctaInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            Ready to grow your audience?
+            Win on TikTok before competitors catch up.
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -343,7 +333,7 @@ export default function SocialMediaService() {
                 onClick={() => navigate("/contact")}
                 className="inline-flex items-center gap-3 px-8 py-5 bg-foreground text-background rounded-full font-medium hover:opacity-80 transition-opacity"
               >
-                Grow My Brand
+                Get a Free TikTok Ads Audit
                 <ArrowUpRight size={18} />
               </button>
             </Magnetic>

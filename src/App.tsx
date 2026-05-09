@@ -21,6 +21,13 @@ const EnterpriseService = lazy(() => import("./pages/services/EnterpriseService"
 const StrategyService = lazy(() => import("./pages/services/StrategyService"));
 const MobileAppService = lazy(() => import("./pages/services/MobileAppService"));
 const SocialMediaService = lazy(() => import("./pages/services/SocialMediaService"));
+const PaidAdsService = lazy(() => import("./pages/services/PaidAdsService"));
+const GoogleAdsService = lazy(() => import("./pages/services/GoogleAdsService"));
+const MetaAdsService = lazy(() => import("./pages/services/MetaAdsService"));
+const LinkedInAdsService = lazy(() => import("./pages/services/LinkedInAdsService"));
+const TikTokAdsService = lazy(() => import("./pages/services/TikTokAdsService"));
+const BingAdsService = lazy(() => import("./pages/services/BingAdsService"));
+const YelpAdsService = lazy(() => import("./pages/services/YelpAdsService"));
 const IndustrialSectorPage = lazy(() => import("./pages/industries/IndustrialSectorPage"));
 const DecisionIntelligencePage = lazy(() => import("./pages/industries/DecisionIntelligencePage"));
 const FintechFinancePage = lazy(() => import("./pages/industries/FintechFinancePage"));
@@ -58,7 +65,7 @@ const preloadRoutes = () => {
 };
 
 // Content wrapper that handles layout for all pages
-// Pure CSS progress bar — zero JS on scroll, uses native scroll-driven animation
+// Pure CSS progress bar - zero JS on scroll, uses native scroll-driven animation
 const ProgressBar = () => (
   <>
     <style>{`
@@ -153,6 +160,13 @@ const App = () => (
             <Route path="/services/strategy" element={<LayoutWrapper><StrategyService /></LayoutWrapper>} />
             <Route path="/services/mobile" element={<LayoutWrapper><MobileAppService /></LayoutWrapper>} />
             <Route path="/services/social-media" element={<LayoutWrapper><SocialMediaService /></LayoutWrapper>} />
+            <Route path="/services/paid-ads" element={<LayoutWrapper><PaidAdsService /></LayoutWrapper>} />
+            <Route path="/services/google-ads" element={<LayoutWrapper><GoogleAdsService /></LayoutWrapper>} />
+            <Route path="/services/meta-ads" element={<LayoutWrapper><MetaAdsService /></LayoutWrapper>} />
+            <Route path="/services/linkedin-ads" element={<LayoutWrapper><LinkedInAdsService /></LayoutWrapper>} />
+            <Route path="/services/tiktok-ads" element={<LayoutWrapper><TikTokAdsService /></LayoutWrapper>} />
+            <Route path="/services/bing-ads" element={<LayoutWrapper><BingAdsService /></LayoutWrapper>} />
+            <Route path="/services/yelp-ads" element={<LayoutWrapper><YelpAdsService /></LayoutWrapper>} />
             <Route path="/industries/industrial-sector" element={<LayoutWrapper><IndustrialSectorPage /></LayoutWrapper>} />
             <Route path="/industries/decision-intelligence" element={<LayoutWrapper><DecisionIntelligencePage /></LayoutWrapper>} />
             <Route path="/industries/fintech-finance" element={<LayoutWrapper><FintechFinancePage /></LayoutWrapper>} />

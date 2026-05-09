@@ -12,22 +12,22 @@ const offerings = [
   { num: "01", title: "Technical Due Diligence", desc: "Deep code, architecture, and team assessments for investors, acquirers, and boards making high-stakes decisions." },
   { num: "02", title: "System Design & Architecture Review", desc: "Identify bottlenecks, single points of failure, and scaling risks before they become production incidents." },
   { num: "03", title: "AI Strategy & Roadmapping", desc: "Translate AI capabilities into a prioritized roadmap aligned with business goals, team maturity, and budget reality." },
-  { num: "04", title: "CTO-as-a-Service", desc: "Fractional technical leadership for early-stage teams — product decisions, hiring, vendor evaluation, and engineering culture." },
+  { num: "04", title: "CTO-as-a-Service", desc: "Fractional technical leadership for early-stage teams - product decisions, hiring, vendor evaluation, and engineering culture." },
   { num: "05", title: "Technology Stack Selection", desc: "Objective guidance on frameworks, cloud providers, databases, and tooling based on your product trajectory, not vendor bias." },
   { num: "06", title: "Engineering Process & DevOps Consulting", desc: "CI/CD pipelines, code review culture, sprint structure, and on-call practices that scale with your team." },
 ];
 
 const pillars = [
-  { num: "01", title: "Business-First Thinking", desc: "Every architecture decision is evaluated against business impact — cost, speed, risk, and competitive advantage — not just technical elegance." },
+  { num: "01", title: "Business-First Thinking", desc: "Every architecture decision is evaluated against business impact - cost, speed, risk, and competitive advantage - not just technical elegance." },
   { num: "02", title: "Honest, Independent Advice", desc: "No vendor relationships. No hidden incentives. We tell you what to build, what to buy, and what to avoid, based purely on what's right for your product." },
-  { num: "03", title: "Senior-Level Expertise", desc: "Advice from engineers who have designed and scaled systems in production — not consultants reading documentation." },
+  { num: "03", title: "Senior-Level Expertise", desc: "Advice from engineers who have designed and scaled systems in production - not consultants reading documentation." },
 ];
 
 const processSteps = [
   { num: "01", title: "Discovery", desc: "We start by understanding your business context, current architecture, team strengths, and the decisions you're facing." },
-  { num: "02", title: "Assessment", desc: "Deep technical review — codebase, infrastructure, data models, and team workflows — to map risk and opportunity." },
+  { num: "02", title: "Assessment", desc: "Deep technical review - codebase, infrastructure, data models, and team workflows - to map risk and opportunity." },
   { num: "03", title: "Strategy Delivery", desc: "A clear, prioritized action plan with concrete recommendations, trade-off analysis, and an implementation roadmap." },
-  { num: "04", title: "Ongoing Advisory", desc: "Embedded advisory support through implementation — available for architecture reviews, hire interviews, and critical decisions." },
+  { num: "04", title: "Ongoing Advisory", desc: "Embedded advisory support through implementation - available for architecture reviews, hire interviews, and critical decisions." },
 ];
 
 export default function StrategyService() {
@@ -104,12 +104,12 @@ export default function StrategyService() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
-              We partner with founders and engineering leaders on system design, AI strategy, and technical direction — reducing risk and enabling smarter, faster decisions at every stage of growth.
+              We partner with founders and engineering leaders on system design, AI strategy, and technical direction - reducing risk and enabling smarter, faster decisions at every stage of growth.
             </motion.p>
         </div>
       </motion.section>
 
-      {/* SECTION 1 — What We Offer (GlowCard with hover-expand) */}
+      {/* SECTION 1 - What We Offer (GlowCard with hover-expand) */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -157,7 +157,7 @@ export default function StrategyService() {
         </div>
       </section>
 
-      {/* SECTION 2 — Our Approach (hover-expand list) */}
+      {/* SECTION 2 - Our Approach (hover-expand list) */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -218,13 +218,13 @@ export default function StrategyService() {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <h3 className="text-2xl md:text-3xl font-bold mb-6">Data-Driven Strategy, Not Guesswork</h3>
-              <p className="text-muted-foreground leading-relaxed">We back every recommendation with real research — competitor analysis, user interviews, and technical audits. Your roadmap comes with evidence, not assumptions.</p>
+              <p className="text-muted-foreground leading-relaxed">We back every recommendation with real research - competitor analysis, user interviews, and technical audits. Your roadmap comes with evidence, not assumptions.</p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 3 — Process (scroll-driven timeline) */}
+      {/* SECTION 3 - Process (scroll-driven timeline) */}
       <section ref={sec3Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <ProcessTimeline steps={processSteps} inView={sec3InView} sectionLabel="/03" />

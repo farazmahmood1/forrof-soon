@@ -64,7 +64,8 @@ const LogoTrack = memo(
               alt={logoAlt(altNames[i % altNames.length])}
               width={160}
               height={68}
-              loading="eager"
+              // First 6 are above-the-fold; rest can lazy-load
+              loading={i < 6 ? "eager" : "lazy"}
               decoding="async"
               onError={onErr}
               className="cs-logo-img"

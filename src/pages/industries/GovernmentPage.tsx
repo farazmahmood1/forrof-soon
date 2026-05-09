@@ -32,7 +32,7 @@ const challenges = [
 ];
 
 const whoItsFor = [
-  { title: "Central and Local Authorities", desc: "Digital transformation for ministries, municipalities, and regional authorities — from internal workflows to citizen-facing portals." },
+  { title: "Central and Local Authorities", desc: "Digital transformation for ministries, municipalities, and regional authorities - from internal workflows to citizen-facing portals." },
   { title: "Social Security and Employment", desc: "Scalable systems for benefits processing, employment services, and case management across large populations." },
   { title: "Tax Services & Revenue Agencies", desc: "Secure platforms for tax filing, revenue collection, compliance monitoring, and taxpayer self-service." },
   { title: "Utilities & Energy Regulators", desc: "Monitoring dashboards, licensing portals, and regulatory compliance tools for utility oversight and energy management." },
@@ -51,21 +51,21 @@ const services = [
 ];
 
 const whatWeBuild = [
-  { title: "Citizen Service Portals", desc: "Self-service platforms where citizens can apply for services, track requests, and receive notifications — reducing counter visits." },
+  { title: "Citizen Service Portals", desc: "Self-service platforms where citizens can apply for services, track requests, and receive notifications - reducing counter visits." },
   { title: "Document & Workflow Automation", desc: "Digitize paper-based processes with automated routing, approvals, and archiving for faster turnaround and fewer errors." },
   { title: "Permits & Licensing Platforms", desc: "End-to-end systems for application submission, review, approval, and renewal of permits and licenses." },
   { title: "Public Safety & Emergency Systems", desc: "Real-time dashboards, alerting systems, and coordination tools for emergency management and public safety agencies." },
-  { title: "Grant/Benefit Management Systems", desc: "Manage the full lifecycle of grants and benefits — from eligibility checks and applications to disbursement and reporting." },
+  { title: "Grant/Benefit Management Systems", desc: "Manage the full lifecycle of grants and benefits - from eligibility checks and applications to disbursement and reporting." },
   { title: "Analytics Dashboards & Reporting", desc: "Interactive dashboards that turn operational data into actionable insights for leadership and public transparency." },
   { title: "Internal HR/Procurement Platforms", desc: "Custom platforms for workforce management, recruitment, procurement workflows, and vendor management." },
   { title: "Secure Data Sharing Platforms", desc: "Controlled, auditable data exchange between agencies with role-based access, encryption, and consent management." },
 ];
 
 const securityItems = [
-  { title: "Security-by-Design Architecture", desc: "Security is embedded from the first design decision — not bolted on at the end. Threat modeling, secure defaults, and least-privilege access are standard." },
+  { title: "Security-by-Design Architecture", desc: "Security is embedded from the first design decision - not bolted on at the end. Threat modeling, secure defaults, and least-privilege access are standard." },
   { title: "DevSecOps Delivery", desc: "Automated security scanning, dependency checks, and vulnerability testing integrated into every build and deployment pipeline." },
   { title: "Audit Readiness", desc: "Comprehensive logging, change tracking, and exportable reports so your systems are always ready for internal or external audits." },
-  { title: "Deployment Flexibility", desc: "On-premise, private cloud, or hybrid — we deploy where your data residency and sovereignty requirements demand." },
+  { title: "Deployment Flexibility", desc: "On-premise, private cloud, or hybrid - we deploy where your data residency and sovereignty requirements demand." },
   { title: "Continuity & Support", desc: "Disaster recovery plans, automated backups, failover configurations, and 24/7 monitoring to keep critical systems running." },
 ];
 
@@ -157,7 +157,7 @@ export default function GovernmentPage() {
         </div>
       </motion.section>
 
-      {/* ═══════════ SEC 1 — Challenges (accordion with numbered indicators) ═══════════ */}
+      {/* ═══════════ SEC 1 - Challenges (accordion with numbered indicators) ═══════════ */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec1InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -203,7 +203,7 @@ export default function GovernmentPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 2 — Who It's For (click-to-select with detail panel) ═══════════ */}
+      {/* ═══════════ SEC 2 - Who It's For (click-to-select with detail panel) ═══════════ */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec2InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -263,7 +263,7 @@ export default function GovernmentPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 3 — Services (hover-expand list) ═══════════ */}
+      {/* ═══════════ SEC 3 - Services (hover-expand list) ═══════════ */}
       <section ref={sec3Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec3InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -308,7 +308,7 @@ export default function GovernmentPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 4 — What We Build (vertical tabs with layoutId) ═══════════ */}
+      {/* ═══════════ SEC 4 - What We Build (vertical tabs with layoutId) ═══════════ */}
       <section ref={sec4Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec4InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -361,7 +361,7 @@ export default function GovernmentPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 5 — Security & Compliance (glow cards with Shield icons) ═══════════ */}
+      {/* ═══════════ SEC 5 - Security & Compliance (glow cards with Shield icons) ═══════════ */}
       <section ref={sec5Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec5InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -406,7 +406,7 @@ export default function GovernmentPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 6 — Why Choose Us (stat cards with CountUp) ═══════════ */}
+      {/* ═══════════ SEC 6 - Why Choose Us (stat cards with CountUp) ═══════════ */}
       <section ref={sec6Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec6InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>

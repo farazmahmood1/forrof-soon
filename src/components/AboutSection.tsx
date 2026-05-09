@@ -5,11 +5,11 @@ import { ArrowUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const words =
-  "We build intelligent products and business systems that turn software into a growth engine.".split(
+  "We build intelligent AI products, scalable SaaS platforms, and full-funnel marketing engines that turn ideas into measurable growth.".split(
     " "
   );
 
-// Simple whileInView word reveal — no scroll-linked hooks
+// Simple whileInView word reveal - no scroll-linked hooks
 const WordByWordReveal = ({ words }: { words: string[] }) => (
   <p className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight">
     {words.map((word, i) => (
@@ -39,7 +39,7 @@ export const AboutSection = () => {
       data-no-cursor-light
     >
 
-      {/* Large decorative text in background — static, no scroll animation */}
+      {/* Large decorative text in background - static, no scroll animation */}
       <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none">
         <span className="text-[25vw] font-bold text-foreground/[0.04] whitespace-nowrap">
           FORROF

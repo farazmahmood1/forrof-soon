@@ -10,10 +10,10 @@ import { MvpTerminalBlock } from "@/components/AiMlVisuals";
 
 const offerings = [
   { num: "01", title: "Product Discovery & Requirement Analysis", desc: "Map user needs, define scope, and establish clear success criteria before writing a single line of code." },
-  { num: "02", title: "Rapid Prototyping & UX/UI Design", desc: "Clickable prototypes and polished UI in days, not months — validated with real users before development begins." },
+  { num: "02", title: "Rapid Prototyping & UX/UI Design", desc: "Clickable prototypes and polished UI in days, not months - validated with real users before development begins." },
   { num: "03", title: "Replit-Based MVPs for Rapid Iteration", desc: "Collaborative, cloud-based development environments for ultra-fast iteration and stakeholder demos." },
   { num: "04", title: "Technical Feasibility & Architecture Planning", desc: "Honest feasibility assessment and a scalable architecture plan that grows with your product." },
-  { num: "05", title: "Lean Product Roadmap Planning", desc: "Prioritize ruthlessly — only the features that prove the hypothesis and attract early adopters make the cut." },
+  { num: "05", title: "Lean Product Roadmap Planning", desc: "Prioritize ruthlessly - only the features that prove the hypothesis and attract early adopters make the cut." },
   { num: "06", title: "Early-Stage Launch & Support", desc: "Go-live support, monitoring, and rapid iteration based on real user feedback from launch day." },
   { num: "07", title: "No-Code/Low-Code MVP Solutions", desc: "Ship faster with Bubble, Webflow, or Retool when speed to market matters more than custom code." },
   { num: "08", title: "Pitch Deck & Investor-Ready Materials", desc: "Compelling pitch narrative, financial models, and demo-ready prototypes that open doors with investors." },
@@ -21,13 +21,13 @@ const offerings = [
 
 const excellence = [
   { title: "Lean & Focused", desc: "Our MVPs include only the essential features needed to test assumptions and gather feedback. This minimizes waste and maximizes learning early in the product lifecycle." },
-  { title: "Rapid Prototyping", desc: "We prioritize speed and clarity — using low-code, boilerplates, and AI tools to build and iterate MVPs and POCs quickly, so ideas can be validated with real users fast." },
+  { title: "Rapid Prototyping", desc: "We prioritize speed and clarity - using low-code, boilerplates, and AI tools to build and iterate MVPs and POCs quickly, so ideas can be validated with real users fast." },
   { title: "Validated Learning", desc: "We integrate analytics, feedback loops, and user tracking from day one (e.g., via Mixpanel, Amplitude, or Hotjar) to help refine direction and prioritize improvements after launch." },
 ];
 
 const processSteps = [
   { num: "01", title: "Planning", desc: "At Forrof, we create clear roadmaps by defining goals, scope, and timelines to ensure project success from the start." },
-  { num: "02", title: "Development", desc: "Our in-house developers deliver clean, scalable code — no freelancers or part-timers — bringing your vision to life efficiently." },
+  { num: "02", title: "Development", desc: "Our in-house developers deliver clean, scalable code - no freelancers or part-timers - bringing your vision to life efficiently." },
   { num: "03", title: "Testing & Deployment", desc: "We thoroughly test and deploy your product with confidence, ensuring smooth performance and reliability." },
 ];
 
@@ -38,7 +38,7 @@ const delivery = [
 
 const faqs = [
   { q: "What is an average time to build an MVP?", a: "Most MVPs take between 4 and 12 weeks to build, depending on complexity, the number of integrations, and whether custom design is required. A lean MVP with core features can often be delivered in 4–6 weeks; a more complex product with API integrations and a polished UI typically takes 8–12 weeks. We'll give you a precise estimate after a discovery call." },
-  { q: "But can I hire an individual developer?", a: "You can — but with Forrof you get more than one developer. You get a dedicated team including a product lead, engineers, and QA, all aligned on your goal. Individual developers often lack the breadth to handle architecture, design, testing, and delivery simultaneously. Our team approach means faster velocity, fewer blind spots, and a product you can actually ship to users." },
+  { q: "But can I hire an individual developer?", a: "You can - but with Forrof you get more than one developer. You get a dedicated team including a product lead, engineers, and QA, all aligned on your goal. Individual developers often lack the breadth to handle architecture, design, testing, and delivery simultaneously. Our team approach means faster velocity, fewer blind spots, and a product you can actually ship to users." },
 ];
 
 export default function MvpService() {
@@ -145,7 +145,7 @@ export default function MvpService() {
         </div>
       </motion.section>
 
-      {/* SECTION 1 — Our Approach */}
+      {/* SECTION 1 - Our Approach */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -173,7 +173,7 @@ export default function MvpService() {
             animate={sec1InView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            MVP and POC development isn't just a quick build — it's a strategic approach. We focus on delivering functional, testable products fast, helping you validate ideas, attract investors, and reduce time-to-market without sacrificing quality or scalability.
+            MVP and POC development isn't just a quick build - it's a strategic approach. We focus on delivering functional, testable products fast, helping you validate ideas, attract investors, and reduce time-to-market without sacrificing quality or scalability.
           </motion.p>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -185,7 +185,7 @@ export default function MvpService() {
             >
               <h3 className="text-2xl font-bold mb-5">Focused MVPs</h3>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                Validate your ideas quickly with functional, high-quality MVPs designed to accelerate feedback and investor interest — without wasting time or resources.
+                Validate your ideas quickly with functional, high-quality MVPs designed to accelerate feedback and investor interest - without wasting time or resources.
               </p>
             </motion.div>
 
@@ -204,7 +204,7 @@ export default function MvpService() {
         </div>
       </section>
 
-      {/* CALLOUT — Tech Stack */}
+      {/* CALLOUT - Tech Stack */}
       <section className="section-forced-dark section-padding py-24">
         <div className="max-w-[1800px] mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
@@ -217,13 +217,13 @@ export default function MvpService() {
               </h2>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed self-end">
-              We choose technologies based on what's right for your product — not what's easiest to staff. From no-code tools for speed to production-grade frameworks for scale, every decision is deliberate.
+              We choose technologies based on what's right for your product - not what's easiest to staff. From no-code tools for speed to production-grade frameworks for scale, every decision is deliberate.
             </p>
           </div>
         </div>
       </section>
 
-      {/* SECTION 2 — What We Offer */}
+      {/* SECTION 2 - What We Offer */}
       <section ref={sec2Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -299,14 +299,14 @@ export default function MvpService() {
         </div>
       </section>
 
-      {/* SECTION 3 — Process */}
+      {/* SECTION 3 - Process */}
       <section ref={sec3Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <ProcessTimeline steps={processSteps} inView={sec3InView} sectionLabel="/03" />
         </div>
       </section>
 
-      {/* SECTION 4 — How We Excel */}
+      {/* SECTION 4 - How We Excel */}
       <section ref={sec4Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -358,7 +358,7 @@ export default function MvpService() {
         </div>
       </section>
 
-      {/* SECTION 5 — How We Deliver */}
+      {/* SECTION 5 - How We Deliver */}
       <section ref={sec5Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -409,7 +409,7 @@ export default function MvpService() {
         </div>
       </section>
 
-      {/* SECTION 6 — FAQ */}
+      {/* SECTION 6 - FAQ */}
       <section ref={sec6Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div

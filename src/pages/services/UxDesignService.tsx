@@ -9,27 +9,27 @@ import { useNavigate } from "react-router-dom";
 import { UxTerminalBlock } from "@/components/AiMlVisuals";
 
 const designServices = [
-  { num: "01", title: "Web-app Design", desc: "Complex product interfaces simplified — dashboards, portals, and SaaS tools that users actually enjoy navigating." },
+  { num: "01", title: "Web-app Design", desc: "Complex product interfaces simplified - dashboards, portals, and SaaS tools that users actually enjoy navigating." },
   { num: "02", title: "Mobile Design", desc: "Native-feeling iOS and Android experiences designed around thumb zones, gestures, and mobile-first interaction patterns." },
   { num: "03", title: "Wireframing & Prototyping", desc: "Low and high-fidelity prototypes that validate flows, surface usability issues, and align stakeholders before development." },
   { num: "04", title: "User Research", desc: "Interviews, usability tests, and behavioral analysis to ground every design decision in evidence rather than opinion." },
   { num: "05", title: "UX Audit", desc: "A structured review of your existing product identifying friction points, drop-offs, and opportunities to improve KPIs." },
-  { num: "06", title: "Ongoing Design Support", desc: "Embedded design partnership for continuous product evolution — sprint-by-sprint or on-demand." },
+  { num: "06", title: "Ongoing Design Support", desc: "Embedded design partnership for continuous product evolution - sprint-by-sprint or on-demand." },
 ];
 
 const processSteps = [
   { num: "01", title: "Stakeholder Interviews", desc: "We talk to your team, users, and leadership to understand goals, constraints, and what success really looks like." },
   { num: "02", title: "Benchmarking & Trend Analysis", desc: "Competitive landscape review and design trend analysis to position your product at the forefront of your category." },
   { num: "03", title: "Userflow & Wireframes", desc: "Information architecture, user journeys, and low-fidelity wireframes that map the full product experience." },
-  { num: "04", title: "Visual Direction", desc: "Moodboards, style explorations, and design language foundations — finding the right aesthetic that serves your brand." },
-  { num: "05", title: "UI Design", desc: "Pixel-perfect high-fidelity screens with a complete design system — components, tokens, states, and documentation." },
+  { num: "04", title: "Visual Direction", desc: "Moodboards, style explorations, and design language foundations - finding the right aesthetic that serves your brand." },
+  { num: "05", title: "UI Design", desc: "Pixel-perfect high-fidelity screens with a complete design system - components, tokens, states, and documentation." },
   { num: "06", title: "Design Hand-off", desc: "Developer-ready Figma files, annotated specs, interactive prototypes, and a living component library." },
 ];
 
 const whyUs = [
   { title: "Faster Time-to-Market", desc: "Streamlined processes and reusable design systems cut design-to-dev handoff time significantly." },
-  { title: "Feasible Design", desc: "Every design decision is made with engineering constraints in mind — no beautiful concepts that can't actually be built." },
-  { title: "Business-Driven Design", desc: "We optimize for your metrics — conversion, retention, activation — not just aesthetics or awards." },
+  { title: "Feasible Design", desc: "Every design decision is made with engineering constraints in mind - no beautiful concepts that can't actually be built." },
+  { title: "Business-Driven Design", desc: "We optimize for your metrics - conversion, retention, activation - not just aesthetics or awards." },
   { title: "Long-Term Design Support", desc: "A design partner who grows with your product, not a one-time agency engagement." },
   { title: "Transparent and Collaborative Partnership", desc: "Weekly reviews, shared Figma workspaces, and honest conversations about trade-offs throughout every project." },
   { title: "Seamless Developer Handoff", desc: "Organized file structure, auto-layout, variables, and annotations that make developers' lives measurably easier." },
@@ -44,7 +44,7 @@ const stats = [
 export default function UxDesignService() {
   usePageMetadata({
     title: "UI/UX Design Services | Forrof",
-    description: "World-class UI/UX design services that improve user satisfaction, boost retention, and drive business growth. From web apps to mobile — we design for results.",
+    description: "World-class UI/UX design services that improve user satisfaction, boost retention, and drive business growth. From web apps to mobile - we design for results.",
     keywords: "UI UX design, product design, web app design, mobile design, UX audit, wireframing, prototyping, design system",
   });
 
@@ -122,7 +122,7 @@ export default function UxDesignService() {
         </div>
       </motion.section>
 
-      {/* SECTION 1 — Design Services */}
+      {/* SECTION 1 - Design Services */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -182,20 +182,20 @@ export default function UxDesignService() {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <h3 className="text-2xl md:text-3xl font-bold mb-6">Design Systems That Scale</h3>
-              <p className="text-muted-foreground leading-relaxed">We deliver more than mockups — complete design systems with tokens, components, and motion guidelines that keep your product consistent as it grows.</p>
+              <p className="text-muted-foreground leading-relaxed">We deliver more than mockups - complete design systems with tokens, components, and motion guidelines that keep your product consistent as it grows.</p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 2 — How We Work */}
+      {/* SECTION 2 - How We Work */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <ProcessTimeline steps={processSteps} inView={sec2InView} sectionLabel="/02" title="How We Work" labelText="Process" />
         </div>
       </section>
 
-      {/* SECTION 3 — Why Choose Us + Stats */}
+      {/* SECTION 3 - Why Choose Us + Stats */}
       <section ref={sec3Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div

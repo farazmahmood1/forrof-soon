@@ -42,7 +42,7 @@ export const InsightsSection = () => {
       }));
       setDisplayedInsights(mapped);
     }).catch(() => {
-      // API unavailable — section stays empty
+      // API unavailable - section stays empty
     });
     return () => { cancelled = true; };
   }, []);
@@ -100,7 +100,7 @@ export const InsightsSection = () => {
           </motion.div>
         </div>
 
-        {/* Insights Grid — GPU-accelerated hover effects */}
+        {/* Insights Grid - GPU-accelerated hover effects */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {displayedInsights.map((insight) => (
             <article
@@ -111,9 +111,9 @@ export const InsightsSection = () => {
               data-cursor="Read"
               onClick={() => handleArticleClick(insight)}
             >
-              {/* Image Container — single composite layer */}
+              {/* Image Container - single composite layer */}
               <div className="relative overflow-hidden rounded-2xl mb-6 aspect-[4/3]">
-                {/* Main Image — use GPU-friendly scale via will-change */}
+                {/* Main Image - use GPU-friendly scale via will-change */}
                 <img
                   src={insight.image}
                   alt={`${insight.title} – Forrof software agency insights`}
@@ -136,7 +136,7 @@ export const InsightsSection = () => {
                   ))}
                 </div>
 
-                {/* Read More Arrow — simpler animation (opacity + scale only) */}
+                {/* Read More Arrow - simpler animation (opacity + scale only) */}
                 <div className="absolute bottom-6 right-6 w-14 h-14 bg-foreground rounded-full flex items-center justify-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-400 will-change-transform">
                   <ArrowUpRight className="text-background" size={20} />
                 </div>
@@ -164,7 +164,7 @@ export const InsightsSection = () => {
                   </span>
                 </h3>
 
-                {/* Excerpt — sanitized at load time, not on render */}
+                {/* Excerpt - sanitized at load time, not on render */}
                 <div
                   className="text-muted-foreground text-sm leading-relaxed"
                   dangerouslySetInnerHTML={{ __html: insight.excerpt }}

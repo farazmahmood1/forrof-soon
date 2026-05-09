@@ -29,12 +29,16 @@ const generateStars = (count: number) =>
     };
   });
 
-export const HeroSection = () => {
+interface HeroSectionProps {
+  onGlobeReady?: () => void;
+}
+
+export const HeroSection = ({ onGlobeReady }: HeroSectionProps = {}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const globeRef = useRef<HTMLDivElement>(null);
 
-  // Native scroll parallax — no Framer Motion useScroll, no React re-renders.
+  // Native scroll parallax - no Framer Motion useScroll, no React re-renders.
   // Completely stops processing once the hero section scrolls fully off-screen.
   useEffect(() => {
     const container = containerRef.current;
@@ -140,7 +144,7 @@ export const HeroSection = () => {
             </div>
           }
         >
-          <HeroGlobe className="w-[120vw] h-full" />
+          <HeroGlobe className="w-[120vw] h-full" onReady={onGlobeReady} />
         </Suspense>
       </div>
 
@@ -149,7 +153,7 @@ export const HeroSection = () => {
         ref={contentRef}
         className="relative z-20 px-4 md:px-8 lg:px-16 xl:px-20 w-full h-full flex flex-col justify-between pt-[18vh] pb-[6vh] md:pb-[8vh]"
       >
-        {/* Top — /01 label + heading + subtitle + CTA */}
+        {/* Top - /01 label + heading + subtitle + CTA */}
         <div className="max-w-[1800px] mx-auto w-full">
           {/* /01 Section Label */}
           <motion.div
@@ -176,7 +180,7 @@ export const HeroSection = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.8 }}
             >
-              Space of Intelligent AI Products & Business Systems
+              Space of Intelligent Software, AI & Marketing Systems
             </motion.span>
           </motion.div>
 
@@ -190,11 +194,18 @@ export const HeroSection = () => {
               transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.3 }}
             >
               <span className="text-white">
-                Building Intelligent Software.
+                Building Intelligent Software
               </span>
               <br />
-              <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg, #ffffff 0%, #48f0e7 40%, #00d4aa 70%, #126b66 100%)" }}>
-                for the AI Era.
+              <span
+                className="text-transparent bg-clip-text"
+                style={{
+                  backgroundImage: "linear-gradient(135deg, #ffffff 0%, #48f0e7 40%, #00d4aa 70%, #126b66 100%)",
+                }}
+              >
+                & Scalable Growth Engines
+                <br />
+                for the AI Era
               </span>
             </motion.h1>
 
@@ -204,7 +215,7 @@ export const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9, duration: 0.8 }}
             >
-              We design and build custom software, AI systems, and digital platforms for companies worldwide — helping businesses scale with modern, future‑ready technology.
+              Custom software, AI systems, and growth marketing - built to scale companies worldwide.
             </motion.p>
 
               <motion.a
@@ -223,10 +234,10 @@ export const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Bottom-right — description + tags */}
+        {/* Bottom-right - description + tags */}
         <div className="max-w-[1800px] mx-auto w-full flex justify-end">
           <motion.div
-            className="max-w-[400px] hidden xl:flex flex-col items-end gap-6 flex-shrink-0"
+            className="max-w-[400px] hidden xl:flex flex-col items-end gap-4 flex-shrink-0"
           >
             <motion.p
               className="text-[15px] leading-[1.8] text-right font-light"
@@ -235,14 +246,14 @@ export const HeroSection = () => {
               transition={{ delay: 1.2, duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
             >
               <span className="text-white/90">
-                Whether through AI‑powered platforms, scalable product architectures, or intelligent automation systems,
+                AI platforms, scalable SaaS, intelligent automation, or growth marketing -
               </span>{" "}
               <span className="text-white/40">
-                we design and build software that becomes a long‑term business asset, not just an app.
+                we build software that scales and campaigns that compound.
               </span>
             </motion.p>
             <div className="flex gap-3 flex-wrap justify-end">
-              {["AI", "ML", "SaaS"].map((tag, i) => (
+              {["AI", "SaaS", "Ads", "SEO"].map((tag, i) => (
                 <motion.span
                   key={tag}
                   className="px-5 py-2 border-2 border-[#48f0e7]/40 text-white/80 rounded-full text-[11px] uppercase tracking-[0.2em] hover:border-[#48f0e7]/70 hover:text-[#48f0e7] transition-colors duration-300"

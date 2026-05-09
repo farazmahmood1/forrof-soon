@@ -26,20 +26,41 @@ const Index = () => {
   });
 
   const [isLoading, setIsLoading] = useState(!homeShown);
+  const [globeReady, setGlobeReady] = useState(homeShown);
+  const [minTimeElapsed, setMinTimeElapsed] = useState(homeShown);
 
+  // Minimum loader display so it doesn't flash off too fast on cached loads
   useEffect(() => {
     if (homeShown) return;
-    homeShown = true;
-    const t = setTimeout(() => setIsLoading(false), 1000);
+    const t = setTimeout(() => setMinTimeElapsed(true), 800);
     return () => clearTimeout(t);
   }, []);
+
+  // Hard cap: dismiss after 8s even if the globe never reports ready
+  // (slow connections, texture load errors, etc.)
+  useEffect(() => {
+    if (homeShown) return;
+    const t = setTimeout(() => {
+      setGlobeReady(true);
+      setMinTimeElapsed(true);
+    }, 8000);
+    return () => clearTimeout(t);
+  }, []);
+
+  // Hide the loader once BOTH conditions met: min time elapsed AND globe loaded
+  useEffect(() => {
+    if (globeReady && minTimeElapsed && !homeShown) {
+      homeShown = true;
+      setIsLoading(false);
+    }
+  }, [globeReady, minTimeElapsed]);
 
   return (
     <>
       <LoadingScreen isLoading={isLoading} />
 
       <main className="overflow-x-clip">
-        <HeroSection />
+        <HeroSection onGlobeReady={() => setGlobeReady(true)} />
         <OurClientsSection />
         <ServicesSection />
         <ProjectsSection />

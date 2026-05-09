@@ -11,16 +11,16 @@ export const CustomCursor = () => {
   const opacityMain = useMotionValue(0);
   const opacityTrail = useMotionValue(0);
 
-  // Raw motion values for main cursor — no spring overhead, instant response
+  // Raw motion values for main cursor - no spring overhead, instant response
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
 
-  // Only the trail gets springs — 2 springs instead of 6
+  // Only the trail gets springs - 2 springs instead of 6
   const trailX = useSpring(cursorX, { stiffness: 150, damping: 20 });
   const trailY = useSpring(cursorY, { stiffness: 150, damping: 20 });
 
   useEffect(() => {
-    // Skip attaching listeners entirely on touch devices — saves 7 event listeners
+    // Skip attaching listeners entirely on touch devices - saves 7 event listeners
     if (isTouchDevice) return;
 
     let rafId = 0;
@@ -108,7 +108,7 @@ export const CustomCursor = () => {
         }}
       />
 
-      {/* Main cursor — raw values, no spring delay */}
+      {/* Main cursor - raw values, no spring delay */}
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[9999] rounded-full bg-foreground flex items-center justify-center w-4 h-4"
         style={{

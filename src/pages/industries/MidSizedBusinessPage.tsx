@@ -142,7 +142,7 @@ export default function MidSizedBusinessPage() {
         </div>
       </motion.section>
 
-      {/* ═══════════ SEC 1 — Who We Help (vertical tabs with layoutId) ═══════════ */}
+      {/* ═══════════ SEC 1 - Who We Help (vertical tabs with layoutId) ═══════════ */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec1InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -198,7 +198,7 @@ export default function MidSizedBusinessPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 2 — Challenges (click-to-select) ═══════════ */}
+      {/* ═══════════ SEC 2 - Challenges (click-to-select) ═══════════ */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec2InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -265,7 +265,7 @@ export default function MidSizedBusinessPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 3 — Value (glow cards with hover-expand) ═══════════ */}
+      {/* ═══════════ SEC 3 - Value (glow cards with hover-expand) ═══════════ */}
       <section ref={sec3Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec3InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -299,7 +299,7 @@ export default function MidSizedBusinessPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 4 — What We Build (hover-expand list) ═══════════ */}
+      {/* ═══════════ SEC 4 - What We Build (hover-expand list) ═══════════ */}
       <section ref={sec4Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec4InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -344,7 +344,7 @@ export default function MidSizedBusinessPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 5 — Engagement Models (accordion with numbered indicators) ═══════════ */}
+      {/* ═══════════ SEC 5 - Engagement Models (accordion with numbered indicators) ═══════════ */}
       <section ref={sec5Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec5InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -396,7 +396,7 @@ export default function MidSizedBusinessPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 6 — How We Work (vertical tabs with layoutId) ═══════════ */}
+      {/* ═══════════ SEC 6 - How We Work (vertical tabs with layoutId) ═══════════ */}
       <section ref={sec6Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec6InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>

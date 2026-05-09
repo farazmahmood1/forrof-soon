@@ -16,6 +16,7 @@ export const ContactSection = () => {
     email: "",
     company: "",
     budget: "",
+    serviceInterest: "",
     message: "",
   });
   const [focusedField, setFocusedField] = useState<string | null>(null);
@@ -41,6 +42,7 @@ export const ContactSection = () => {
           email: "",
           company: "",
           budget: "",
+          serviceInterest: "",
           message: "",
         });
       } else {
@@ -270,6 +272,51 @@ export const ContactSection = () => {
                 </motion.div>
               ))}
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.65 }}
+            >
+              <motion.label
+                className="block text-sm font-medium mb-3 text-muted-foreground"
+                animate={{
+                  color:
+                    focusedField === "serviceInterest"
+                      ? "hsl(var(--foreground))"
+                      : "hsl(var(--muted-foreground))",
+                }}
+              >
+                What do you need?
+              </motion.label>
+              <select
+                name="serviceInterest"
+                value={formData.serviceInterest}
+                onChange={(e) =>
+                  setFormData({ ...formData, serviceInterest: e.target.value })
+                }
+                onFocus={() => setFocusedField("serviceInterest")}
+                onBlur={() => setFocusedField(null)}
+                className="w-full bg-background border-b-2 border-border py-4 focus:outline-none transition-colors text-foreground"
+              >
+                <option value="">Select a service…</option>
+                <option value="paid-ads">Paid Ads (Google, Meta, LinkedIn)</option>
+                <option value="google-ads">Google Ads</option>
+                <option value="meta-ads">Meta Ads</option>
+                <option value="social-media">Social Media Marketing</option>
+                <option value="seo">SEO</option>
+                <option value="software">Custom Software & Web</option>
+                <option value="ai-ml">AI / ML Development</option>
+                <option value="saas">SaaS Development</option>
+                <option value="not-sure">Not sure yet - let's talk</option>
+              </select>
+              <motion.div
+                className="h-0.5 bg-foreground origin-left mt-[-2px]"
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: focusedField === "serviceInterest" ? 1 : 0 }}
+                transition={{ duration: 0.4 }}
+              />
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}

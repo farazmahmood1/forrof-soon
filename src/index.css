@@ -23,7 +23,7 @@
     --muted: 215 10% 78%;
     --muted-foreground: 215 12% 50%;
 
-    --accent: 174 72% 25%; /* #126b66 — brand teal */
+    --accent: 174 72% 25%; /* #126b66 - brand teal */
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -38,8 +38,8 @@
 
   .dark {
     /* Dark Mode */
-    --background: 220 55% 3%; /* #050a12 — deep blue-black */
-    --foreground: 36 20% 92%; /* #f0ece6 — warm white */
+    --background: 220 55% 3%; /* #050a12 - deep blue-black */
+    --foreground: 36 20% 92%; /* #f0ece6 - warm white */
 
     --card: 220 40% 7%;
     --card-foreground: 36 20% 92%;
@@ -54,9 +54,9 @@
     --secondary-foreground: 0 0% 98%;
 
     --muted: 215 15% 25%;
-    --muted-foreground: 210 13% 54%; /* #7a8a99 — blue-tinted gray */
+    --muted-foreground: 210 13% 54%; /* #7a8a99 - blue-tinted gray */
 
-    --accent: 168 100% 42%; /* #00d4aa — bright cyan */
+    --accent: 168 100% 42%; /* #00d4aa - bright cyan */
     --accent-foreground: 220 55% 3%;
 
     --destructive: 0 84.2% 60.2%;
@@ -200,7 +200,7 @@
 
 /* ─── Section forced themes ───────────────────────────────────────────────
    Overrides CSS vars at section scope so children still use hsl(var(--x)).
-   Green gradient is static (no animation) — pure CSS, zero JS overhead.
+   Green gradient is static (no animation) - pure CSS, zero JS overhead.
 ───────────────────────────────────────────────────────────────────────── */
 
 .section-forced-dark {
@@ -241,7 +241,7 @@
   position: relative;
 }
 
-/* Article content styling — force light text over inline styles from CMS */
+/* Article content styling - force light text over inline styles from CMS */
 .article-content,
 .article-content * {
   color: hsl(var(--muted-foreground)) !important;
@@ -363,7 +363,7 @@
 
 /* ─── Layout containment for scroll perf ──────────────────��──────────── */
 /* Removed overly broad [style*="transform"] { will-change: transform }
-   rule — it was creating a compositing layer for EVERY framer-motion
+   rule - it was creating a compositing layer for EVERY framer-motion
    element on the page, thrashing GPU memory during scroll.
    The marquee tracks already have will-change set explicitly above. */
 .section-forced-dark,

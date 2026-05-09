@@ -17,11 +17,11 @@ const problems = [
 ];
 
 const valueProps = [
-  { title: "AI Strategy & Roadmapping", desc: "We help you identify the right use cases and align AI goals with business value — no hype, no wasted spend." },
+  { title: "AI Strategy & Roadmapping", desc: "We help you identify the right use cases and align AI goals with business value - no hype, no wasted spend." },
   { title: "ML Model Development & Deployment", desc: "We build and deploy custom models that solve specific problems and scale with your growth." },
   { title: "Data Engineering & MLOps", desc: "Our team creates clean, reliable data pipelines and supports continuous model monitoring and improvement." },
   { title: "Ethical AI by Design", desc: "Transparency, explainability, and compliance are embedded in every step of development." },
-  { title: "Full Ownership", desc: "You retain all rights to the code, models, and data — no vendor lock-in, no hidden traps." },
+  { title: "Full Ownership", desc: "You retain all rights to the code, models, and data - no vendor lock-in, no hidden traps." },
 ];
 
 const serviceCards = [
@@ -48,12 +48,12 @@ const serviceCards = [
   {
     num: "05",
     title: "Predictive Analytics & Forecasting",
-    desc: "Based on historical data, we can teach a particular model to forecast the future. This type of AI & ML service is often connected to fintech or marketing — for example, predicting how likely a certain client will repay a loan.",
+    desc: "Based on historical data, we can teach a particular model to forecast the future. This type of AI & ML service is often connected to fintech or marketing - for example, predicting how likely a certain client will repay a loan.",
   },
   {
     num: "06",
     title: "AI-Powered Product Integrations",
-    desc: "We connect advanced AI/ML capabilities directly into your existing tools — recommendations, search, vision, NLP — to boost efficiency and business value.",
+    desc: "We connect advanced AI/ML capabilities directly into your existing tools - recommendations, search, vision, NLP - to boost efficiency and business value.",
   },
 ];
 
@@ -76,7 +76,7 @@ const whyUs = [
   },
   {
     title: "No Vendor Lock-In",
-    desc: "You retain full ownership of the source code, data, and machine learning models — everything we build is yours.",
+    desc: "You retain full ownership of the source code, data, and machine learning models - everything we build is yours.",
   },
 ];
 
@@ -148,12 +148,12 @@ const processSteps = [
   {
     num: "02",
     title: "Data Acquisition & Preparation",
-    desc: "AI systems are only as strong as their data. We acquire relevant datasets, ensure data quality, handle bias, and prepare the training pipeline — including labeling, structuring, cleaning, and augmentation when needed.",
+    desc: "AI systems are only as strong as their data. We acquire relevant datasets, ensure data quality, handle bias, and prepare the training pipeline - including labeling, structuring, cleaning, and augmentation when needed.",
   },
   {
     num: "03",
     title: "AI/ML Development",
-    desc: "Our in-house experts architect the intelligence layer — whether it's an ML model, rule-based AI system, or hybrid approach. We handle algorithm selection, feature engineering, model training, and optimisation in secure environments.",
+    desc: "Our in-house experts architect the intelligence layer - whether it's an ML model, rule-based AI system, or hybrid approach. We handle algorithm selection, feature engineering, model training, and optimisation in secure environments.",
   },
   {
     num: "04",
@@ -163,12 +163,12 @@ const processSteps = [
   {
     num: "05",
     title: "Deployment & Integration",
-    desc: "We deploy models into live environments using APIs, microservices, or edge AI where needed. Whether embedded in web apps, mobile, or enterprise systems — the goal is frictionless delivery with CI/CD pipelines.",
+    desc: "We deploy models into live environments using APIs, microservices, or edge AI where needed. Whether embedded in web apps, mobile, or enterprise systems - the goal is frictionless delivery with CI/CD pipelines.",
   },
   {
     num: "06",
     title: "Monitoring, Feedback & Iteration",
-    desc: "After launch, we monitor behaviour in production — tracking model drift, user feedback, latency, and performance. Our MLOps/AIOps stack supports automated retraining, rollback, and adjustments to keep your system intelligent and adaptive.",
+    desc: "After launch, we monitor behaviour in production - tracking model drift, user feedback, latency, and performance. Our MLOps/AIOps stack supports automated retraining, rollback, and adjustments to keep your system intelligent and adaptive.",
   },
 ];
 
@@ -275,7 +275,7 @@ export default function AiMlService() {
         </div>
       </motion.section>
 
-      {/* SECTION 1 — Value Proposition (click-to-select challenge/benefit) */}
+      {/* SECTION 1 - Value Proposition (click-to-select challenge/benefit) */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32 relative overflow-hidden">
         <div className="max-w-[1800px] mx-auto relative z-10">
           <motion.div
@@ -307,7 +307,7 @@ export default function AiMlService() {
           </motion.p>
 
           <div className="grid md:grid-cols-2 gap-12 lg:gap-24">
-            {/* Key Problems — click-to-select */}
+            {/* Key Problems - click-to-select */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={sec1InView ? { opacity: 1, y: 0 } : {}}
@@ -339,7 +339,7 @@ export default function AiMlService() {
               </ul>
             </motion.div>
 
-            {/* Value Props — animated detail panel */}
+            {/* Value Props - animated detail panel */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={sec1InView ? { opacity: 1, y: 0 } : {}}
@@ -381,7 +381,7 @@ export default function AiMlService() {
       </section>
 
 
-      {/* SECTION 2 — Services Overview (GlowCard with hover-reveal descriptions) */}
+      {/* SECTION 2 - Services Overview (GlowCard with hover-reveal descriptions) */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32 relative overflow-hidden">
         <div className="max-w-[1800px] mx-auto relative z-10">
           <motion.div
@@ -410,7 +410,7 @@ export default function AiMlService() {
               animate={sec2InView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Forrof provides AI/ML services that support seamless growth, operational efficiency, and continuous innovation — from prototype to production.
+              Forrof provides AI/ML services that support seamless growth, operational efficiency, and continuous innovation - from prototype to production.
             </motion.p>
           </div>
 
@@ -447,7 +447,7 @@ export default function AiMlService() {
             >
               <h3 className="text-2xl md:text-3xl font-bold mb-6">Production-Ready from Day One</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Our models don't just work in notebooks — they ship to production with monitoring, scaling, and CI/CD built in. From data pipeline to deployed endpoint, every step is engineered for reliability.
+                Our models don't just work in notebooks - they ship to production with monitoring, scaling, and CI/CD built in. From data pipeline to deployed endpoint, every step is engineered for reliability.
               </p>
               <Magnetic>
                 <button
@@ -463,7 +463,7 @@ export default function AiMlService() {
         </div>
       </section>
 
-      {/* SECTION 3 — Why Choose Us (hover-expand list) */}
+      {/* SECTION 3 - Why Choose Us (hover-expand list) */}
       <section ref={sec3Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -520,7 +520,7 @@ export default function AiMlService() {
         </div>
       </section>
 
-      {/* SECTION 4 — Industries (accordion with numbered indicator boxes) */}
+      {/* SECTION 4 - Industries (accordion with numbered indicator boxes) */}
       <section ref={sec4Ref} className="section-forced-dark section-padding py-32 relative overflow-hidden">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -608,7 +608,7 @@ export default function AiMlService() {
       </section>
 
 
-      {/* SECTION 5 — Process (centered alternating timeline) */}
+      {/* SECTION 5 - Process (centered alternating timeline) */}
       <section ref={sec5Ref} className="section-forced-dark section-padding py-32 overflow-hidden">
         <div className="max-w-[1800px] mx-auto">
           <ProcessTimeline steps={processSteps} inView={sec5InView} sectionLabel="/05" subtitle="* The processes of AI/ML development may vary from project to project since we are agile." />

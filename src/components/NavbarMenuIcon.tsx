@@ -111,6 +111,21 @@ const serviceLinks: ServiceLink[] = [
     slug: "social-media",
     subs: ["Social Media Strategy", "Content Creation & Copywriting", "Community Management", "Paid Social Advertising", "Analytics & Reporting", "Influencer Marketing"],
   },
+  {
+    name: "Paid Ads",
+    slug: "paid-ads",
+    subs: ["Google Search & PMax", "Paid Social (Meta, TikTok, LinkedIn)", "Retargeting & Remarketing", "Local Service Ads (LSA)", "Conversion Tracking & API", "Landing Page CRO"],
+  },
+  {
+    name: "Google Ads",
+    slug: "google-ads",
+    subs: ["Google Search Ads", "Performance Max (PMax)", "YouTube Ads", "Display & Discovery", "Local Service Ads", "Google Shopping"],
+  },
+  {
+    name: "Meta Ads",
+    slug: "meta-ads",
+    subs: ["Facebook & Instagram Ads", "Lookalike & Custom Audiences", "Creative Production & Testing", "Conversion API (CAPI)", "Retargeting Funnels", "Reporting & Attribution"],
+  },
 ];
 
 const menuVariants = {
@@ -345,7 +360,7 @@ export const NavbarMenuIcon = () => {
   const [logoHovered, setLogoHovered] = useState(false);
   const [inHeroZone, setInHeroZone] = useState(true);
 
-  // Track whether we're in the hero section — only setState when value actually changes
+  // Track whether we're in the hero section - only setState when value actually changes
   useEffect(() => {
     let prev = true;
     return scrollY.on("change", (v) => {
@@ -379,7 +394,7 @@ export const NavbarMenuIcon = () => {
     }
   }, [isOpen, isContactOpen]);
 
-  // Page stays scrollable when menu is open — no overflow lock
+  // Page stays scrollable when menu is open - no overflow lock
 
   const handleNavClick = (href: string) => {
     setIsOpen(false);
@@ -410,7 +425,7 @@ export const NavbarMenuIcon = () => {
 
   return (
     <>
-      {/* Background bar on scroll — seamless dark fade */}
+      {/* Background bar on scroll - seamless dark fade */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-24 z-40 pointer-events-none"
         style={{
@@ -567,11 +582,11 @@ export const NavbarMenuIcon = () => {
         </nav>
       </header>
 
-      {/* Menu Overlay — floating card over blurred backdrop */}
+      {/* Menu Overlay - floating card over blurred backdrop */}
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Layer 1: Transparent backdrop — pointer-events-none so page scrolls behind */}
+            {/* Layer 1: Transparent backdrop - pointer-events-none so page scrolls behind */}
             <motion.div
               className="fixed inset-0 z-40 pointer-events-none"
               initial={{ opacity: 0 }}
@@ -608,7 +623,7 @@ export const NavbarMenuIcon = () => {
                 {/* Multi-column content */}
                 <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_0.7fr_0.6fr_0.6fr_1.2fr] gap-8 md:gap-6 lg:gap-6 items-start">
 
-                  {/* Left — Connect info */}
+                  {/* Left - Connect info */}
                   <motion.div variants={slideUp} className="flex flex-col justify-between h-full">
                     <div>
                       <div className="flex items-center gap-2 mb-6">
@@ -644,7 +659,7 @@ export const NavbarMenuIcon = () => {
                     </motion.a>
                   </motion.div>
 
-                  {/* Middle — Navigation */}
+                  {/* Middle - Navigation */}
                   <motion.div variants={slideUp}>
                     <div className="mb-5 pb-3 border-b border-foreground/10">
                       <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">Navigation</span>
@@ -732,7 +747,7 @@ export const NavbarMenuIcon = () => {
                     </nav>
                   </motion.div>
 
-                  {/* Right — Services with expandable sub-items */}
+                  {/* Right - Services with expandable sub-items */}
                   <motion.div variants={slideUp} className="overflow-y-auto max-h-full pr-2">
                     <div className="mb-5 pb-3 border-b border-foreground/10">
                       <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">Services</span>
@@ -825,7 +840,7 @@ export const NavbarMenuIcon = () => {
               <div className="relative z-10 h-full flex flex-col px-6 md:px-12 lg:px-16 pt-10 md:pt-14 pb-6 overflow-y-auto">
                 <div className="flex-1 grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-start">
 
-                  {/* Left — Connect info */}
+                  {/* Left - Connect info */}
                   <motion.div
                     className="flex flex-col justify-between h-full"
                     initial={{ opacity: 0, y: 20 }}
@@ -869,7 +884,7 @@ export const NavbarMenuIcon = () => {
                     </div>
                   </motion.div>
 
-                  {/* Right — Contact form */}
+                  {/* Right - Contact form */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

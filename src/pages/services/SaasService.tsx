@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { SaasTerminalBlock } from "@/components/AiMlVisuals";
 
 const challenges = [
-  { issue: "Lack of transparency", benefit: "Clear communication at every stage — you always know what's happening and why." },
+  { issue: "Lack of transparency", benefit: "Clear communication at every stage - you always know what's happening and why." },
   { issue: "No proper post-development support", benefit: "Dedicated post-launch support to keep your SaaS healthy and growing." },
   { issue: "Insufficient alignment with real business needs", benefit: "Deep business immersion so we build what actually moves your metrics." },
 ];
@@ -29,7 +29,7 @@ const features = [
   { num: "03", title: "Enterprise Security", desc: "SSO/SAML, end-to-end encryption, role-based access control, and SOC 2-ready audit trails by default." },
   { num: "04", title: "Cloud-Native Approach", desc: "Containers, Kubernetes, and managed cloud services for elastic scaling and zero-downtime deployments." },
   { num: "05", title: "Product Analytics Built-in", desc: "Event tracking, funnel analysis, and retention dashboards embedded from day one so you ship with insight." },
-  { num: "06", title: "Dedicated Team", desc: "A cross-functional squad — PM, designer, engineers, QA — aligned to your roadmap and delivery cadence." },
+  { num: "06", title: "Dedicated Team", desc: "A cross-functional squad - PM, designer, engineers, QA - aligned to your roadmap and delivery cadence." },
 ];
 
 const processSteps = [
@@ -65,7 +65,7 @@ const domains = [
   {
     num: "05",
     title: "Food & Restaurant Management",
-    desc: "Full-stack restaurant tech — POS integrations, online ordering, kitchen display systems, inventory management, staff scheduling, and loyalty programmes. We build for independent restaurants and multi-location franchise operations alike.",
+    desc: "Full-stack restaurant tech - POS integrations, online ordering, kitchen display systems, inventory management, staff scheduling, and loyalty programmes. We build for independent restaurants and multi-location franchise operations alike.",
   },
   {
     num: "06",
@@ -79,7 +79,7 @@ const customerStories = [
     id: "carbonmade",
     title: "Carbonmade",
     subtitle: "Creative Portfolio Platform",
-    desc: "Product design and scaling for Carbonmade — a leading portfolio platform that has empowered over 100,000 creative professionals to showcase their work and grow their businesses.",
+    desc: "Product design and scaling for Carbonmade - a leading portfolio platform that has empowered over 100,000 creative professionals to showcase their work and grow their businesses.",
     tags: ["Product Design", "SaaS", "Creative Tools"],
     stat: "100K+ Creatives",
   },
@@ -87,7 +87,7 @@ const customerStories = [
     id: "loopiq",
     title: "Loopiq",
     subtitle: "Customer Engagement SaaS",
-    desc: "End-to-end SaaS development for Loopiq — a customer engagement platform with real-time analytics and automated workflows, now serving 5,000+ businesses with a 38% improvement in engagement metrics.",
+    desc: "End-to-end SaaS development for Loopiq - a customer engagement platform with real-time analytics and automated workflows, now serving 5,000+ businesses with a 38% improvement in engagement metrics.",
     tags: ["SaaS Development", "Analytics", "Automation"],
     stat: "5,000+ Businesses",
   },
@@ -95,7 +95,7 @@ const customerStories = [
     id: "curogram",
     title: "Curogram",
     subtitle: "Healthcare Communication Platform",
-    desc: "HIPAA-compliant communication platform connecting patients and providers — serving 50,000+ patients in its first year with a 35% reduction in wait times and SOC 2 certification achieved.",
+    desc: "HIPAA-compliant communication platform connecting patients and providers - serving 50,000+ patients in its first year with a 35% reduction in wait times and SOC 2 certification achieved.",
     tags: ["Healthcare", "HIPAA", "Platform Engineering"],
     stat: "50K+ Patients",
   },
@@ -190,7 +190,7 @@ export default function SaasService() {
         </div>
       </motion.section>
 
-      {/* SECTION 1 — Challenges & Benefits (click-to-select) */}
+      {/* SECTION 1 - Challenges & Benefits (click-to-select) */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -290,7 +290,7 @@ export default function SaasService() {
         </div>
       </section>
 
-      {/* SECTION 2 — Services We Offer (GlowCard with hover-reveal descriptions) */}
+      {/* SECTION 2 - Services We Offer (GlowCard with hover-reveal descriptions) */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -338,7 +338,7 @@ export default function SaasService() {
         </div>
       </section>
 
-      {/* SECTION 3 — Why Choose Our SaaS Services (hover-expand list) */}
+      {/* SECTION 3 - Why Choose Our SaaS Services (hover-expand list) */}
       <section ref={sec3Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -400,20 +400,20 @@ export default function SaasService() {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <h3 className="text-2xl md:text-3xl font-bold mb-6">Built to Scale from Day One</h3>
-              <p className="text-muted-foreground leading-relaxed">Every SaaS platform we build is multi-tenant ready, subscription-optimized, and designed to handle exponential growth — from your first 10 users to your first 10,000.</p>
+              <p className="text-muted-foreground leading-relaxed">Every SaaS platform we build is multi-tenant ready, subscription-optimized, and designed to handle exponential growth - from your first 10 users to your first 10,000.</p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 4 — Process (scroll-driven timeline) */}
+      {/* SECTION 4 - Process (scroll-driven timeline) */}
       <section ref={sec4Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <ProcessTimeline steps={processSteps} inView={sec4InView} sectionLabel="/04" />
         </div>
       </section>
 
-      {/* SECTION 5 — Business Domains (accordion with numbered indicator boxes) */}
+      {/* SECTION 5 - Business Domains (accordion with numbered indicator boxes) */}
       <section ref={sec5Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -442,7 +442,7 @@ export default function SaasService() {
               animate={sec5InView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              What are the main technical blockers to long-term SaaS scalability? We've solved them across every major vertical — here's how we approach each domain.
+              What are the main technical blockers to long-term SaaS scalability? We've solved them across every major vertical - here's how we approach each domain.
             </motion.p>
           </div>
 
@@ -506,7 +506,7 @@ export default function SaasService() {
         </div>
       </section>
 
-      {/* SECTION 6 — Customer Stories (GlowCard) */}
+      {/* SECTION 6 - Customer Stories (GlowCard) */}
       <section ref={sec6Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div

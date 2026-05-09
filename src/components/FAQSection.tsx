@@ -6,9 +6,24 @@ import { useNavigate } from "react-router-dom";
 
 const faqs = [
   {
-    question: "What software and digital services does Forrof provide?",
+    question: "What software, AI, and marketing services does Forrof provide?",
     answer:
-      "Forrof is a full service software agency offering branding, UI UX design, custom web development, mobile app development, SaaS solutions, SEO, digital marketing, cloud solutions, automation, cybersecurity, and digital transformation services for businesses of all sizes.",
+      "Forrof is a full-service agency. On the product side: custom software development, AI/ML solutions, SaaS platforms, mobile apps, branding, UI/UX design, cloud solutions, automation, cybersecurity, and digital transformation. On the growth side: Google Ads, Meta Ads, LinkedIn ads, TikTok ads, SEO, social media marketing, and B2B email and LinkedIn outreach campaigns.",
+  },
+  {
+    question: "Do you run paid ad campaigns on Google, Meta, and LinkedIn?",
+    answer:
+      "Yes. We manage end-to-end paid ad campaigns across Google (Search, PMax, YouTube, LSA), Meta (Facebook & Instagram with server-side Conversion API), LinkedIn, TikTok, and Microsoft Bing - with API-level conversion tracking and CRO-optimized landing pages built per ad group.",
+  },
+  {
+    question: "How long until we see ROI from your ad campaigns?",
+    answer:
+      "Most clients see qualified leads within the first 2-3 weeks of launch. Strong ROAS typically stabilizes by month 2-3 once tracking is mature and we've identified winning audiences and creative. Scaling phase usually begins from month 3 onward as the algorithm learns from clean conversion signals.",
+  },
+  {
+    question: "Do you handle B2B cold email and LinkedIn outreach?",
+    answer:
+      "Yes. We build ICP-precise lead lists, write multi-step email and LinkedIn cadences, engineer deliverability (SPF/DKIM/DMARC, sender warm-up, inbox rotation), staff a real human reply desk, and report on opens, replies, meetings booked, and pipeline generated each week.",
   },
   {
     question: "How long does a custom software or web development project take?",
@@ -77,7 +92,7 @@ export const FAQSection = () => {
                 animate={isInView ? { y: 0 } : {}}
                 transition={{ duration: 1, delay: 0.3 }}
               >
-                Frequently Asked Questions About Our Product & AI Services
+                Frequently Asked Questions About Our Product, AI & Marketing Services
               </motion.h2>
             </div>
             <motion.p

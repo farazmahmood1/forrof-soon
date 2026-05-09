@@ -9,53 +9,53 @@ import { useNavigate } from "react-router-dom";
 import { SocialMediaTerminalBlock } from "@/components/AiMlVisuals";
 
 const services = [
-  { num: "01", title: "Social Media Strategy", desc: "A data-backed playbook built around your brand goals, target audience, and competitive landscape - covering platform mix, content pillars, posting cadence, and measurable KPIs." },
-  { num: "02", title: "Content Creation & Copywriting", desc: "Scroll-stopping visuals, short-form video, carousels, and on-brand copy crafted by specialists who understand how each platform's algorithm rewards authenticity and consistency." },
-  { num: "03", title: "Community Management", desc: "Real-time moderation, comment responses, DM handling, and proactive community building that turns followers into loyal advocates and keeps your brand voice consistent at every touchpoint." },
-  { num: "04", title: "Paid Social Advertising", desc: "Full-funnel paid campaigns across Meta, LinkedIn, TikTok, and more - precision audience targeting, creative testing, budget optimisation, and weekly performance reporting that ties spend directly to revenue." },
-  { num: "05", title: "Analytics & Performance Reporting", desc: "Custom dashboards tracking reach, engagement, follower growth, conversion attribution, and ROI - delivered as clear executive reports that show exactly what is working and what to do next." },
-  { num: "06", title: "Influencer & Partnership Marketing", desc: "End-to-end influencer identification, brief creation, contract management, and campaign tracking to amplify your message through trusted voices your target audience already follows." },
+  { num: "01", title: "Facebook & Instagram Ads", desc: "Audience-targeted campaigns across Feed, Reels, Stories, and Marketplace - combining Meta's behavioral targeting with conversion-tested creative that turns scrollers into qualified leads." },
+  { num: "02", title: "Lookalike & Custom Audiences", desc: "Layered audience strategies built from your customer data, website visitors, video viewers, and engagement - finding new buyers who behave like your best existing customers." },
+  { num: "03", title: "Creative Production & Testing", desc: "Static, video, carousel, and UGC-style ad creative produced and tested in parallel - because the creative is the targeting on Meta, and only systematic testing finds your winners." },
+  { num: "04", title: "Conversion API (CAPI) Setup", desc: "Server-side Meta CAPI integration that bypasses iOS 14+ tracking restrictions - feeding cleaner conversion signals back to Meta so the algorithm finds high-intent buyers faster." },
+  { num: "05", title: "Retargeting & Funnel Sequences", desc: "Multi-stage retargeting funnels with sequenced creative - different messages for site visitors, cart abandoners, and engaged audiences, keeping CPL low while volume scales." },
+  { num: "06", title: "Reporting & Attribution", desc: "Weekly performance reviews tying ad spend back to leads, meetings, and revenue - with clean attribution across the iOS 14+ tracking gap, not just Meta's platform-side numbers." },
 ];
 
 const platforms = [
-  { num: "01", title: "Instagram", desc: "Feed posts, Reels, Stories, and collaborations engineered for visual brands - optimised for both organic reach and paid discovery campaigns." },
-  { num: "02", title: "LinkedIn", desc: "Thought leadership content, executive personal branding, and B2B lead-generation campaigns that position your brand as an authority in your industry." },
-  { num: "03", title: "TikTok", desc: "Trend-aware short-form video production and paid TikTok Ads that reach high-intent audiences with content designed natively for the platform's unique culture." },
-  { num: "04", title: "Facebook", desc: "Community management, targeted Meta ad campaigns, and retargeting funnels that leverage Facebook's unmatched audience segmentation for scalable reach." },
-  { num: "05", title: "X (Twitter)", desc: "Real-time brand presence, reactive content strategy, and conversation monitoring that keeps your brand relevant and visible in fast-moving industry discussions." },
-  { num: "06", title: "YouTube", desc: "Long-form and Shorts strategy, SEO-optimised video production, and YouTube Ads that build a lasting content library driving discovery and retention." },
+  { num: "01", title: "Facebook Feed", desc: "The original Meta surface - still the highest-converting placement for most lead-gen campaigns. Strong for both static and video creative aimed at 25+ audiences." },
+  { num: "02", title: "Instagram Feed & Reels", desc: "Visual-first campaigns hitting younger demographics with Reels short-form video and Feed images - best for brand-led businesses and aspirational service offerings." },
+  { num: "03", title: "Instagram Stories", desc: "Full-screen, vertical placements with the highest engagement rate on Meta - ideal for limited-time offers, lead magnets, and high-intent direct response." },
+  { num: "04", title: "Facebook Marketplace", desc: "Often-overlooked placement with low CPMs and high commercial intent - strong for local services, home improvement, and product-based businesses." },
+  { num: "05", title: "Messenger Ads", desc: "Conversational campaigns delivered into Messenger inboxes - for warm-up nurture sequences and high-touch lead qualification flows." },
+  { num: "06", title: "Audience Network", desc: "Meta's extended placements across third-party apps and sites - used selectively for retargeting and budget extension once core placements are saturated." },
 ];
 
 const processSteps = [
-  { num: "01", title: "Audit & Strategy", desc: "We analyse your current presence, benchmark against competitors, and deliver a clear social strategy tied to specific business objectives and audience insights." },
-  { num: "02", title: "Content Planning", desc: "Monthly content calendars, platform-specific creative briefs, and campaign timelines planned and approved in advance so execution is always seamless and on schedule." },
-  { num: "03", title: "Execution & Management", desc: "Daily publishing, community engagement, paid campaign management, and creative production handled end-to-end - you stay focused on your business while we run your channels." },
-  { num: "04", title: "Reporting & Optimisation", desc: "Regular performance reviews covering all key metrics with clear interpretation and actionable recommendations to continuously improve results month over month." },
+  { num: "01", title: "Audience & Offer Strategy", desc: "We map your ideal customer to Meta's behavioral and interest signals, define the offer that converts cold traffic, and lock in the funnel structure before creative is produced." },
+  { num: "02", title: "Creative Production", desc: "Static, video, and UGC-style creative produced in parallel - multiple hooks, formats, and angles built specifically for Meta's algorithm, not repurposed from print or TV." },
+  { num: "03", title: "CAPI & Tracking Setup", desc: "Conversion API server-side integration, pixel hardening, and event deduplication - so iOS 14+ doesn't black-box half your conversion data and Meta optimizes on real signals." },
+  { num: "04", title: "Test, Scale, Repeat", desc: "Multiple ad sets and creatives tested in parallel from launch. Winners get scaled with budget, losers get killed weekly. Creative refreshes every 2-4 weeks before fatigue hits." },
 ];
 
 const whyUsItems = [
   {
     num: "01",
-    title: "Data-Driven Content",
-    desc: "Every creative decision is grounded in analytics - from post timing and format selection to caption length and hashtag strategy. We test, measure, and iterate so your content continuously improves rather than stagnating on gut feel.",
+    title: "Creative Is the Targeting",
+    desc: "Since iOS 14+, audience targeting on Meta is mostly broad - the creative is what does the actual targeting. We treat creative production as the most important campaign asset, not an afterthought, with systematic testing of hooks, formats, and angles.",
   },
   {
     num: "02",
-    title: "Brand Voice Consistency",
-    desc: "A unified tone, visual identity, and messaging framework applied consistently across every platform, campaign, and community interaction - so your brand feels instantly recognisable whether someone finds you on LinkedIn, TikTok, or anywhere in between.",
+    title: "Conversion API From Day One",
+    desc: "Most agencies still rely on the Meta pixel alone, which loses 30-50% of conversion data after iOS 14+. We deploy server-side Conversion API on every account from launch - cleaner signals, faster algorithm learning, lower CPA.",
   },
   {
     num: "03",
-    title: "ROI-Focused Campaigns",
-    desc: "Every post, ad, and campaign is tied back to measurable business outcomes - leads generated, traffic driven, revenue attributed. We are accountable to results, not vanity metrics, and our reporting is structured to prove the value of every pound spent.",
+    title: "Real Attribution, Not Platform Numbers",
+    desc: "Meta will always over-report its own performance. We layer GA4, server-side tracking, and CRM-level attribution to show what actually happened - so you know whether Meta drove the lead or just took credit for it.",
   },
 ];
 
-export default function SocialMediaService() {
+export default function MetaAdsService() {
   usePageMetadata({
-    title: "Social Media Marketing Services | Forrof",
-    description: "Full-service social media marketing that grows your audience, builds brand authority, and drives measurable business results across Instagram, LinkedIn, TikTok, and beyond.",
-    keywords: "social media marketing, social media strategy, content creation, community management, paid social advertising, influencer marketing, Instagram marketing, LinkedIn marketing, TikTok advertising",
+    title: "Meta Ads Agency | Facebook & Instagram Ads | Forrof",
+    description: "Meta Ads management across Facebook, Instagram, and Messenger - with creative-led targeting, server-side Conversion API, and full-funnel attribution that survives iOS 14+.",
+    keywords: "meta ads agency, facebook ads agency, instagram ads agency, meta ads management, facebook ads management, conversion api, capi, ios 14 tracking, meta marketing, social ads",
   });
 
   const navigate = useNavigate();
@@ -68,7 +68,6 @@ export default function SocialMediaService() {
   const sec4Ref = useRef(null);
   const ctaRef = useRef(null);
 
-
   const sec1InView = useInView(sec1Ref, { once: true, margin: "-100px" });
   const sec2InView = useInView(sec2Ref, { once: true, margin: "-100px" });
   const sec3InView = useInView(sec3Ref, { once: true, margin: "-100px" });
@@ -78,7 +77,6 @@ export default function SocialMediaService() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
 
-      {/* HERO */}
       <motion.section
         ref={heroRef}
         className="relative min-h-screen flex items-end section-padding pt-28 pb-16 md:pb-24 overflow-hidden"
@@ -101,7 +99,7 @@ export default function SocialMediaService() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              Services / Social Media
+              Services / Meta Ads
             </motion.span>
             <div className="overflow-hidden mb-6 py-2">
               <motion.h1
@@ -120,7 +118,7 @@ export default function SocialMediaService() {
                   backgroundPosition: { duration: 3, ease: "easeInOut", delay: 1, repeat: Infinity, repeatType: "reverse" },
                 }}
               >
-                Social Media Marketing
+                Meta Ads Management
               </motion.h1>
             </div>
             <motion.p
@@ -130,12 +128,11 @@ export default function SocialMediaService() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
-              We grow your brand presence, deepen audience engagement, and turn social channels into consistent revenue drivers - with strategy, content, and paid campaigns that actually perform.
+              Facebook and Instagram campaigns powered by creative-led targeting, server-side Conversion API, and full-funnel attribution that actually survives iOS 14+.
             </motion.p>
         </div>
       </motion.section>
 
-      {/* SECTION 1 - Platforms We Master */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -146,7 +143,7 @@ export default function SocialMediaService() {
           >
             <span className="number-label">/01</span>
             <LineReveal className="h-px bg-border flex-1" delay={0.3} />
-            <span className="text-xs text-muted-foreground uppercase tracking-widest">Platforms We Master</span>
+            <span className="text-xs text-muted-foreground uppercase tracking-widest">Placements</span>
           </motion.div>
 
           <motion.h2
@@ -155,7 +152,7 @@ export default function SocialMediaService() {
             animate={sec1InView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            Every Platform, Mastered
+            Every Meta Surface, Optimised
           </motion.h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -183,7 +180,6 @@ export default function SocialMediaService() {
         </div>
       </section>
 
-      {/* SECTION 2 - Services */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -231,7 +227,6 @@ export default function SocialMediaService() {
         </div>
       </section>
 
-      {/* SECTION 3 - Why Us (hover-expand list) */}
       <section ref={sec3Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -297,7 +292,6 @@ export default function SocialMediaService() {
         </div>
       </section>
 
-      {/* Terminal visual */}
       <section className="section-forced-dark section-padding py-24">
         <div className="max-w-[1800px] mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -308,21 +302,19 @@ export default function SocialMediaService() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold mb-6">Strategy Meets Execution</h3>
-              <p className="text-muted-foreground leading-relaxed">We don't just plan content - we build complete campaign engines with brand guidelines, content calendars, and real-time analytics baked in.</p>
+              <h3 className="text-2xl md:text-3xl font-bold mb-6">Creative Engine, Not Just Media Buying</h3>
+              <p className="text-muted-foreground leading-relaxed">We produce, test, and rotate ad creative continuously - because Meta's algorithm rewards fresh, native-format assets, and creative fatigue is the silent killer of every paid social account.</p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 4 - Process (scroll-driven timeline) */}
       <section ref={sec4Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <ProcessTimeline steps={processSteps} inView={sec4InView} sectionLabel="/04" />
         </div>
       </section>
 
-      {/* CTA */}
       <section ref={ctaRef} className="section-forced-dark section-padding py-40 relative overflow-hidden">
         <div className="max-w-[1800px] mx-auto text-center relative z-10">
           <motion.h2
@@ -331,7 +323,7 @@ export default function SocialMediaService() {
             animate={ctaInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            Ready to grow your audience?
+            Make Meta work for you again.
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -343,7 +335,7 @@ export default function SocialMediaService() {
                 onClick={() => navigate("/contact")}
                 className="inline-flex items-center gap-3 px-8 py-5 bg-foreground text-background rounded-full font-medium hover:opacity-80 transition-opacity"
               >
-                Grow My Brand
+                Get a Free Meta Ads Audit
                 <ArrowUpRight size={18} />
               </button>
             </Magnetic>

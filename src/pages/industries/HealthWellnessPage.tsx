@@ -140,7 +140,7 @@ export default function HealthWellnessPage() {
         </div>
       </motion.section>
 
-      {/* ═══════════ SEC 1 — Pain Points (accordion with numbered indicators) ═══════════ */}
+      {/* ═══════════ SEC 1 - Pain Points (accordion with numbered indicators) ═══════════ */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec1InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -184,7 +184,7 @@ export default function HealthWellnessPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 2 — Services (glow cards with hover-expand) ═══════════ */}
+      {/* ═══════════ SEC 2 - Services (glow cards with hover-expand) ═══════════ */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec2InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -226,14 +226,14 @@ export default function HealthWellnessPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 3 — Process (scroll-driven timeline with outcomes) ═══════════ */}
+      {/* ═══════════ SEC 3 - Process (scroll-driven timeline with outcomes) ═══════════ */}
       <section ref={sec3Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <ProcessTimeline steps={processSteps} inView={sec3InView} sectionLabel="/03" title="How We Build Custom Healthcare Software Solutions" labelText="How We Work" subtitle="The health & wellness industry is now heavily driven by AI. Our structured process reflects what we've learned delivering custom healthcare software solutions across fitness, mental health, remote care, and beyond." />
         </div>
       </section>
 
-      {/* ═══════════ SEC 4 — Why Us Quick (animated checklist) ═══════════ */}
+      {/* ═══════════ SEC 4 - Why Us Quick (animated checklist) ═══════════ */}
       <section ref={sec4Ref} className="section-forced-dark section-padding py-24">
         <div className="max-w-[1800px] mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -249,7 +249,7 @@ export default function HealthWellnessPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 5 — Security & Compliance (accordion) ═══════════ */}
+      {/* ═══════════ SEC 5 - Security & Compliance (accordion) ═══════════ */}
       <section ref={sec5Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec5InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -293,7 +293,7 @@ export default function HealthWellnessPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 6 — Tech Services (vertical tabs) ═══════════ */}
+      {/* ═══════════ SEC 6 - Tech Services (vertical tabs) ═══════════ */}
       <section ref={sec6Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec6InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -344,7 +344,7 @@ export default function HealthWellnessPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 7 — Why Choose Us (stat cards) ═══════════ */}
+      {/* ═══════════ SEC 7 - Why Choose Us (stat cards) ═══════════ */}
       <section ref={sec7Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec7InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>

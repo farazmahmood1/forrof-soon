@@ -9,53 +9,53 @@ import { useNavigate } from "react-router-dom";
 import { SocialMediaTerminalBlock } from "@/components/AiMlVisuals";
 
 const services = [
-  { num: "01", title: "Social Media Strategy", desc: "A data-backed playbook built around your brand goals, target audience, and competitive landscape - covering platform mix, content pillars, posting cadence, and measurable KPIs." },
-  { num: "02", title: "Content Creation & Copywriting", desc: "Scroll-stopping visuals, short-form video, carousels, and on-brand copy crafted by specialists who understand how each platform's algorithm rewards authenticity and consistency." },
-  { num: "03", title: "Community Management", desc: "Real-time moderation, comment responses, DM handling, and proactive community building that turns followers into loyal advocates and keeps your brand voice consistent at every touchpoint." },
-  { num: "04", title: "Paid Social Advertising", desc: "Full-funnel paid campaigns across Meta, LinkedIn, TikTok, and more - precision audience targeting, creative testing, budget optimisation, and weekly performance reporting that ties spend directly to revenue." },
-  { num: "05", title: "Analytics & Performance Reporting", desc: "Custom dashboards tracking reach, engagement, follower growth, conversion attribution, and ROI - delivered as clear executive reports that show exactly what is working and what to do next." },
-  { num: "06", title: "Influencer & Partnership Marketing", desc: "End-to-end influencer identification, brief creation, contract management, and campaign tracking to amplify your message through trusted voices your target audience already follows." },
+  { num: "01", title: "Sponsored Content", desc: "Single-image, video, and carousel ads in the LinkedIn feed - precision-targeted by job title, seniority, company size, and industry to reach the exact decision-makers who can sign your contract." },
+  { num: "02", title: "Sponsored InMail & Message Ads", desc: "Direct-to-inbox sponsored messages from real LinkedIn senders that bypass cold-email filters and land directly in your prospect's primary message tab." },
+  { num: "03", title: "Conversation Ads", desc: "Interactive multi-path messages that let prospects choose their own journey - higher engagement than static InMail, with built-in qualification flows." },
+  { num: "04", title: "Lead Gen Forms", desc: "Native LinkedIn forms pre-filled with profile data, generating ICP-perfect leads at 2-3x higher conversion than traditional landing pages." },
+  { num: "05", title: "Account-Based Marketing (ABM)", desc: "Target named accounts with multi-touch campaigns - custom creative for each tier, sequenced nurture, and tight integration with your sales team's outreach." },
+  { num: "06", title: "Reporting & CRM Sync", desc: "Weekly performance reviews tying ad spend back to MQLs, SQLs, and pipeline - with HubSpot, Salesforce, or your CRM wired up so leads flow straight to sales." },
 ];
 
-const platforms = [
-  { num: "01", title: "Instagram", desc: "Feed posts, Reels, Stories, and collaborations engineered for visual brands - optimised for both organic reach and paid discovery campaigns." },
-  { num: "02", title: "LinkedIn", desc: "Thought leadership content, executive personal branding, and B2B lead-generation campaigns that position your brand as an authority in your industry." },
-  { num: "03", title: "TikTok", desc: "Trend-aware short-form video production and paid TikTok Ads that reach high-intent audiences with content designed natively for the platform's unique culture." },
-  { num: "04", title: "Facebook", desc: "Community management, targeted Meta ad campaigns, and retargeting funnels that leverage Facebook's unmatched audience segmentation for scalable reach." },
-  { num: "05", title: "X (Twitter)", desc: "Real-time brand presence, reactive content strategy, and conversation monitoring that keeps your brand relevant and visible in fast-moving industry discussions." },
-  { num: "06", title: "YouTube", desc: "Long-form and Shorts strategy, SEO-optimised video production, and YouTube Ads that build a lasting content library driving discovery and retention." },
+const formats = [
+  { num: "01", title: "Sponsored Content", desc: "Native feed ads (single image, video, carousel, document) - the workhorse format for awareness and lead generation on LinkedIn." },
+  { num: "02", title: "Sponsored Messaging (InMail)", desc: "Direct messages delivered into prospects' inboxes - high open rates and CTR for high-ticket B2B offers." },
+  { num: "03", title: "Conversation Ads", desc: "Multi-CTA interactive messages with branching paths - lets prospects qualify themselves before reaching sales." },
+  { num: "04", title: "Lead Gen Forms", desc: "Native pre-filled forms attached to any ad type - lowest friction conversion path on LinkedIn." },
+  { num: "05", title: "Document Ads", desc: "Sponsored downloadable PDFs (whitepapers, guides, ebooks) - excellent for top-of-funnel lead generation." },
+  { num: "06", title: "Dynamic & Spotlight Ads", desc: "Personalized ads that pull in viewer's profile photo or company name - higher CTR for company-page promotion." },
 ];
 
 const processSteps = [
-  { num: "01", title: "Audit & Strategy", desc: "We analyse your current presence, benchmark against competitors, and deliver a clear social strategy tied to specific business objectives and audience insights." },
-  { num: "02", title: "Content Planning", desc: "Monthly content calendars, platform-specific creative briefs, and campaign timelines planned and approved in advance so execution is always seamless and on schedule." },
-  { num: "03", title: "Execution & Management", desc: "Daily publishing, community engagement, paid campaign management, and creative production handled end-to-end - you stay focused on your business while we run your channels." },
-  { num: "04", title: "Reporting & Optimisation", desc: "Regular performance reviews covering all key metrics with clear interpretation and actionable recommendations to continuously improve results month over month." },
+  { num: "01", title: "ICP & Audience Mapping", desc: "We define your ideal customer profile by job title, seniority, company size, industry, and intent signals - then build matching LinkedIn audiences with care." },
+  { num: "02", title: "Offer & Creative Production", desc: "Lead magnets, case studies, video creative, and ad copy crafted specifically for the LinkedIn audience - professional tone, value-first, decision-maker focused." },
+  { num: "03", title: "Launch & Test", desc: "Multiple ad sets across formats and audiences from day one. We find the winning combination of audience + creative + offer in weeks, not quarters." },
+  { num: "04", title: "Scale & Optimize", desc: "Winners get scaled with budget, losers get killed weekly. CRM integration ensures lead quality is tracked back to closed revenue, not just form fills." },
 ];
 
 const whyUsItems = [
   {
     num: "01",
-    title: "Data-Driven Content",
-    desc: "Every creative decision is grounded in analytics - from post timing and format selection to caption length and hashtag strategy. We test, measure, and iterate so your content continuously improves rather than stagnating on gut feel.",
+    title: "B2B-Native Targeting",
+    desc: "LinkedIn is the only platform where you can target by exact job title at a named company. We use this precision to build audiences of just hundreds or thousands of perfect-fit decision-makers - not millions of unqualified impressions.",
   },
   {
     num: "02",
-    title: "Brand Voice Consistency",
-    desc: "A unified tone, visual identity, and messaging framework applied consistently across every platform, campaign, and community interaction - so your brand feels instantly recognisable whether someone finds you on LinkedIn, TikTok, or anywhere in between.",
+    title: "Quality Over Volume",
+    desc: "LinkedIn CPMs are 5-10x Meta. We don't waste them on awareness fluff. Every campaign optimizes for booked meetings or pipeline-attributed leads - and we kill creative the moment cost per qualified lead drops.",
   },
   {
     num: "03",
-    title: "ROI-Focused Campaigns",
-    desc: "Every post, ad, and campaign is tied back to measurable business outcomes - leads generated, traffic driven, revenue attributed. We are accountable to results, not vanity metrics, and our reporting is structured to prove the value of every pound spent.",
+    title: "CRM-Wired Attribution",
+    desc: "We connect LinkedIn Lead Gen Forms directly to HubSpot or Salesforce, with offline conversion tracking sending closed deals back to LinkedIn. The algorithm learns from real revenue, not vanity form fills - so cost per closed account drops month over month.",
   },
 ];
 
-export default function SocialMediaService() {
+export default function LinkedInAdsService() {
   usePageMetadata({
-    title: "Social Media Marketing Services | Forrof",
-    description: "Full-service social media marketing that grows your audience, builds brand authority, and drives measurable business results across Instagram, LinkedIn, TikTok, and beyond.",
-    keywords: "social media marketing, social media strategy, content creation, community management, paid social advertising, influencer marketing, Instagram marketing, LinkedIn marketing, TikTok advertising",
+    title: "LinkedIn Ads Agency | B2B Lead Generation | Forrof",
+    description: "LinkedIn Ads management for B2B businesses - precision targeting by job title, seniority, and company, with CRM-wired attribution that ties spend to closed revenue.",
+    keywords: "linkedin ads agency, linkedin ads management, b2b advertising, linkedin lead generation, sponsored content, sponsored inmail, account based marketing, abm, b2b paid social",
   });
 
   const navigate = useNavigate();
@@ -68,7 +68,6 @@ export default function SocialMediaService() {
   const sec4Ref = useRef(null);
   const ctaRef = useRef(null);
 
-
   const sec1InView = useInView(sec1Ref, { once: true, margin: "-100px" });
   const sec2InView = useInView(sec2Ref, { once: true, margin: "-100px" });
   const sec3InView = useInView(sec3Ref, { once: true, margin: "-100px" });
@@ -78,7 +77,6 @@ export default function SocialMediaService() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
 
-      {/* HERO */}
       <motion.section
         ref={heroRef}
         className="relative min-h-screen flex items-end section-padding pt-28 pb-16 md:pb-24 overflow-hidden"
@@ -101,7 +99,7 @@ export default function SocialMediaService() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              Services / Social Media
+              Services / LinkedIn Ads
             </motion.span>
             <div className="overflow-hidden mb-6 py-2">
               <motion.h1
@@ -120,7 +118,7 @@ export default function SocialMediaService() {
                   backgroundPosition: { duration: 3, ease: "easeInOut", delay: 1, repeat: Infinity, repeatType: "reverse" },
                 }}
               >
-                Social Media Marketing
+                LinkedIn Ads Management
               </motion.h1>
             </div>
             <motion.p
@@ -130,12 +128,11 @@ export default function SocialMediaService() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
-              We grow your brand presence, deepen audience engagement, and turn social channels into consistent revenue drivers - with strategy, content, and paid campaigns that actually perform.
+              B2B-grade campaigns targeting senior decision-makers by company, role, and industry - for high-ticket services where one closed account pays for the whole quarter.
             </motion.p>
         </div>
       </motion.section>
 
-      {/* SECTION 1 - Platforms We Master */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -146,7 +143,7 @@ export default function SocialMediaService() {
           >
             <span className="number-label">/01</span>
             <LineReveal className="h-px bg-border flex-1" delay={0.3} />
-            <span className="text-xs text-muted-foreground uppercase tracking-widest">Platforms We Master</span>
+            <span className="text-xs text-muted-foreground uppercase tracking-widest">Ad Formats</span>
           </motion.div>
 
           <motion.h2
@@ -155,11 +152,11 @@ export default function SocialMediaService() {
             animate={sec1InView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            Every Platform, Mastered
+            Every LinkedIn Ad Format
           </motion.h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {platforms.map((item, i) => (
+            {formats.map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 40 }}
@@ -183,7 +180,6 @@ export default function SocialMediaService() {
         </div>
       </section>
 
-      {/* SECTION 2 - Services */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -231,7 +227,6 @@ export default function SocialMediaService() {
         </div>
       </section>
 
-      {/* SECTION 3 - Why Us (hover-expand list) */}
       <section ref={sec3Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -251,7 +246,7 @@ export default function SocialMediaService() {
             animate={sec3InView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            Why Brands Choose Us
+            Why B2B Brands Choose Us
           </motion.h2>
 
           <div className="space-y-0">
@@ -269,9 +264,7 @@ export default function SocialMediaService() {
                   <span className="text-xs text-muted-foreground font-medium tracking-widest uppercase min-w-[32px]">
                     {item.num}
                   </span>
-                  <h3
-                    className="text-xl font-semibold transition-transform duration-300 group-hover:translate-x-3"
-                  >
+                  <h3 className="text-xl font-semibold transition-transform duration-300 group-hover:translate-x-3">
                     {item.title}
                   </h3>
                 </div>
@@ -297,7 +290,6 @@ export default function SocialMediaService() {
         </div>
       </section>
 
-      {/* Terminal visual */}
       <section className="section-forced-dark section-padding py-24">
         <div className="max-w-[1800px] mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -308,21 +300,19 @@ export default function SocialMediaService() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold mb-6">Strategy Meets Execution</h3>
-              <p className="text-muted-foreground leading-relaxed">We don't just plan content - we build complete campaign engines with brand guidelines, content calendars, and real-time analytics baked in.</p>
+              <h3 className="text-2xl md:text-3xl font-bold mb-6">B2B Pipeline, Not Just Impressions</h3>
+              <p className="text-muted-foreground leading-relaxed">CRM-wired Lead Gen Forms, offline conversion tracking, and weekly pipeline-attributed reporting - so LinkedIn spend ties directly to closed revenue, not vanity engagement.</p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 4 - Process (scroll-driven timeline) */}
       <section ref={sec4Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <ProcessTimeline steps={processSteps} inView={sec4InView} sectionLabel="/04" />
         </div>
       </section>
 
-      {/* CTA */}
       <section ref={ctaRef} className="section-forced-dark section-padding py-40 relative overflow-hidden">
         <div className="max-w-[1800px] mx-auto text-center relative z-10">
           <motion.h2
@@ -331,7 +321,7 @@ export default function SocialMediaService() {
             animate={ctaInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            Ready to grow your audience?
+            Reach the right decision-makers.
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -343,7 +333,7 @@ export default function SocialMediaService() {
                 onClick={() => navigate("/contact")}
                 className="inline-flex items-center gap-3 px-8 py-5 bg-foreground text-background rounded-full font-medium hover:opacity-80 transition-opacity"
               >
-                Grow My Brand
+                Get a Free LinkedIn Ads Audit
                 <ArrowUpRight size={18} />
               </button>
             </Magnetic>

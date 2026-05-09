@@ -9,21 +9,21 @@ import { useNavigate } from "react-router-dom";
 import { MobileTerminalBlock } from "@/components/AiMlVisuals";
 
 const niches = [
-  { num: "01", title: "Logistics & Transportation", desc: "On-demand delivery apps, fleet management, route optimisation, driver portals, and real-time shipment tracking — built to keep operations moving and customers informed at every step." },
+  { num: "01", title: "Logistics & Transportation", desc: "On-demand delivery apps, fleet management, route optimisation, driver portals, and real-time shipment tracking - built to keep operations moving and customers informed at every step." },
   { num: "02", title: "Education", desc: "E-learning platforms, interactive courseware, progress tracking dashboards, live tutoring features, and gamified learning experiences that keep students engaged across devices." },
   { num: "03", title: "Healthcare & Wellness", desc: "HIPAA-compliant telehealth apps, appointment booking, electronic health records, medication reminders, wearable integrations, and patient-provider communication platforms." },
   { num: "04", title: "Fintech & Finance", desc: "Mobile banking, digital wallets, investment tracking, KYC/AML workflows, real-time market data, and secure payment flows built to PCI-DSS standards." },
-  { num: "05", title: "Food & Restaurant Management", desc: "Online ordering, table reservations, kitchen display systems, loyalty programmes, and delivery-driver coordination — for independent restaurants and franchise chains alike." },
+  { num: "05", title: "Food & Restaurant Management", desc: "Online ordering, table reservations, kitchen display systems, loyalty programmes, and delivery-driver coordination - for independent restaurants and franchise chains alike." },
   { num: "06", title: "Social & Entertainment", desc: "Community platforms, live streaming, short-form video, real-time chat, social graphs, and creator monetisation tools designed for scale and engagement." },
   { num: "07", title: "Industrial Sector", desc: "Field service management, asset tracking, IoT sensor dashboards, predictive maintenance alerts, and offline-first apps built for environments where connectivity is unreliable." },
   { num: "08", title: "E-commerce & Marketplace", desc: "Product catalogues, smart search, cart and checkout flows, vendor portals, in-app payments, reviews, and personalised recommendations that convert browsers into buyers." },
-  { num: "09", title: "Other Apps", desc: "LegalTech, Decision Intelligence, real estate, travel, SaaS companion apps, and more. If your niche isn't listed, we've likely built in it — or we'll figure it out together." },
+  { num: "09", title: "Other Apps", desc: "LegalTech, Decision Intelligence, real estate, travel, SaaS companion apps, and more. If your niche isn't listed, we've likely built in it - or we'll figure it out together." },
 ];
 
 const painPoints = [
   {
     title: "Communication Gaps With the Dev Team",
-    desc: "No more black-box development. We offer daily recaps, weekly status calls, and regular product demo sessions so you always know exactly where your app stands — and why.",
+    desc: "No more black-box development. We offer daily recaps, weekly status calls, and regular product demo sessions so you always know exactly where your app stands - and why.",
   },
   {
     title: "User Experience (UX) Challenges",
@@ -35,16 +35,16 @@ const painPoints = [
   },
   {
     title: "Unclear Requirements & Scope Creep",
-    desc: "We turn vague business ideas into precise technical specifications before development starts. No surprises, no endless change requests — just clean, well-scoped execution.",
+    desc: "We turn vague business ideas into precise technical specifications before development starts. No surprises, no endless change requests - just clean, well-scoped execution.",
   },
 ];
 
 const differentiators = [
   { title: "100+ Mobile Apps Shipped", desc: "We've successfully built and launched over 100 mobile applications for startups, growing businesses, and global enterprises across every major vertical." },
-  { title: "Experts in React Native, Flutter, Kotlin & Swift", desc: "Deep expertise in every major mobile stack means we always recommend the right technology for your product — not the one we're most comfortable billing for." },
+  { title: "Experts in React Native, Flutter, Kotlin & Swift", desc: "Deep expertise in every major mobile stack means we always recommend the right technology for your product - not the one we're most comfortable billing for." },
   { title: "Transparent Agile Development", desc: "We keep you involved at every planning, design, development, and testing stage. Monitor progress, give feedback early, and stay in full control of your product throughout." },
   { title: "Analytics & A/B Testing Built-In", desc: "We instrument every project with analytics and A/B testing capabilities so you can track user behaviour, validate hypotheses, and make evidence-based product decisions from day one." },
-  { title: "App Store Publication & ASO Support", desc: "Full support with store submission and App Store Optimisation — ensuring your app launches smoothly and gets discovered by the right users from the moment it goes live." },
+  { title: "App Store Publication & ASO Support", desc: "Full support with store submission and App Store Optimisation - ensuring your app launches smoothly and gets discovered by the right users from the moment it goes live." },
   { title: "SLA Support & Scaling Roadmap", desc: "Post-launch SLA agreements guarantee fast response times, regular updates, and proactive monitoring. Your app stays reliable, secure, and ready to scale as you grow." },
 ];
 
@@ -58,13 +58,13 @@ const stats = [
 const techStack = [
   { name: "React Native", desc: "Cross-platform JavaScript framework delivering near-native performance on iOS and Android from a single, maintainable codebase." },
   { name: "Flutter", desc: "Google's UI toolkit for building natively compiled, visually expressive apps across mobile, web, and desktop from one codebase." },
-  { name: "Kotlin", desc: "Modern, concise, and safe language for native Android development — full Jetpack ecosystem, Compose UI, and seamless Google integration." },
-  { name: "Swift", desc: "Apple's powerful and expressive language for native iOS development — performance, safety, and deep OS integration built in from the ground up." },
+  { name: "Kotlin", desc: "Modern, concise, and safe language for native Android development - full Jetpack ecosystem, Compose UI, and seamless Google integration." },
+  { name: "Swift", desc: "Apple's powerful and expressive language for native iOS development - performance, safety, and deep OS integration built in from the ground up." },
 ];
 
 const processSteps = [
-  { num: "01", title: "Idea Assessment", desc: "Investigate user needs and market trends to shape and validate your app idea — so we build something people actually want before writing a line of code." },
-  { num: "02", title: "UX Design", desc: "Design intuitive, engaging interfaces focused on user experience and usability — wireframes, prototypes, and high-fidelity screens validated with real users." },
+  { num: "01", title: "Idea Assessment", desc: "Investigate user needs and market trends to shape and validate your app idea - so we build something people actually want before writing a line of code." },
+  { num: "02", title: "UX Design", desc: "Design intuitive, engaging interfaces focused on user experience and usability - wireframes, prototypes, and high-fidelity screens validated with real users." },
   { num: "03", title: "App Development", desc: "Develop a robust, scalable, high-performance app architecture with sprint-based builds, continuous integration, and weekly progress demos." },
   { num: "04", title: "Quality Assurance", desc: "Automated and manual testing across real device matrices to guarantee reliability, security, and premium quality before anything reaches the store." },
   { num: "05", title: "Smooth Deployment", desc: "Managed App Store and Play Store submission with phased rollout strategy, crash monitoring from day one, and zero-downtime launch execution." },
@@ -88,7 +88,7 @@ const popularServices = [
 export default function MobileAppService() {
   usePageMetadata({
     title: "Mobile App Development Services | Forrof",
-    description: "Expert mobile app development for iOS and Android. From native Swift and Kotlin apps to cross-platform React Native and Flutter — we build fast, functional, and future-ready mobile experiences.",
+    description: "Expert mobile app development for iOS and Android. From native Swift and Kotlin apps to cross-platform React Native and Flutter - we build fast, functional, and future-ready mobile experiences.",
     keywords: "mobile app development, iOS development, Android development, React Native, Flutter, cross-platform apps, MVP mobile app, app store optimisation",
   });
 
@@ -171,7 +171,7 @@ export default function MobileAppService() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            From first sketch to full-scale launch, we build mobile apps that are fast, functional, and future-ready — on iOS, Android, and cross-platform.
+            From first sketch to full-scale launch, we build mobile apps that are fast, functional, and future-ready - on iOS, Android, and cross-platform.
           </motion.p>
           <motion.div
             className="mt-10"
@@ -192,7 +192,7 @@ export default function MobileAppService() {
         </div>
       </motion.section>
 
-      {/* SECTION 1 — What We Offer + Niches */}
+      {/* SECTION 1 - What We Offer + Niches */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -222,7 +222,7 @@ export default function MobileAppService() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <p className="text-muted-foreground leading-relaxed">
-                We help startups and enterprises turn great ideas into powerful mobile apps. From first sketch to final launch, our process covers design, development, testing, and scaling — under one roof with a single accountable team.
+                We help startups and enterprises turn great ideas into powerful mobile apps. From first sketch to final launch, our process covers design, development, testing, and scaling - under one roof with a single accountable team.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 We build iOS, Android, and cross-platform apps that are fast, user-friendly, and designed to deliver real business results. Our mobile engineering team works closely with you to keep the process smooth, clear, and stress-free.
@@ -301,7 +301,7 @@ export default function MobileAppService() {
         </div>
       </section>
 
-      {/* SECTION 2 — Pain Points */}
+      {/* SECTION 2 - Pain Points */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -349,7 +349,7 @@ export default function MobileAppService() {
         </div>
       </section>
 
-      {/* SECTION 3 — What Sets Us Apart */}
+      {/* SECTION 3 - What Sets Us Apart */}
       <section ref={sec3Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -425,7 +425,7 @@ export default function MobileAppService() {
         </div>
       </section>
 
-      {/* SECTION 4 — Stats */}
+      {/* SECTION 4 - Stats */}
       <section ref={sec4Ref} className="section-forced-dark section-padding py-24">
         <div className="max-w-[1800px] mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 md:divide-x md:divide-border">
@@ -453,7 +453,7 @@ export default function MobileAppService() {
         </div>
       </section>
 
-      {/* SECTION 5 — Tech Stack */}
+      {/* SECTION 5 - Tech Stack */}
       <section ref={sec5Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -482,7 +482,7 @@ export default function MobileAppService() {
               animate={sec5InView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              We work with every major mobile framework — choosing the right tool for your product, not defaulting to whatever's cheapest to staff.
+              We work with every major mobile framework - choosing the right tool for your product, not defaulting to whatever's cheapest to staff.
             </motion.p>
           </div>
 
@@ -526,14 +526,14 @@ export default function MobileAppService() {
         </div>
       </section>
 
-      {/* SECTION 6 — Process (scroll-driven timeline) */}
+      {/* SECTION 6 - Process (scroll-driven timeline) */}
       <section ref={sec6Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <ProcessTimeline steps={processSteps} inView={sec6InView} sectionLabel="/05" subtitle="* The process may vary from project to project since we are agile." />
         </div>
       </section>
 
-      {/* SECTION 7 — Popular Services */}
+      {/* SECTION 7 - Popular Services */}
       <section ref={sec7Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div

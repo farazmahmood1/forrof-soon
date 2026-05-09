@@ -118,7 +118,7 @@ const Articles = () => {
         </motion.div>
       </motion.section>
 
-      {/* Category Filter + Featured — Elevated rounded container */}
+      {/* Category Filter + Featured - Elevated rounded container */}
       <section className="relative py-6 md:py-10">
         <div className="max-w-[1800px] mx-auto section-padding">
           {/* Raised panel with slightly lighter bg + border radius */}
@@ -171,7 +171,7 @@ const Articles = () => {
         </div>
       </section>
 
-      {/* Articles Grid — Different bg tone with inner rounded cards */}
+      {/* Articles Grid - Different bg tone with inner rounded cards */}
       {filteredArticles.length > 1 && (
         <section className="relative py-16 md:py-24">
           {/* Subtle ambient glow behind grid */}
@@ -209,7 +209,7 @@ const Articles = () => {
         </section>
       )}
 
-      {/* Newsletter Section — Distinct bordered rounded container */}
+      {/* Newsletter Section - Distinct bordered rounded container */}
       <section className="relative py-10 md:py-16">
         <div className="max-w-[1200px] mx-auto section-padding">
           <motion.div

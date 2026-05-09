@@ -23,7 +23,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-/* ─── Auto-icon mapping — picks an icon from the step title ─── */
+/* ─── Auto-icon mapping - picks an icon from the step title ─── */
 const ICON_KEYWORDS: [RegExp, LucideIcon][] = [
   [/discover|audit|research|analysis|assessment/i, Search],
   [/intro|call/i, Phone],

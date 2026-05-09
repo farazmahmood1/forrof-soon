@@ -11,10 +11,11 @@ const businessScales = [
     icon: Lightbulb,
     number: "01",
     description:
-      "For our enterprise software development service, we help businesses scale existing products and teams, modernize legacy systems, and integrate with internal and external systems, ensuring complete stability, security, and compliance.",
+      "For enterprises, we build custom software, AI/ML systems, and SaaS platforms - modernizing legacy systems and integrating internal and external services - alongside enterprise-scale paid media and SEO programs that drive predictable revenue. Every engagement is built for stability, security, and compliance.",
     focus: [
       "Reliability, predictability, and trust;",
-      "Future-proof architecture solutions;",
+      "Future-proof architecture and AI integration;",
+      "Enterprise-scale paid media and SEO programs;",
       "Long-term partnership, not one-time projects.",
     ],
     link: "/services/enterprise",
@@ -25,10 +26,12 @@ const businessScales = [
     icon: LayoutGrid,
     number: "02",
     description:
-      "We help fast-growing companies optimize processes and UX, add new features without impacting the existing system, and prepare for product scaling.",
+      "For fast-growing companies, we optimize product, UX, and engineering - shipping new features without breaking existing systems, automating workflows with AI - and run high-performing Google and Meta ad campaigns. Both your product and your revenue engine prepared to scale.",
     focus: [
       "Fast time-to-market with clear priorities;",
       "Scalability without over-engineering;",
+      "AI-powered automation and integrations;",
+      "Performance ad campaigns tied to revenue;",
       "Visible business value from every release.",
     ],
     link: "/industries/mid-sized-business",
@@ -39,9 +42,11 @@ const businessScales = [
     icon: Box,
     number: "03",
     description:
-      "Our teams help with digital transformation, product launches or updates, and process automation. We build intuitive solutions without overcomplications.",
+      "For small businesses, we lead digital transformation, ship product launches and updates, automate manual processes - and run lean Google Ads, Meta Ads, and email outreach campaigns that bring a steady flow of qualified leads. Practical software and lean marketing, no overcomplications.",
     focus: [
       "Simple and practical solutions;",
+      "Process automation that saves real hours;",
+      "Lean ad campaigns tied to ROI;",
       "Turnkey solution without overload;",
       "Clear communication without technical noise.",
     ],
@@ -53,10 +58,12 @@ const businessScales = [
     icon: Star,
     number: "04",
     description:
-      "We work directly with founders, helping them validate ideas and launch MVPs with rapid iterations and honest risk assessment. We test hypotheses and help prepare investor demos.",
+      "For founders, we validate ideas, launch MVPs and POCs with rapid iterations, run early-stage paid acquisition tests on Google and Meta, and prepare investor demos. We test product hypotheses and demand hypotheses in parallel - so you know what to build and who will buy.",
     focus: [
       "Product-first thinking, not just coding;",
       "Active participation in vision formation;",
+      "MVP and POC development with honest risk reads;",
+      "Early demand validation via paid channels;",
       "UX and core value, not unnecessary features.",
     ],
     link: "/services/mvp",
@@ -226,7 +233,7 @@ export const BusinessScaleSection = () => {
       }}
     >
       <div className="max-w-[1800px] mx-auto relative z-10">
-        {/* Header — same pattern as other sections */}
+        {/* Header - same pattern as other sections */}
         <motion.div
           className="flex items-center gap-4 mb-12"
           initial={{ opacity: 0, y: 30 }}
@@ -241,7 +248,7 @@ export const BusinessScaleSection = () => {
           </motion.span>
         </motion.div>
 
-        {/* Title Grid — matches site heading pattern */}
+        {/* Title Grid - matches site heading pattern */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           <div className="overflow-hidden">
             <motion.h2
@@ -266,7 +273,7 @@ export const BusinessScaleSection = () => {
             transition={{ duration: 1, delay: 0.6 }}
           >
             <p className="text-xl text-muted-foreground max-w-md leading-relaxed">
-              From startups to enterprises, we design solutions tailored to your stage of growth — with the right focus, speed, and scale.
+              From startups to enterprises, we design solutions tailored to your stage of growth - with the right focus, speed, and scale.
             </p>
           </motion.div>
         </div>

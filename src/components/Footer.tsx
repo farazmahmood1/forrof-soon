@@ -107,7 +107,7 @@ export const Footer = () => {
           </h2>
         </motion.div>
 
-        {/* Main Footer Content — 5 columns matching navbar */}
+        {/* Main Footer Content - 5 columns matching navbar */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-8 mb-16">
           {/* Services */}
           <motion.div

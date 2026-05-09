@@ -155,7 +155,7 @@ export default function PaintingPage() {
         </div>
       </motion.section>
 
-      {/* ═══════════ SEC 1 — Pain Points & Solution (two-column click-to-select) ═══════════ */}
+      {/* ═══════════ SEC 1 - Pain Points & Solution (two-column click-to-select) ═══════════ */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec1InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -218,7 +218,7 @@ export default function PaintingPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 2 — Who We Serve (accordion with numbered indicators) ═══════════ */}
+      {/* ═══════════ SEC 2 - Who We Serve (accordion with numbered indicators) ═══════════ */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec2InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -264,7 +264,7 @@ export default function PaintingPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 3 — Use Cases (hover-expand list) ═══════════ */}
+      {/* ═══════════ SEC 3 - Use Cases (hover-expand list) ═══════════ */}
       <section ref={sec3Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec3InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -309,7 +309,7 @@ export default function PaintingPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 4 — Services (vertical tabs with layoutId) ═══════════ */}
+      {/* ═══════════ SEC 4 - Services (vertical tabs with layoutId) ═══════════ */}
       <section ref={sec4Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec4InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -360,7 +360,7 @@ export default function PaintingPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 5 — ROI (stat cards with CountUp) ═══════════ */}
+      {/* ═══════════ SEC 5 - ROI (stat cards with CountUp) ═══════════ */}
       <section ref={sec5Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec5InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -396,7 +396,7 @@ export default function PaintingPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 6 — Integrations (animated grid) ═══════════ */}
+      {/* ═══════════ SEC 6 - Integrations (animated grid) ═══════════ */}
       <section ref={sec6Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec6InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -429,7 +429,7 @@ export default function PaintingPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 7 — Process (scroll-driven timeline) ═══════════ */}
+      {/* ═══════════ SEC 7 - Process (scroll-driven timeline) ═══════════ */}
       <section ref={sec7Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <ProcessTimeline steps={processSteps} inView={sec7InView} sectionLabel="/07" labelText="How We Work" />

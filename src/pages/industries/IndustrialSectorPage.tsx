@@ -26,9 +26,9 @@ const valuePoints = [
 ];
 
 const solutions = [
-  { title: "Enterprise Resource Planning (ERP)", desc: "Unified platforms that connect finance, supply chain, production, and HR into a single source of truth — eliminating data silos and manual reconciliation." },
+  { title: "Enterprise Resource Planning (ERP)", desc: "Unified platforms that connect finance, supply chain, production, and HR into a single source of truth - eliminating data silos and manual reconciliation." },
   { title: "Enterprise Asset Management (EAM)", desc: "Track, maintain, and optimize physical assets across facilities with real-time condition monitoring, work order management, and compliance reporting." },
-  { title: "Product Lifecycle Management (PLM)", desc: "End-to-end product data management from concept through retirement — version control, BOM management, and cross-team collaboration." },
+  { title: "Product Lifecycle Management (PLM)", desc: "End-to-end product data management from concept through retirement - version control, BOM management, and cross-team collaboration." },
   { title: "Manufacturing Execution Systems (MES)", desc: "Real-time production monitoring, quality control, and shop-floor data collection that bridges the gap between ERP planning and actual manufacturing." },
   { title: "Industrial Analytics & Business Intelligence", desc: "Transform raw sensor and operational data into actionable dashboards, trend analysis, and predictive insights that drive smarter decisions." },
   { title: "IoT Integration & Remote Monitoring", desc: "Connect machines, sensors, and edge devices to cloud platforms for real-time visibility, remote diagnostics, and automated alerting across facilities." },
@@ -182,7 +182,7 @@ export default function IndustrialSectorPage() {
         </div>
       </motion.section>
 
-      {/* ═══════════ SEC 1 — Challenges (interactive select, not boxes) ═══════════ */}
+      {/* ═══════════ SEC 1 - Challenges (interactive select, not boxes) ═══════════ */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec1InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -198,7 +198,7 @@ export default function IndustrialSectorPage() {
             Industrial companies often operate with outdated, disconnected systems &mdash; making growth expensive and inefficient.
           </motion.p>
 
-          {/* Interactive challenge selector — click to reveal */}
+          {/* Interactive challenge selector - click to reveal */}
           <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 items-start">
             {/* Left: challenge list */}
             <div className="space-y-0">
@@ -279,7 +279,7 @@ export default function IndustrialSectorPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 2 — From Problem to Product (animated reveal grid) ═══════════ */}
+      {/* ═══════════ SEC 2 - From Problem to Product (animated reveal grid) ═══════════ */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec2InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -325,7 +325,7 @@ export default function IndustrialSectorPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 3 — Services (glow cards with hover expand) ═══════════ */}
+      {/* ═══════════ SEC 3 - Services (glow cards with hover expand) ═══════════ */}
       <section ref={sec3Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec3InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -373,7 +373,7 @@ export default function IndustrialSectorPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 4 — AI & Computer Vision (accordion) ═══════════ */}
+      {/* ═══════════ SEC 4 - AI & Computer Vision (accordion) ═══════════ */}
       <section ref={sec4Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec4InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -438,14 +438,14 @@ export default function IndustrialSectorPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 5 — Process (scroll-driven timeline) ═══════════ */}
+      {/* ═══════════ SEC 5 - Process (scroll-driven timeline) ═══════════ */}
       <section ref={sec5Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <ProcessTimeline steps={processSteps} inView={sec5InView} sectionLabel="/05" labelText="How We Work" />
         </div>
       </section>
 
-      {/* ═══════════ SEC 6 — Why Choose Us (stat cards with counters) ═══════════ */}
+      {/* ═══════════ SEC 6 - Why Choose Us (stat cards with counters) ═══════════ */}
       <section ref={sec6Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec6InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -488,7 +488,7 @@ export default function IndustrialSectorPage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 7 — Technology Expertise (interactive tabs) ═══════════ */}
+      {/* ═══════════ SEC 7 - Technology Expertise (interactive tabs) ═══════════ */}
       <section ref={sec7Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec7InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>

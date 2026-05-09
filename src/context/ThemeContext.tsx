@@ -14,7 +14,7 @@ const ThemeContext = createContext<ThemeProviderState>({
 
 export function ThemeProvider({ children, ..._ }: { children: React.ReactNode; defaultTheme?: string; storageKey?: string }) {
     useEffect(() => {
-        // Always dark — no theme switching
+        // Always dark - no theme switching
         const root = window.document.documentElement;
         root.classList.remove("light");
         root.classList.add("dark");

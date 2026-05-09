@@ -181,7 +181,7 @@ export default function FintechFinancePage() {
         </div>
       </motion.section>
 
-      {/* ═══════════ SEC 1 — Pain Points (click-to-select) ═══════════ */}
+      {/* ═══════════ SEC 1 - Pain Points (click-to-select) ═══════════ */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec1InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -244,7 +244,7 @@ export default function FintechFinancePage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 2 — Service Offerings (hover-expand list) ═══════════ */}
+      {/* ═══════════ SEC 2 - Service Offerings (hover-expand list) ═══════════ */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec2InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -289,7 +289,7 @@ export default function FintechFinancePage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 3 — Industry Verticals (accordion with indicators) ═══════════ */}
+      {/* ═══════════ SEC 3 - Industry Verticals (accordion with indicators) ═══════════ */}
       <section ref={sec3Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec3InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -338,7 +338,7 @@ export default function FintechFinancePage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 4 — Why Choose Us (stat cards with counters) ═══════════ */}
+      {/* ═══════════ SEC 4 - Why Choose Us (stat cards with counters) ═══════════ */}
       <section ref={sec4Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec4InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -375,7 +375,7 @@ export default function FintechFinancePage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 5 — Compliance & Security ═══════════ */}
+      {/* ═══════════ SEC 5 - Compliance & Security ═══════════ */}
       <section ref={sec5Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec5InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
@@ -445,14 +445,14 @@ export default function FintechFinancePage() {
         </div>
       </section>
 
-      {/* ═══════════ SEC 6 — Process (scroll-driven timeline) ═══════════ */}
+      {/* ═══════════ SEC 6 - Process (scroll-driven timeline) ═══════════ */}
       <section ref={sec6Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <ProcessTimeline steps={processSteps} inView={sec6InView} sectionLabel="/06" title="How We Build Scalable FinTech Solutions" labelText="How We Work" />
         </div>
       </section>
 
-      {/* ═══════════ SEC 7 — Scale CTA ═══════════ */}
+      {/* ═══════════ SEC 7 - Scale CTA ═══════════ */}
       <section ref={sec7Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div className="flex items-center gap-4 mb-20" initial={{ opacity: 0, y: 20 }} animate={sec7InView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>

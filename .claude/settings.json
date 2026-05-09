@@ -46,7 +46,12 @@
       "Bash(grep -n \"mousemove\\\\|pointermove\" /c/animated-ui/brian-tracy/src/components/*.tsx)",
       "Bash(ls /c/animated-ui/brian-tracy/src/components/ui/*.tsx)",
       "Bash(grep -c \"repeat: Infinity\" /c/animated-ui/brian-tracy/src/components/*.tsx)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(bun run *)",
+      "Read(//tmp/claude/c--animated-ui-brian-tracy/0548a19a-9b0b-45bd-9dd2-5c30d2bf8c07/tasks/**)",
+      "Skill(browse)",
+      "Skill(browse:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://dev.gemseeroo.com/clients/Appen-Talent%20Store%20Logo.png\")"
     ],
     "additionalDirectories": [
       "C:\\animated-ui\\brian-tracy\\src\\pages\\services"

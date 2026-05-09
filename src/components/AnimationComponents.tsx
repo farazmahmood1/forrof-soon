@@ -128,7 +128,7 @@ interface MagneticProps {
 
 export const Magnetic = ({ children, className = "", strength = 0.3 }: MagneticProps) => {
   const ref = useRef<HTMLDivElement>(null);
-  // Cache rect on mouseenter — avoids getBoundingClientRect() on every mousemove frame
+  // Cache rect on mouseenter - avoids getBoundingClientRect() on every mousemove frame
   const rectRef = useRef<DOMRect | null>(null);
 
   const handleMouseEnter = () => {

@@ -1,6 +1,6 @@
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { useRef, useState } from "react";
-import { ArrowUpRight, Zap, Brain, Layers, Rocket, Map, Palette, Smartphone, Megaphone, Search, PenTool, Code, RocketIcon } from "lucide-react";
+import { useRef } from "react";
+import { ArrowUpRight, Zap, Brain, Layers, Rocket, Map, Palette, Smartphone, Megaphone, Search, PenTool, Code, RocketIcon, Target, TrendingUp, BarChart3 } from "lucide-react";
 import { LineReveal, Magnetic } from "@/components/AnimationComponents";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { useLenis } from "@/hooks/useLenis";
@@ -11,7 +11,7 @@ const services = [
     number: "01",
     title: "AI/ML Development",
     description:
-      "Real‑world AI systems — from document intelligence to custom agents and workflows — integrated directly into your business.",
+      "Real‑world AI systems - from document intelligence to custom agents and workflows - integrated directly into your business.",
     tags: ["LLMs", "Agents", "Workflows", "RAG"],
     icon: Zap,
     slug: "ai-ml",
@@ -41,7 +41,7 @@ const services = [
     number: "04",
     title: "MVP & POC Development",
     description:
-      "From idea to production‑grade platform — lean MVPs and prototypes that prove your concept and attract investors fast.",
+      "From idea to production‑grade platform - lean MVPs and prototypes that prove your concept and attract investors fast.",
     tags: ["Architecture", "MVP", "Scaling", "DevOps"],
     icon: Rocket,
     slug: "mvp",
@@ -87,6 +87,36 @@ const services = [
     slug: "social-media",
     highlight: false,
   },
+  {
+    number: "09",
+    title: "Paid Ads",
+    description:
+      "Intent-driven campaigns across Google, Meta, LinkedIn, TikTok, and Bing - engineered with API-level tracking and CRO landing pages that turn ad spend into booked revenue.",
+    tags: ["Google", "Meta", "LinkedIn", "ROAS"],
+    icon: Target,
+    slug: "paid-ads",
+    highlight: true,
+  },
+  {
+    number: "10",
+    title: "Google Ads",
+    description:
+      "Search, Performance Max, YouTube, and Local Service Ads built around high-intent keywords, API-level tracking, and conversion-tuned landing pages.",
+    tags: ["Search", "PMax", "YouTube", "LSA"],
+    icon: TrendingUp,
+    slug: "google-ads",
+    highlight: false,
+  },
+  {
+    number: "11",
+    title: "Meta Ads",
+    description:
+      "Facebook and Instagram campaigns powered by creative-led targeting, server-side Conversion API, and full-funnel attribution that survives iOS 14+.",
+    tags: ["Facebook", "Instagram", "CAPI", "Creative"],
+    icon: BarChart3,
+    slug: "meta-ads",
+    highlight: false,
+  },
 ];
 
 const process = [
@@ -99,7 +129,7 @@ const process = [
   {
     step: "02",
     title: "Architect",
-    description: "We design the system — tech stack, AI layers, data models, and product flows — before writing a single line.",
+    description: "We design the system - tech stack, AI layers, data models, and product flows - before writing a single line.",
     icon: PenTool,
   },
   {
@@ -127,18 +157,20 @@ const ServiceCard = ({
   isInView: boolean;
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  const [pos, setPos] = useState({ x: 50, y: 50 });
+  const glowRef = useRef<HTMLDivElement>(null);
   const Icon = service.icon;
   const navigate = useNavigate();
   const hl = service.highlight;
+  const glowColor = hl ? "rgba(0,212,170,0.25)" : "hsl(var(--accent) / 0.22)";
 
+  // Direct DOM writes via ref - zero React re-renders during mousemove
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = cardRef.current?.getBoundingClientRect();
-    if (!rect) return;
-    setPos({
-      x: ((e.clientX - rect.left) / rect.width) * 100,
-      y: ((e.clientY - rect.top) / rect.height) * 100,
-    });
+    const glow = glowRef.current;
+    if (!rect || !glow) return;
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    glow.style.background = `radial-gradient(250px circle at ${x}% ${y}%, ${glowColor}, transparent 70%)`;
   };
 
   return (
@@ -160,11 +192,10 @@ const ServiceCard = ({
     >
       {/* Gradient always magnetic to cursor */}
       <div
+        ref={glowRef}
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: hl
-            ? `radial-gradient(250px circle at ${pos.x}% ${pos.y}%, rgba(0,212,170,0.25), transparent 70%)`
-            : `radial-gradient(250px circle at ${pos.x}% ${pos.y}%, hsl(var(--accent) / 0.22), transparent 70%)`,
+          background: `radial-gradient(250px circle at 50% 50%, ${glowColor}, transparent 70%)`,
           transition: "background 0.15s ease",
         }}
       />
@@ -224,8 +255,8 @@ const Services = () => {
   usePageMetadata({
     title: "Services | Forrof",
     description:
-      "Explore our comprehensive software and digital services including AI development, SaaS platforms, and product strategy.",
-    keywords: "AI development, SaaS, internal tools, automation, product design",
+      "Explore our comprehensive software, AI, and growth marketing services including AI development, SaaS platforms, paid ads, SEO, and email & LinkedIn outreach.",
+    keywords: "AI development, SaaS, paid ads, google ads, meta ads, email marketing, linkedin marketing, growth marketing, internal tools, automation, product design",
   });
 
   const heroRef = useRef<HTMLDivElement>(null);
@@ -310,7 +341,7 @@ const Services = () => {
               transition={{ delay: 0.6 }}
             >
               We partner with founders and growing teams to build AI‑powered products,
-              intelligent systems, and scalable software platforms.
+              intelligent systems, scalable software platforms, and marketing engines that drive measurable revenue.
             </motion.p>
 
             <motion.div
@@ -320,7 +351,7 @@ const Services = () => {
               transition={{ delay: 0.8 }}
             >
               {[
-                { n: "8", label: "Core Services" },
+                { n: "11", label: "Core Services" },
                 { n: "150+", label: "Projects Shipped" },
                 { n: "98%", label: "Client Satisfaction" },
               ].map((s) => (
@@ -431,7 +462,7 @@ const Services = () => {
             animate={isProcessInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            A proven process that keeps you in the loop at every step — no black boxes, no surprises.
+            A proven process that keeps you in the loop at every step - no black boxes, no surprises.
           </motion.p>
 
           {/* Premium centered timeline */}

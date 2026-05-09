@@ -11,8 +11,8 @@ import { EnterpriseArchBlock } from "@/components/AiMlVisuals";
 const teamTypes = [
   { num: "01", title: "Enterprise Innovation Labs", desc: "Test ideas fast, launch pilots, and validate new digital products without disrupting core operations." },
   { num: "02", title: "CIO / CTO Offices", desc: "Engineering expertise and predictable delivery for technology leaders managing complex transformation agendas." },
-  { num: "03", title: "Corporate Digital Ventures", desc: "From concept to MVP and scaling — we operate as your external venture studio with enterprise-grade discipline." },
-  { num: "04", title: "Regional Divisions and R&D Departments", desc: "Launch local initiatives with global standards — strategy, design, and development under one roof." },
+  { num: "03", title: "Corporate Digital Ventures", desc: "From concept to MVP and scaling - we operate as your external venture studio with enterprise-grade discipline." },
+  { num: "04", title: "Regional Divisions and R&D Departments", desc: "Launch local initiatives with global standards - strategy, design, and development under one roof." },
   { num: "05", title: "Enterprise AI / Automation Initiatives", desc: "Quick ROI, production-ready AI pilots that move from whiteboard to working system in weeks, not quarters." },
 ];
 
@@ -20,7 +20,7 @@ const challenges = [
   {
     num: "01",
     challenge: "Slow digital transformation cycles",
-    approach: "Agile product teams operating in short sprints — shipping value every two weeks, not every two years.",
+    approach: "Agile product teams operating in short sprints - shipping value every two weeks, not every two years.",
   },
   {
     num: "02",
@@ -30,7 +30,7 @@ const challenges = [
   {
     num: "03",
     challenge: "High vendor costs and opaque pricing",
-    approach: "Lean, senior-led teams and transparent pricing models — you know exactly what you're paying for and why.",
+    approach: "Lean, senior-led teams and transparent pricing models - you know exactly what you're paying for and why.",
   },
   {
     num: "04",
@@ -56,7 +56,7 @@ const engagementModels = [
   {
     num: "01",
     title: "Innovation Pilot",
-    desc: "Test a hypothesis quickly with a time-boxed, budget-fixed pilot — de-risk the investment before committing to full scale.",
+    desc: "Test a hypothesis quickly with a time-boxed, budget-fixed pilot - de-risk the investment before committing to full scale.",
   },
   {
     num: "02",
@@ -66,26 +66,26 @@ const engagementModels = [
   {
     num: "03",
     title: "Augmented Enterprise Teams",
-    desc: "Add senior specialists — engineers, designers, AI architects — who integrate with your existing teams and processes.",
+    desc: "Add senior specialists - engineers, designers, AI architects - who integrate with your existing teams and processes.",
   },
   {
     num: "04",
     title: "End-to-End Product Delivery",
-    desc: "Full ownership of a product from design through deployment — we operate as your external product studio.",
+    desc: "Full ownership of a product from design through deployment - we operate as your external product studio.",
   },
 ];
 
 const reasons = [
   { title: "Deep Expertise in AI and Digital Innovation", desc: "Proven track record delivering AI solutions, digital platforms, and automation systems across complex enterprise environments." },
   { title: "Enterprise-Level Delivery", desc: "SOC 2-ready processes, senior engineers, and delivery standards that meet enterprise procurement and security requirements." },
-  { title: "Transparent Communication and Agile Approach", desc: "Weekly demos, honest status reporting, and sprint retrospectives — no surprises, just consistent progress." },
+  { title: "Transparent Communication and Agile Approach", desc: "Weekly demos, honest status reporting, and sprint retrospectives - no surprises, just consistent progress." },
   { title: "Focus on Measurable Business Results", desc: "Every engagement is tied to specific KPIs. We optimize for your outcomes, not deliverable counts." },
 ];
 
 export default function EnterpriseService() {
   usePageMetadata({
     title: "Enterprise Software & IT Services | Forrof",
-    description: "IT technology partner for enterprise innovation. Move faster, innovate smarter, and scale with confidence — from rapid pilots to production-grade platforms.",
+    description: "IT technology partner for enterprise innovation. Move faster, innovate smarter, and scale with confidence - from rapid pilots to production-grade platforms.",
     keywords: "enterprise software, IT consulting, digital transformation, enterprise AI, innovation lab, CTO services, enterprise development",
   });
 
@@ -169,7 +169,7 @@ export default function EnterpriseService() {
         </div>
       </motion.section>
 
-      {/* SECTION 1 — Who We Serve (hover-expand list) */}
+      {/* SECTION 1 - Who We Serve (hover-expand list) */}
       <section ref={sec1Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -218,7 +218,7 @@ export default function EnterpriseService() {
         </div>
       </section>
 
-      {/* SECTION 2 — Challenges (click-to-select) */}
+      {/* SECTION 2 - Challenges (click-to-select) */}
       <section ref={sec2Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -242,7 +242,7 @@ export default function EnterpriseService() {
           </motion.h2>
 
           <div className="grid md:grid-cols-[1fr_1.2fr] gap-12 md:gap-16">
-            {/* Left — clickable list */}
+            {/* Left - clickable list */}
             <div className="space-y-2">
               {challenges.map((item, i) => (
                 <motion.button
@@ -287,7 +287,7 @@ export default function EnterpriseService() {
               ))}
             </div>
 
-            {/* Right — detail panel */}
+            {/* Right - detail panel */}
             <div className="relative min-h-[280px]">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -326,7 +326,7 @@ export default function EnterpriseService() {
             >
               <h3 className="text-2xl md:text-3xl font-bold mb-6">Enterprise-Grade from the Ground Up</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Every system we build is designed for enterprise reality — microservices architecture, SSO integration, SOC 2 compliance, and 99.99% uptime. No shortcuts, no tech debt, no surprises.
+                Every system we build is designed for enterprise reality - microservices architecture, SSO integration, SOC 2 compliance, and 99.99% uptime. No shortcuts, no tech debt, no surprises.
               </p>
               <Magnetic>
                 <button
@@ -342,14 +342,14 @@ export default function EnterpriseService() {
         </div>
       </section>
 
-      {/* SECTION 3 — How We Work (scroll-driven timeline) */}
+      {/* SECTION 3 - How We Work (scroll-driven timeline) */}
       <section ref={sec3Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <ProcessTimeline steps={processSteps} inView={sec3InView} sectionLabel="/03" title="How We Work with Enterprise Clients" labelText="Process" />
         </div>
       </section>
 
-      {/* SECTION 4 — Engagement Models (GlowCard with hover-expand) */}
+      {/* SECTION 4 - Engagement Models (GlowCard with hover-expand) */}
       <section ref={sec4Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div
@@ -397,7 +397,7 @@ export default function EnterpriseService() {
         </div>
       </section>
 
-      {/* SECTION 5 — Why Partner with Us (GlowCard with hover-expand) */}
+      {/* SECTION 5 - Why Partner with Us (GlowCard with hover-expand) */}
       <section ref={sec5Ref} className="section-forced-light section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <motion.div

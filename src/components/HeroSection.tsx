@@ -253,7 +253,7 @@ export const HeroSection = ({ onGlobeReady }: HeroSectionProps = {}) => {
               </span>
             </motion.p>
             <div className="flex gap-3 flex-wrap justify-end">
-              {["AI", "SaaS", "Ads", "SEO"].map((tag, i) => (
+              {["AI", "ML", "SaaS", "Paid Ads"].map((tag, i) => (
                 <motion.span
                   key={tag}
                   className="px-5 py-2 border-2 border-[#48f0e7]/40 text-white/80 rounded-full text-[11px] uppercase tracking-[0.2em] hover:border-[#48f0e7]/70 hover:text-[#48f0e7] transition-colors duration-300"

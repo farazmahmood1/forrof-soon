@@ -1,11 +1,125 @@
 import {
+  AnimatePresence,
   motion,
   useInView,
 } from "framer-motion";
-import { useRef, useState } from "react";
-import { Send, ArrowUpRight, Mail, Phone, MapPin } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Check, ChevronDown, Send, ArrowUpRight, Mail, Phone, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { LineReveal, Magnetic } from "./AnimationComponents";
+
+type ServiceOption = { value: string; label: string };
+
+const serviceOptions: ServiceOption[] = [
+  { value: "paid-ads", label: "Paid Ads (Google, Meta, LinkedIn)" },
+  { value: "google-ads", label: "Google Ads" },
+  { value: "meta-ads", label: "Meta Ads" },
+  { value: "social-media", label: "Social Media Marketing" },
+  { value: "seo", label: "SEO" },
+  { value: "software", label: "Custom Software & Web" },
+  { value: "ai-ml", label: "AI / ML Development" },
+  { value: "saas", label: "SaaS Development" },
+  { value: "not-sure", label: "Not sure yet - let's talk" },
+];
+
+const ServiceSelect = ({
+  value,
+  onChange,
+  onFocus,
+  onBlur,
+}: {
+  value: string;
+  onChange: (v: string) => void;
+  onFocus: () => void;
+  onBlur: () => void;
+}) => {
+  const [open, setOpen] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const onDocClick = (e: MouseEvent) => {
+      if (!wrapperRef.current?.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    if (open) {
+      document.addEventListener("mousedown", onDocClick);
+      document.addEventListener("keydown", onKey);
+    }
+    return () => {
+      document.removeEventListener("mousedown", onDocClick);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  const selected = serviceOptions.find((o) => o.value === value);
+
+  return (
+    <div ref={wrapperRef} className="relative">
+      {/* Hidden input so the value is included in FormData on submit */}
+      <input type="hidden" name="serviceInterest" value={value} />
+      <button
+        type="button"
+        onClick={() => {
+          setOpen((o) => !o);
+          onFocus();
+        }}
+        onBlur={(e) => {
+          if (!wrapperRef.current?.contains(e.relatedTarget as Node)) onBlur();
+        }}
+        className="w-full bg-background border-b-2 border-border py-4 pr-10 text-left focus:outline-none transition-colors text-foreground cursor-pointer flex items-center justify-between"
+      >
+        <span className={selected ? "text-foreground" : "text-muted-foreground"}>
+          {selected ? selected.label : "Select a service…"}
+        </span>
+        <ChevronDown
+          size={16}
+          className={`text-muted-foreground transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.18, ease: [0.25, 0.1, 0.25, 1] }}
+            className="absolute left-0 right-0 top-full mt-2 z-50 rounded-xl border border-border bg-background shadow-2xl overflow-hidden max-h-72 overflow-y-auto"
+          >
+            <ul role="listbox" className="py-1">
+              {serviceOptions.map((opt) => {
+                const isSelected = opt.value === value;
+                return (
+                  <li key={opt.value}>
+                    <button
+                      type="button"
+                      role="option"
+                      aria-selected={isSelected}
+                      onClick={() => {
+                        onChange(opt.value);
+                        setOpen(false);
+                      }}
+                      className={`w-full text-left px-4 py-2.5 text-sm flex items-center justify-between gap-3 transition-colors ${
+                        isSelected
+                          ? "bg-[#00d4aa]/10 text-foreground"
+                          : "text-muted-foreground hover:bg-foreground/[0.04] hover:text-foreground"
+                      }`}
+                    >
+                      <span>{opt.label}</span>
+                      {isSelected && <Check size={14} className="text-[#00d4aa] shrink-0" />}
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
 
 export const ContactSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -289,27 +403,12 @@ export const ContactSection = () => {
               >
                 What do you need?
               </motion.label>
-              <select
-                name="serviceInterest"
+              <ServiceSelect
                 value={formData.serviceInterest}
-                onChange={(e) =>
-                  setFormData({ ...formData, serviceInterest: e.target.value })
-                }
+                onChange={(v) => setFormData({ ...formData, serviceInterest: v })}
                 onFocus={() => setFocusedField("serviceInterest")}
                 onBlur={() => setFocusedField(null)}
-                className="w-full bg-background border-b-2 border-border py-4 focus:outline-none transition-colors text-foreground"
-              >
-                <option value="">Select a service…</option>
-                <option value="paid-ads">Paid Ads (Google, Meta, LinkedIn)</option>
-                <option value="google-ads">Google Ads</option>
-                <option value="meta-ads">Meta Ads</option>
-                <option value="social-media">Social Media Marketing</option>
-                <option value="seo">SEO</option>
-                <option value="software">Custom Software & Web</option>
-                <option value="ai-ml">AI / ML Development</option>
-                <option value="saas">SaaS Development</option>
-                <option value="not-sure">Not sure yet - let's talk</option>
-              </select>
+              />
               <motion.div
                 className="h-0.5 bg-foreground origin-left mt-[-2px]"
                 initial={{ scaleX: 0 }}

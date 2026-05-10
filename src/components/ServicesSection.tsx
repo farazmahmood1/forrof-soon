@@ -32,6 +32,13 @@ const services: { number: string; title: string; description: string; image: str
   },
   {
     number: "04",
+    title: "Mobile App Development",
+    description: "Native and cross‑platform iOS and Android apps engineered for performance, polish, and scale - shipped fast and built to retain users from the first launch.",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80",
+    slug: "mobile",
+  },
+  {
+    number: "05",
     title: "Paid Ads",
     description: "Intent-driven campaigns across Google, Meta, LinkedIn, and TikTok - engineered with API-level tracking and CRO landing pages that turn ad spend into booked revenue.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
@@ -39,7 +46,7 @@ const services: { number: string; title: string; description: string; image: str
     trending: true,
   },
   {
-    number: "05",
+    number: "06",
     title: "Social Media Marketing",
     description: "Data-driven social strategies, content creation, and paid campaigns that grow your audience and turn followers into qualified customers.",
     image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80",

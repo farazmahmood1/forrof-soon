@@ -1,41 +1,17 @@
 import { memo, useEffect, useRef, useState } from "react";
 
-const clientFiles = [
-  "Appen-Talent Store Logo.png",
-  "Bushal Farm Logo.jpg",
-  "a (7).jpeg",
-  "carbonmade_logo.jfif",
-  "curogram logo.jfif",
-  "a (4).jpeg",
-  "FitReps Logo.svg",
-  "Fynosign Logo (2).png",
-  "glampinghub logo.jpg",
-  "Khrimsay Logo.png",
-  "Kumon North America, Inc. logo.png",
-  "logo_1714715740.jpg",
-  "loopiq logo.jfif",
-  "a (3).jpeg",
-  "LoopIQ Logo.jpg",
-  "mapmatix logo.jfif",
-  "Olio_Logo.jpg",
-  "a (1).jpeg",
-  "Ruhr-Universität logo.jpg",
-  "Screenshot 2025-12-28 163931.png",
-  "a (2).jpeg",
-  "a (5).jpeg",
-];
-
-const paths = clientFiles.map(
-  (n) => `${import.meta.env.VITE_SERVER}/clients/${encodeURI(n)}`
+const paths = Array.from(
+  { length: 23 },
+  (_, i) => `https://dev.gemseeroo.com/logos/${i + 1}.png`
 );
+const names = Array.from({ length: 23 }, (_, i) => `Client ${i + 1}`);
 const mid = Math.ceil(paths.length / 2);
 const row1 = paths.slice(0, mid);
 const row2 = paths.slice(mid);
-const names1 = clientFiles.slice(0, mid);
-const names2 = clientFiles.slice(mid);
+const names1 = names.slice(0, mid);
+const names2 = names.slice(mid);
 
-const logoAlt = (n: string) =>
-  n.replace(/\.(png|jpg|jpeg|svg|jfif|webp)$/i, "").replace(/[-_]/g, " ");
+const logoAlt = (n: string) => n;
 
 const onErr = (e: React.SyntheticEvent<HTMLImageElement>) => {
   const t = e.target as HTMLImageElement;

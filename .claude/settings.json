@@ -66,7 +66,10 @@
       "WebFetch(domain:www.signal-sigma.com)",
       "WebFetch(domain:www.saleshero.io)",
       "WebFetch(domain:quidget.ai)",
-      "WebFetch(domain:rallytyper.com)"
+      "WebFetch(domain:rallytyper.com)",
+      "Bash(curl -sI \"https://dev.gemseeroo.com/logos/1.png\")",
+      "Bash(curl -sI --max-time 10 \"https://dev.gemseeroo.com/logos/1.png\")",
+      "Bash(curl -sIL --max-time 15 -o /dev/null -w \"HTTP %{http_code} | content-type: %{content_type} | size: %{size_download}\\\\n\" \"https://dev.gemseeroo.com/logos/1.png\")"
     ],
     "additionalDirectories": [
       "C:\\animated-ui\\brian-tracy\\src\\pages\\services"

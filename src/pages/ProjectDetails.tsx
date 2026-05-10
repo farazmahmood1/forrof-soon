@@ -396,6 +396,30 @@ const ProjectDetails = () => {
               transition={{ duration: 0.6 }}
               loading="lazy"
             />
+            {project.image === "/placeholder.svg" && (
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+                <motion.div
+                  className="relative z-10 flex flex-col items-center gap-3 px-6 py-5 rounded-full bg-background/80 backdrop-blur-md border border-[#00d4aa]/30"
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6, duration: 0.8 }}
+                >
+                  <div className="flex items-center gap-2.5">
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full rounded-full bg-[#00d4aa] opacity-75 animate-ping" />
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00d4aa]" />
+                    </span>
+                    <span className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.25em] text-foreground">
+                      Case Study Under Development
+                    </span>
+                  </div>
+                  <span className="text-[10px] md:text-[11px] text-muted-foreground tracking-wide">
+                    Visuals & detailed write-up coming soon
+                  </span>
+                </motion.div>
+              </div>
+            )}
           </div>
         </div>
       </motion.section>

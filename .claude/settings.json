@@ -51,7 +51,22 @@
       "Read(//tmp/claude/c--animated-ui-brian-tracy/0548a19a-9b0b-45bd-9dd2-5c30d2bf8c07/tasks/**)",
       "Skill(browse)",
       "Skill(browse:*)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://dev.gemseeroo.com/clients/Appen-Talent%20Store%20Logo.png\")"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://dev.gemseeroo.com/clients/Appen-Talent%20Store%20Logo.png\")",
+      "Bash(git commit -m ' *)",
+      "Bash(gh auth *)",
+      "WebFetch(domain:bushelfarm.com)",
+      "WebFetch(domain:olioapp.com)",
+      "WebFetch(domain:glampinghub.com)",
+      "WebFetch(domain:curogram.com)",
+      "WebFetch(domain:carbonmade.com)",
+      "WebFetch(domain:loop-iq-prod.vercel.app)",
+      "WebFetch(domain:fynosign.com)",
+      "WebSearch",
+      "WebFetch(domain:www.bushelpowered.com)",
+      "WebFetch(domain:www.signal-sigma.com)",
+      "WebFetch(domain:www.saleshero.io)",
+      "WebFetch(domain:quidget.ai)",
+      "WebFetch(domain:rallytyper.com)"
     ],
     "additionalDirectories": [
       "C:\\animated-ui\\brian-tracy\\src\\pages\\services"

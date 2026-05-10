@@ -111,7 +111,7 @@ export default function MvpService() {
               animate={{ y: 0, backgroundPosition: "100% 50%" }}
               transition={{
                 y: { duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 },
-                backgroundPosition: { duration: 3, ease: "easeInOut", delay: 1, repeat: Infinity, repeatType: "reverse" },
+                backgroundPosition: { duration: 3, ease: "easeInOut", delay: 1 },
               }}
             >
               MVP &amp; POC Development
@@ -444,6 +444,7 @@ export default function MvpService() {
                 <button
                   className="w-full py-7 flex items-center justify-between gap-6 text-left group transition-all duration-300 hover:pl-4 hover:bg-foreground/[0.03] rounded-xl"
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  onMouseEnter={() => setOpenFaq(i)}
                 >
                   <div className="flex items-center gap-4">
                     <motion.div

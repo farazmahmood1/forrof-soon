@@ -7,13 +7,14 @@ import { ArrowUpRight } from "lucide-react";
 import { LineReveal, Magnetic } from "./AnimationComponents";
 import { useNavigate } from "react-router-dom";
 
-const services = [
+const services: { number: string; title: string; description: string; image: string; slug: string; trending?: boolean }[] = [
   {
     number: "01",
     title: "AI/ML Development",
     description: "Real‑world AI systems - from document intelligence to custom agents and workflows - integrated directly into your business.",
     image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=600&q=80",
     slug: "ai-ml",
+    trending: true,
   },
   {
     number: "02",
@@ -35,6 +36,7 @@ const services = [
     description: "Intent-driven campaigns across Google, Meta, LinkedIn, and TikTok - engineered with API-level tracking and CRO landing pages that turn ad spend into booked revenue.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
     slug: "paid-ads",
+    trending: true,
   },
   {
     number: "05",
@@ -132,8 +134,13 @@ export const ServicesSection = () => {
                     /{service.number}
                   </span>
                   <div className="md:overflow-visible">
-                    <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold group-hover:translate-x-7 transition-transform duration-500">
+                    <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold group-hover:translate-x-7 transition-transform duration-500 inline-flex items-center gap-3">
                       {service.title}
+                      {service.trending && (
+                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#00d4aa]/15 text-[#00d4aa] font-semibold uppercase tracking-wider border border-[#00d4aa]/30 align-middle">
+                          Trending
+                        </span>
+                      )}
                     </h3>
                   </div>
                 </div>

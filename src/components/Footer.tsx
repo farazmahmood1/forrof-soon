@@ -10,12 +10,13 @@ import { useNavigate } from "react-router-dom";
 import { useRef, useCallback } from "react";
 import { SOCIAL_LINKS } from "@/constants/links";
 
-const serviceLinks = [
-  { name: "AI/ML Development", href: "/services/ai-ml" },
+const serviceLinks: { name: string; href: string; trending?: boolean }[] = [
+  { name: "AI/ML Development", href: "/services/ai-ml", trending: true },
   { name: "Enterprise Software", href: "/services/enterprise" },
   { name: "SaaS Development", href: "/services/saas" },
   { name: "MVP & POC", href: "/services/mvp" },
   { name: "Product Strategy", href: "/services/strategy" },
+  { name: "Paid Ads", href: "/services/paid-ads", trending: true },
   { name: "Mobile App Development", href: "/services/mobile" },
   { name: "Branding & UI/UX", href: "/services/ux-design" },
   { name: "Social Media Marketing", href: "/services/social-media" },
@@ -126,6 +127,11 @@ export const Footer = () => {
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 inline-flex items-center gap-1.5 group"
                   >
                     {link.name}
+                    {link.trending && (
+                      <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-[#00d4aa]/15 text-[#00d4aa] font-semibold uppercase tracking-wider border border-[#00d4aa]/30">
+                        Trending
+                      </span>
+                    )}
                     <ArrowUpRight size={11} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                   </a>
                 </li>

@@ -1,11 +1,11 @@
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { LineReveal, Magnetic } from "@/components/AnimationComponents";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { GlowCard } from "@/components/InteractiveElements";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { SocialMediaTerminalBlock } from "@/components/AiMlVisuals";
 
 const services = [
@@ -31,6 +31,45 @@ const processSteps = [
   { num: "02", title: "Tracking & Setup", desc: "Server-side tracking, conversion API, pixel hardening, and clean attribution - so every dollar is tracked back to the lead, the meeting, and the closed deal." },
   { num: "03", title: "Launch & Test", desc: "Multiple ad groups, creative variants, and audience tests launched simultaneously - we find your winning formula in weeks, not quarters." },
   { num: "04", title: "Scale & Optimize", desc: "Winning ads get scaled, losing ads get killed weekly. Continuous CRO on landing pages and creative iteration keeps CPA dropping while volume climbs." },
+];
+
+const clientWins = [
+  {
+    name: "GreenWorks",
+    logo: "/clients/greenworks-logo.png",
+    image:
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80&auto=format&fit=crop",
+    headline: "Rebuilt Campaign Structure To Support High-Volume, Cost-Efficient Growth.",
+    stats: [
+      { value: "400+", label: "Qualified Leads" },
+      { value: "150+", label: "Bookings" },
+      { value: "$111K+", label: "Revenue Generated" },
+    ],
+  },
+  {
+    name: "Linkhorn Inspection Group",
+    logo: "/clients/linkhorn-logo.png",
+    image:
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80&auto=format&fit=crop",
+    headline: "Turned Strategic Campaign Precision Into Measurable Revenue Growth.",
+    stats: [
+      { value: "600+", label: "Qualified Leads" },
+      { value: "250+", label: "Bookings" },
+      { value: "$181K+", label: "Revenue Generated" },
+    ],
+  },
+  {
+    name: "RedFish Inspections",
+    logo: "/clients/redfish-logo.png",
+    image:
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80&auto=format&fit=crop",
+    headline: "Scaled Local Inspection Demand Into Predictable Pipeline Growth.",
+    stats: [
+      { value: "720+", label: "Qualified Leads" },
+      { value: "290+", label: "Bookings" },
+      { value: "$215K+", label: "Revenue Generated" },
+    ],
+  },
 ];
 
 const whyUsItems = [
@@ -59,19 +98,44 @@ export default function PaidAdsService() {
   });
 
   const navigate = useNavigate();
+  const location = useLocation();
   const [expandedWhy, setExpandedWhy] = useState<number | null>(null);
+  const [activeWin, setActiveWin] = useState(0);
+  const [winsPaused, setWinsPaused] = useState(false);
+
+  useEffect(() => {
+    if (winsPaused) return;
+    const id = setInterval(() => {
+      setActiveWin((prev) => (prev + 1) % clientWins.length);
+    }, 5500);
+    return () => clearInterval(id);
+  }, [winsPaused]);
+
+  // Scroll to hash target (e.g. /services/paid-ads#client-wins) after mount.
+  useEffect(() => {
+    if (!location.hash) return;
+    const id = location.hash.slice(1);
+    const tryScroll = () => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+    const t = setTimeout(tryScroll, 80);
+    return () => clearTimeout(t);
+  }, [location.hash]);
 
   const heroRef = useRef(null);
   const sec1Ref = useRef(null);
   const sec2Ref = useRef(null);
   const sec3Ref = useRef(null);
   const sec4Ref = useRef(null);
+  const winsRef = useRef(null);
   const ctaRef = useRef(null);
 
   const sec1InView = useInView(sec1Ref, { once: true, margin: "-100px" });
   const sec2InView = useInView(sec2Ref, { once: true, margin: "-100px" });
   const sec3InView = useInView(sec3Ref, { once: true, margin: "-100px" });
   const sec4InView = useInView(sec4Ref, { once: true, margin: "-100px" });
+  const winsInView = useInView(winsRef, { once: true, margin: "-100px" });
   const ctaInView = useInView(ctaRef, { once: true, margin: "-100px" });
 
   return (
@@ -116,7 +180,7 @@ export default function PaidAdsService() {
                 animate={{ y: 0, backgroundPosition: "100% 50%" }}
                 transition={{
                   y: { duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 },
-                  backgroundPosition: { duration: 3, ease: "easeInOut", delay: 1, repeat: Infinity, repeatType: "reverse" },
+                  backgroundPosition: { duration: 3, ease: "easeInOut", delay: 1 },
                 }}
               >
                 Paid Ads That Pay Off
@@ -321,6 +385,109 @@ export default function PaidAdsService() {
       <section ref={sec4Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <ProcessTimeline steps={processSteps} inView={sec4InView} sectionLabel="/04" />
+        </div>
+      </section>
+
+      {/* SECTION 5 - Client Wins */}
+      <section id="client-wins" ref={winsRef} className="section-forced-dark section-padding py-32 scroll-mt-20">
+        <div className="max-w-[1800px] mx-auto">
+          <motion.div
+            className="flex items-center gap-4 mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={winsInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="number-label">/05</span>
+            <LineReveal className="h-px bg-border flex-1" delay={0.3} />
+            <span className="text-xs text-muted-foreground uppercase tracking-widest">Client Wins</span>
+          </motion.div>
+
+          <motion.h2
+            className="text-4xl md:text-6xl font-bold tracking-tighter mb-16 max-w-4xl"
+            initial={{ opacity: 0, y: 40 }}
+            animate={winsInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.1 }}
+          >
+            Real Campaigns, Real Revenue
+          </motion.h2>
+
+          <motion.div
+            className="relative overflow-hidden rounded-3xl min-h-[360px] md:min-h-[420px] bg-foreground/5 border border-border/40"
+            initial={{ opacity: 0, y: 60 }}
+            animate={winsInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            onMouseEnter={() => setWinsPaused(true)}
+            onMouseLeave={() => setWinsPaused(false)}
+          >
+            <AnimatePresence mode="wait">
+              {clientWins.map((win, i) =>
+                i === activeWin ? (
+                  <motion.div
+                    key={win.name}
+                    className="absolute inset-0"
+                    initial={{ opacity: 0, x: 60 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -60 }}
+                    transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+                  >
+                    <img
+                      src={win.image}
+                      alt={`${win.name} team`}
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        background:
+                          "linear-gradient(90deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0.25) 65%, rgba(0,0,0,0) 95%)",
+                      }}
+                    />
+                    <div className="relative z-10 flex flex-col justify-between h-full min-h-[360px] md:min-h-[420px] p-8 md:p-12 max-w-2xl">
+                      <img
+                        src={win.logo}
+                        alt={`${win.name} logo`}
+                        className="h-9 md:h-10 w-auto object-contain self-start brightness-0 invert"
+                      />
+                      <div>
+                        <h3 className="text-xl md:text-3xl font-bold text-white leading-tight tracking-tight mb-8 max-w-xl">
+                          {win.headline}
+                        </h3>
+                        <div className="flex flex-wrap gap-x-8 md:gap-x-12 gap-y-5">
+                          {win.stats.map((stat) => (
+                            <div key={stat.label}>
+                              <div className="text-2xl md:text-4xl font-bold text-white leading-none mb-1.5 tracking-tight">
+                                {stat.value}
+                              </div>
+                              <div className="text-[11px] md:text-xs text-white/70 uppercase tracking-wider">
+                                {stat.label}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ) : null
+              )}
+            </AnimatePresence>
+          </motion.div>
+
+          {/* Carousel dots */}
+          <div className="flex items-center justify-center gap-3 mt-8">
+            {clientWins.map((win, i) => (
+              <button
+                key={win.name}
+                onClick={() => setActiveWin(i)}
+                aria-label={`Show ${win.name} case study`}
+                className={`h-1.5 rounded-full transition-all duration-500 ${
+                  i === activeWin
+                    ? "w-10 bg-foreground"
+                    : "w-5 bg-foreground/25 hover:bg-foreground/50"
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </section>
 

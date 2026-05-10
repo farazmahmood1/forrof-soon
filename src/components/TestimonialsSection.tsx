@@ -35,6 +35,78 @@ const testimonials = [
     image:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&q=80",
   },
+  {
+    quote:
+      "Forrof rebuilt our entire paid ads funnel and took us from 1.8x to 5.4x ROAS in under 90 days. Cost per qualified lead dropped 62%. They actually understand performance marketing, not just spending budget.",
+    author: "Daniel Park",
+    role: "Head of Growth",
+    company: "SalesHero",
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&q=80",
+  },
+  {
+    quote:
+      "Forrof shipped a platform that exposes institutional-grade quant logic through a no-code interface — live trading, backtests, ML signals — without ever feeling overwhelming. Our paid signups doubled post-launch.",
+    author: "Jonathan Reeves",
+    role: "Founder & CEO",
+    company: "Signal Sigma",
+    image:
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&q=80",
+  },
+  {
+    quote:
+      "Quidget went from idea to a production AI assistant in three months. Integrations, conversational UX, analytics — everything was thought through. Enterprise customers consistently call out how polished it feels.",
+    author: "Priya Anand",
+    role: "Co-Founder",
+    company: "Quidget AI",
+    image:
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&q=80",
+  },
+  {
+    quote:
+      "Forrof relaunched FynoSign and ran our Google and Meta ads in parallel. The product cut drop-off by 41%, and paid ads are now closing contracts at less than half our previous CAC. Best agency partnership we've had.",
+    author: "Marcus Whitmore",
+    role: "VP Marketing",
+    company: "FynoSign",
+    image:
+      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&q=80",
+  },
+  {
+    quote:
+      "Loopiq was a complex build — real-time data, multiple integrations, a tricky permissions model — and Forrof delivered it cleanly. They communicated like in-house engineers and shipped on every milestone.",
+    author: "Sophie Lambert",
+    role: "Product Lead",
+    company: "Loopiq",
+    image:
+      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&q=80",
+  },
+  {
+    quote:
+      "Forrof rebuilt our campaign structure from the ground up and pulled in 400+ qualified leads, 150+ bookings, and over $111K in revenue. High-volume, cost-efficient growth — exactly what we hired them to deliver.",
+    author: "Aaron Boyle",
+    role: "Operations Director",
+    company: "GreenWorks",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80",
+  },
+  {
+    quote:
+      "Forrof turned strategic campaign precision into measurable revenue growth — 600+ qualified leads, 250+ bookings, and $181K in revenue. Pipeline we can finally forecast against month over month.",
+    author: "Brian Hollister",
+    role: "Marketing Director",
+    company: "Linkhorn Inspection Group",
+    image:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&q=80",
+  },
+  {
+    quote:
+      "Forrof scaled our local inspection demand into a predictable pipeline — 720+ qualified leads, 290+ bookings, and $215K in revenue. They run paid ads like a growth engine, not a media buy.",
+    author: "Nate Beaumont",
+    role: "Owner",
+    company: "RedFish Inspections",
+    image:
+      "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=150&q=80",
+  },
 ];
 
 const stats = [
@@ -195,7 +267,7 @@ export const TestimonialsSection = () => {
             </div>
 
             {/* Testimonial Content with Slide Animation */}
-            <div className="relative min-h-[250px] overflow-hidden">
+            <div className="relative min-h-[340px] sm:min-h-[300px] md:min-h-[280px] overflow-hidden">
               <AnimatePresence initial={false} custom={direction} mode="wait">
                 <motion.div
                   key={current}
@@ -339,7 +411,7 @@ export const TestimonialsSection = () => {
                   { label: "AI/ML", count: 52, opacity: "bg-[#126b66]" },
                   { label: "Enterprise", count: 38, opacity: "bg-[#00d4aa]" },
                   { label: "SaaS", count: 25, opacity: "bg-[#0a9d8a]" },
-                  { label: "MVP/Strategy", count: 37, opacity: "bg-[#126b66]/30 border border-[#126b66]/50" },
+                  { label: "Paid Ads", count: 37, opacity: "bg-[#126b66]/30 border border-[#126b66]/50" },
                 ].map(({ label, count, opacity }, i) => (
                   <motion.div
                     key={label}

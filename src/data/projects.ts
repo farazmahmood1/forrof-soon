@@ -1,6 +1,273 @@
 // Project data
 export const projectsData = [
   {
+    id: "signal-sigma",
+    title: "Signal Sigma",
+    metaTitle: "Signal Sigma | Investment Research & Quant Trading Platform – Forrof",
+    metaDescription: "Signal Sigma is a quantitative investment research and portfolio management platform offering live trading strategies, a no-code custom strategy builder, and machine-learning-assisted analytics for retail investors.",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Signal Sigma Investment Research Platform",
+      "url": "https://forrof.io/project/signal-sigma",
+      "image": "/placeholder.svg",
+      "description": "Case study of Signal Sigma, a quantitative investment research platform combining live trading strategies, dark-pool data, gamma-exposure metrics, and a no-code strategy builder for independent investors.",
+      "author": {
+        "@type": "Organization",
+        "name": "Forrof",
+        "url": "https://forrof.io"
+      },
+      "about": ["Fintech", "Quantitative Analytics", "Investment Research", "Machine Learning"]
+    },
+    date: "Mar 2025",
+    location: "Global",
+    image: "/placeholder.svg",
+    category: "AI Platforms",
+    tags: ["FINTECH", "QUANT TRADING", "AI/ML", "INVESTMENT RESEARCH"],
+    overview:
+      "Signal Sigma is an investment research and portfolio management platform offering automated trading strategies and a no-code custom strategy builder for retail investors. The platform combines multi-factor signal generation, machine-learning-assisted analytics, and institutional-grade data — including dark-pool flow and gamma-exposure metrics — alongside pre-built live strategies (Millennium Alpha, Enterprise, Sigma Portfolio, Vision) and live trade alerts.",
+    designProcess: [
+      {
+        phase: "Discovery",
+        hours: "14 hours",
+        tasks: [
+          "Data Workflow Research",
+          "Business Intelligence Analysis",
+          "AI Systems Research",
+        ],
+      },
+      {
+        phase: "Strategy",
+        hours: "22 hours",
+        tasks: [
+          "Analytics Architecture",
+          "AI Workflow Planning",
+          "Data Visualization Systems",
+        ],
+      },
+      {
+        phase: "Solution",
+        hours: "80 hours",
+        tasks: [
+          "Frontend Development",
+          "Backend Data Processing",
+          "LLM & AI Integration",
+          "Testing & Deployment",
+        ],
+      },
+    ],
+    concepts: [
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+    ],
+    challenge:
+      "The challenge was building institutional-grade quantitative research tools that retail investors can operate without writing code — keeping live data, backtesting, and multi-factor signal generation accurate and fast enough to support real trading decisions, while exposing complex strategy logic through a clean no-code interface.",
+    impact:
+      "Signal Sigma gives independent investors access to multi-factor strategies, custom backtesting, and live trade alerts that previously required a Bloomberg terminal or quant desk — democratising sophisticated investment workflows through a single subscription product.",
+    gallery: ["/placeholder.svg"],
+    responsive: [
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+    ],
+    techStack: [
+      "React",
+      "Next.js",
+      "Python",
+      "Node.js",
+      "Quantitative Models",
+      "Machine Learning",
+      "Backtesting Engine",
+      "PostgreSQL",
+      "AWS",
+      "Tailwind CSS",
+      "Figma",
+    ],
+    liveUrl: "https://www.signal-sigma.com/",
+  },
+  {
+    id: "quidget-ai",
+    title: "Quidget AI",
+    metaTitle: "Quidget AI | No-Code AI Chatbot for Customer Support – Forrof",
+    metaDescription: "Quidget AI is a no-code AI chatbot platform that helps businesses automate customer support by training on their website, FAQs, and uploaded documents — with smart human handoff and 45+ language support.",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Quidget AI Chatbot Platform",
+      "url": "https://forrof.io/project/quidget-ai",
+      "image": "/placeholder.svg",
+      "description": "Case study of Quidget AI, a no-code RAG-based AI chatbot platform that automates customer support across web, voice, email, and messaging channels with smart human handoff.",
+      "author": {
+        "@type": "Organization",
+        "name": "Forrof",
+        "url": "https://forrof.io"
+      },
+      "about": ["AI Chatbot", "Customer Support Automation", "RAG", "Conversational AI"]
+    },
+    date: "Feb 2025",
+    location: "Global",
+    image: "/placeholder.svg",
+    category: "AI Platforms",
+    tags: ["AI CHATBOT", "CUSTOMER SUPPORT", "RAG", "CONVERSATIONAL AI"],
+    overview:
+      "Quidget AI is a no-code AI chatbot platform that helps businesses deploy customer-support agents trained on their own website, FAQs, and uploaded documents. Powered by Large Language Models and a retrieval pipeline, Quidget answers around 80% of common questions instantly and refuses to answer outside its training scope to prevent hallucinations. The platform supports 45+ languages out of the box, includes voice and email AI, and integrates with Zendesk, Freshdesk, Slack, WhatsApp, Calendly, Gmail, and WordPress.",
+    designProcess: [
+      {
+        phase: "Discovery",
+        hours: "10 hours",
+        tasks: [
+          "AI Product Research",
+          "Support Workflow Analysis",
+          "Knowledge Architecture Research",
+        ],
+      },
+      {
+        phase: "Strategy",
+        hours: "18 hours",
+        tasks: [
+          "Conversation Flow Design",
+          "LLM Infrastructure Planning",
+          "AI Agent Workflow Mapping",
+        ],
+      },
+      {
+        phase: "Solution",
+        hours: "68 hours",
+        tasks: [
+          "AI Agent Development",
+          "RAG Pipeline Integration",
+          "Backend Infrastructure",
+          "Testing & Optimization",
+        ],
+      },
+    ],
+    concepts: [
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+    ],
+    challenge:
+      "The core challenge was building a chatbot that delivers accurate, context-aware answers from each customer's own knowledge base while refusing to hallucinate outside its training scope — and keeping configuration simple enough for non-technical support teams to launch in minutes. Achieving consistent quality across 45+ languages and multiple integration surfaces (web, voice, email, messaging) added significant complexity.",
+    impact:
+      "Quidget AI helps support teams automate roughly 80% of repetitive questions, hand off complex cases to humans with full chat context, and serve customers 24/7 across web, voice, email, and messaging channels — improving response time and reducing manual ticket load without sacrificing trust.",
+    gallery: ["/placeholder.svg"],
+    responsive: [
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+    ],
+    techStack: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "OpenAI API",
+      "RAG Pipeline",
+      "Vector Database",
+      "MongoDB",
+      "Tailwind CSS",
+      "Figma",
+    ],
+    liveUrl: "https://quidget.ai/",
+  },
+  {
+    id: "saleshero",
+    title: "SalesHero",
+    metaTitle: "SalesHero | AI LinkedIn Outreach Automation – Forrof",
+    metaDescription: "SalesHero is an AI-powered LinkedIn outreach platform that finds prospects, drafts hyper-personalised messages from each prospect's actual profile and posts, and runs drip campaigns through a Chrome extension.",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "SalesHero AI LinkedIn Outreach Platform",
+      "url": "https://forrof.io/project/saleshero",
+      "image": "/placeholder.svg",
+      "description": "Case study of SalesHero, an AI-driven LinkedIn outreach automation product combining LLM-personalised messaging, prospect ranking, and a lightweight CRM delivered via Chrome extension.",
+      "author": {
+        "@type": "Organization",
+        "name": "Forrof",
+        "url": "https://forrof.io"
+      },
+      "about": ["AI Sales Automation", "LinkedIn Outreach", "LLM Personalisation", "Chrome Extension"]
+    },
+    date: "Jan 2025",
+    location: "Global",
+    image: "/placeholder.svg",
+    category: "AI Platforms",
+    tags: ["AI SALES", "LINKEDIN OUTREACH", "LLM PERSONALISATION", "CHROME EXTENSION"],
+    overview:
+      "SalesHero is an AI-powered LinkedIn outreach automation platform that finds prospects, drafts hyper-personalised messages from each prospect's actual profile and recent posts, and runs drip campaigns through a Chrome extension. The platform combines LLM-driven message generation, prospect discovery and ranking, and a lightweight LinkedIn-integrated CRM to help B2B sales teams scale outreach without falling back on templates. Backed by Tenity, NUS GenAI Accelerate, and Google for Startups AI Academy APAC.",
+    designProcess: [
+      {
+        phase: "Discovery",
+        hours: "12 hours",
+        tasks: [
+          "Sales Workflow Research",
+          "AI Automation Analysis",
+          "Competitor Benchmarking",
+        ],
+      },
+      {
+        phase: "Strategy",
+        hours: "20 hours",
+        tasks: [
+          "Agentic Workflow Architecture",
+          "Conversation Flow Design",
+          "Dashboard Wireframing",
+        ],
+      },
+      {
+        phase: "Solution",
+        hours: "72 hours",
+        tasks: [
+          "LLM Integration",
+          "Frontend Development",
+          "CRM & API Integrations",
+          "AI Workflow Optimization",
+        ],
+      },
+    ],
+    concepts: [
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+    ],
+    challenge:
+      "The biggest challenge was generating sales messages that read as genuinely written by a human — pulled from each prospect's actual recent LinkedIn activity rather than templates — while keeping outreach compliant with LinkedIn's automation policies and the operating surface light enough to live entirely inside a Chrome extension.",
+    impact:
+      "SalesHero replaces template-based outreach with personalised, AI-drafted messages tied to each prospect's real LinkedIn activity, helping B2B sales teams improve reply rates and reducing the manual research time required per prospect.",
+    gallery: ["/placeholder.svg"],
+    responsive: [
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+      "/placeholder.svg",
+    ],
+    techStack: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Chrome Extension",
+      "OpenAI API",
+      "LinkedIn API",
+      "PostgreSQL",
+      "AWS",
+      "Tailwind CSS",
+      "Figma",
+    ],
+    liveUrl: "https://www.saleshero.io/",
+  },
+  {
     id: "bushel",
     title: "Bushel",
     metaTitle: "Bushel Farm Management Platform | Web Development Case Study – Forrof",
@@ -22,10 +289,10 @@ export const projectsData = [
     date: "Dec 2024",
     location: "Global",
     image: `${import.meta.env.VITE_SERVER}/bushel/bushel-web%20(1).png`,
-    category: "Web Development",
-    tags: ["WEB DEVELOPMENT", "UI/UX"],
+    category: "SaaS",
+    tags: ["AGRITECH", "FARM MANAGEMENT", "FINANCIAL SOFTWARE", "INTEGRATIONS"],
     overview:
-      "Bushel is a comprehensive farm management platform designed to streamline agricultural operations. The project combines intuitive UI design with robust backend systems to help farmers manage crops, inventory, and analytics in real-time. Built with modern web technologies, Bushel delivers a seamless experience across mobile and desktop devices.",
+      "Bushel is a farm management and financial software platform built for grain farmers, providing field-level profitability tracking, grain contract management, and digital agribusiness payments. The platform integrates with the broader Bushel Network — including 3,500+ grain facilities, John Deere Operations Center, and Climate FieldView — and includes a banking product (Bushel Business Account) tailored for agricultural operations.",
     designProcess: [
       {
         phase: "Discovery",
@@ -66,9 +333,9 @@ export const projectsData = [
       `${import.meta.env.VITE_SERVER}/bushel/bushel-mob%20(2).png`,
     ],
     challenge:
-      "The primary challenge was designing a complex farm management system with an intuitive interface for users with varying technical expertise. We had to balance powerful analytics and data visualization with simplicity, ensuring farmers could quickly accomplish their most critical tasks without extensive training.",
+      "The challenge was building a single platform that consolidates field-level operational data, grain contract tracking, and farm financials for farmers who already work across multiple equipment systems and grain facilities — without forcing them to manually sync data between John Deere, Climate FieldView, and 3,500+ buyer facilities in the Bushel Network.",
     impact:
-      "Bushel successfully launched with a 95% user onboarding completion rate and has helped thousands of farmers optimize their operations. The platform now processes millions of data points daily, delivering actionable insights that improve crop yields and operational efficiency.",
+      "Bushel gives grain farmers a unified view of profitability across fields, contracts, and finances, with deep integrations into the equipment and facility systems they already use — removing manual record-keeping and improving day-to-day operational decision-making.",
     gallery: [`${import.meta.env.VITE_SERVER}/bushel/cover.png`],
     responsive: [
       `${import.meta.env.VITE_SERVER}/bushel/bushel-mob%20(1).png`,
@@ -87,9 +354,12 @@ export const projectsData = [
     techStack: [
       "React",
       "Node.js",
-      "Framer Motion",
-      "Tailwind CSS",
+      "Webflow",
+      "HubSpot",
+      "John Deere API",
+      "Climate FieldView API",
       "PostgreSQL",
+      "Tailwind CSS",
       "Figma",
     ],
     liveUrl: "https://bushelfarm.com/",
@@ -116,10 +386,10 @@ export const projectsData = [
     date: "Nov 2024",
     location: "UK",
     image: `${import.meta.env.VITE_SERVER}/olio/olio-phone%20(3).png`,
-    category: "Mobile App",
-    tags: ["MOBILE APP", "UI/UX"],
+    category: "Mobile",
+    tags: ["MOBILE APP", "SHARING ECONOMY", "FOOD WASTE", "COMMUNITY"],
     overview:
-      "Olio is a community-focused app that reduces food waste by connecting people to share surplus food with their neighbours. The platform makes it simple for users to list available food, browse local offerings, and arrange pickups. Designed with sustainability and community engagement at its core, Olio transforms how people think about food sharing.",
+      "Olio is a community sharing app where neighbours and local businesses give away surplus food and household items for free. The platform combines a mobile-first listing experience, a Food Waste Heroes volunteer programme that collects surplus from businesses, and partnerships with major UK retailers — including Tesco, Sainsbury's, Pret, Iceland, and ASDA — to redistribute food that would otherwise go to landfill.",
     designProcess: [
       {
         phase: "Discovery",
@@ -155,9 +425,9 @@ export const projectsData = [
       `${import.meta.env.VITE_SERVER}/olio/olio-phone%20(11).png`,
     ],
     challenge:
-      "The main challenge was creating an intuitive mobile experience that encourages community participation while addressing trust and safety concerns. Users needed to easily understand how to share food, verify authenticity, and arrange logistics-all within a simple, engaging interface.",
+      "The main challenge was creating an intuitive mobile experience that encourages community participation while addressing trust, safety, and pickup logistics — users needed to easily list items, find local offers, and arrange handovers within a single, engaging interface that works for both casual neighbours and high-volume Food Waste Hero volunteers.",
     impact:
-      "Since launch, Olio has helped divert thousands of tonnes of food from landfills, creating an active community of sharers across multiple regions. The app has achieved a 4.8-star rating with users praising its ease of use and positive environmental impact.",
+      "Olio has grown to millions of users globally and helped divert significant volumes of food from landfill through a combination of neighbour-to-neighbour sharing and large-scale retail partnerships, with consistently strong app-store ratings on iOS and Android.",
     gallery: [`${import.meta.env.VITE_SERVER}/olio/cover.png`],
     responsive: [
       `${import.meta.env.VITE_SERVER}/olio/olio-mob%20(1).png`,
@@ -173,6 +443,8 @@ export const projectsData = [
     ],
     techStack: [
       "React Native",
+      "iOS Native",
+      "Android Native",
       "TypeScript",
       "Firebase",
       "Stripe",
@@ -183,7 +455,7 @@ export const projectsData = [
   },
   {
     id: "glamping",
-    title: "Glamping",
+    title: "Glamping Hub",
     metaTitle: "Glamping | Luxury Travel Booking Platform Case Study – Forrof",
     metaDescription: "A custom web development project for a luxury travel booking platform. Featuring real-time availability and stunning UI UX.",
     schema: {
@@ -203,10 +475,10 @@ export const projectsData = [
     date: "Oct 2024",
     location: "Europe",
     image: `${import.meta.env.VITE_SERVER}/glamping/glamping-web%20(16).png`,
-    category: "Web Development",
-    tags: ["WEB DEVELOPMENT", "TRAVEL", "UI/UX"],
+    category: "SaaS",
+    tags: ["TRAVEL MARKETPLACE", "BOOKING PLATFORM", "HOSPITALITY", "UI/UX"],
     overview:
-      "Glamping is a luxury travel booking platform that connects travelers with unique glamorous camping experiences across Europe. The platform features stunning property galleries, real-time availability booking, and personalized recommendations. Built with a focus on user experience and conversion optimization, Glamping has become a go-to destination for adventure seekers.",
+      "Glamping Hub is a global online marketplace for booking unique outdoor accommodations — treehouses, yurts, geodesic domes, cabins, and tipis across six continents. The platform features 17,000+ verified stays, a host dashboard for property owners to list and manage their properties, search and filtering by stay type and location, gift cards, and a lowest-price guarantee.",
     designProcess: [
       {
         phase: "Discovery",
@@ -251,9 +523,9 @@ export const projectsData = [
       `${import.meta.env.VITE_SERVER}/glamping/glamping-mob%20(2).png`,
     ],
     challenge:
-      "The main challenge was designing a booking platform that balances feature richness with simplicity. We needed to showcase stunning property visuals while maintaining fast load times and intuitive navigation for users unfamiliar with luxury booking platforms.",
+      "The challenge was designing a booking platform that balances feature richness with simplicity — showcasing visually-driven, niche outdoor accommodation while keeping search, filtering, and checkout fast and intuitive for travellers unfamiliar with the glamping format. Supporting both two-sided marketplace flows (host listings and traveller bookings) added significant complexity.",
     impact:
-      "Glamping launched successfully with a 92% user retention rate and generated 40% of bookings through mobile devices. The platform now hosts over 500 properties and processes thousands of bookings annually, establishing itself as a market leader in the glamping space.",
+      "Glamping Hub has grown into the leading global marketplace for unique outdoor stays, with 17,000+ properties across six continents and a strong host community — establishing the brand as the category-defining player in the glamping space.",
     gallery: [`${import.meta.env.VITE_SERVER}/glamping/glamping-cover.png`],
     responsive: [
       `${import.meta.env.VITE_SERVER}/glamping/glamping-mob%20(1).png`,
@@ -273,6 +545,7 @@ export const projectsData = [
       "Mapbox",
       "Framer Motion",
       "PostgreSQL",
+      "Tailwind CSS",
     ],
     liveUrl: "https://glampinghub.com/",
   },
@@ -298,10 +571,10 @@ export const projectsData = [
     date: "Sep 2024",
     location: "USA",
     image: `${import.meta.env.VITE_SERVER}/curogram/curogram-web%20(3).png`,
-    category: "Web Development",
-    tags: ["HEALTHCARE", "WEB DEVELOPMENT", "UI/UX"],
+    category: "SaaS",
+    tags: ["HEALTHCARE SAAS", "PATIENT ENGAGEMENT", "TELEMEDICINE", "HIPAA"],
     overview:
-      "Curogram is a comprehensive healthcare platform designed to bridge communication between patients and medical professionals. The platform streamlines appointment scheduling, medical record management, and secure messaging. Built with HIPAA compliance in mind, Curogram improves healthcare accessibility and patient outcomes.",
+      "Curogram is an all-in-one HIPAA-compliant patient communication platform for medical practices, combining two-way SMS messaging, automated appointment reminders, online intake forms, telemedicine, mass messaging, and text-to-pay. The platform integrates with virtually any EMR and supports VOIP, helping clinics streamline patient communication while maintaining SOC 2 and HIPAA compliance.",
     designProcess: [
       {
         phase: "Discovery",
@@ -343,9 +616,9 @@ export const projectsData = [
       `${import.meta.env.VITE_SERVER}/curogram/curogram-web%20(13).png`,
     ],
     challenge:
-      "The primary challenge was building a HIPAA-compliant platform without sacrificing user experience. We had to implement robust security measures while maintaining an intuitive interface that both patients and healthcare providers would find easy to use.",
+      "The primary challenge was building a HIPAA-compliant patient-communication platform without sacrificing user experience — implementing robust security and compliance while keeping the interface intuitive for both clinical staff and patients across multiple touchpoints (SMS, telemedicine, intake, payments) and integrating cleanly with virtually any EMR a practice already uses.",
     impact:
-      "Curogram successfully served over 50,000 patients within the first year, reducing patient wait times by 35% and improving provider efficiency by 40%. The platform achieved SOC 2 compliance and maintains a 98% uptime record, establishing trust within the healthcare community.",
+      "Curogram helps medical practices reduce no-shows through automated reminders, accept payments via text, and run telemedicine and digital intake without separate tools — while maintaining SOC 2 and HIPAA compliance and integrating with the EMRs clinics already rely on.",
     gallery: [`${import.meta.env.VITE_SERVER}/curogram/cover%20curogram.png`],
     responsive: [
       `${import.meta.env.VITE_SERVER}/curogram/currogram-mob%20(1).png`,
@@ -363,9 +636,12 @@ export const projectsData = [
       "React",
       "Node.js",
       "Express",
+      "Twilio",
+      "EMR Integrations",
+      "VOIP",
       "PostgreSQL",
       "AWS",
-      "Encryption Libraries",
+      "HIPAA-Compliant Infrastructure",
     ],
     liveUrl: "https://curogram.com",
   },
@@ -391,10 +667,10 @@ export const projectsData = [
     date: "Aug 2024",
     location: "USA",
     image: `${import.meta.env.VITE_SERVER}/carbonmade/carbon-web%20(2).png`,
-    category: "Web Development",
-    tags: ["PORTFOLIO", "WEB DEVELOPMENT", "UI/UX"],
+    category: "SaaS",
+    tags: ["PORTFOLIO PLATFORM", "CREATIVE SAAS", "NO-CODE BUILDER", "WEB HOSTING"],
     overview:
-      "Carbonmade is a portfolio platform designed for creative professionals to showcase their work, build their online presence, and connect with potential clients. The platform combines beautiful templates with powerful customization tools, allowing users to create stunning portfolios without coding. Carbonmade empowers creatives to tell their stories and grow their businesses.",
+      "Carbonmade is a long-running portfolio website builder for creative professionals — designers, illustrators, photographers, and 3D artists. The platform offers a drag-and-drop, no-code builder with unlimited media uploads, 4K video support, custom domain hosting, and mobile-responsive themes. Operating since 2005 with over 2 million users, Carbonmade has become a category staple for creative portfolios.",
     designProcess: [
       {
         phase: "Discovery",
@@ -435,9 +711,9 @@ export const projectsData = [
       `${import.meta.env.VITE_SERVER}/carbonmade/carbon-mob%20(2).png`,
     ],
     challenge:
-      "The main challenge was creating an intuitive platform that caters to users with varying technical skills while providing enough flexibility for professionals to customize their portfolios. We needed to balance template constraints with creative freedom.",
+      "The main challenge was creating a platform that caters to creatives with varying technical skills while providing enough flexibility for professionals to customise their portfolios — balancing template constraints with creative freedom and high-quality media delivery (4K video, high-res images, unlimited uploads) at scale.",
     impact:
-      "Carbonmade has empowered over 100,000 creative professionals to build stunning portfolios. The platform generates millions in client connections annually, with users reporting an average 45% increase in inquiries after launching their portfolios.",
+      "Carbonmade has powered portfolios for over 2 million creative professionals over two decades, supporting unlimited media uploads, 4K video, and custom domains — and has remained a trusted choice for designers and artists building their online presence.",
     gallery: [`${import.meta.env.VITE_SERVER}/carbonmade/cover%20carbonmade.png`],
     responsive: [
       `${import.meta.env.VITE_SERVER}/carbonmade/carbon-mob%20(1).png`,
@@ -448,7 +724,16 @@ export const projectsData = [
       `${import.meta.env.VITE_SERVER}/carbonmade/carbon-mob%20(6).png`,
       `${import.meta.env.VITE_SERVER}/carbonmade/carbon-mob%20(7).png`,
     ],
-    techStack: ["React", "Node.js", "MongoDB", "Stripe", "AWS", "Figma"],
+    techStack: [
+      "React",
+      "Node.js",
+      "Bunny CDN",
+      "MongoDB",
+      "Stripe",
+      "AWS",
+      "Tailwind CSS",
+      "Figma",
+    ],
     liveUrl: "https://carbonmade.com",
   },
   {
@@ -474,9 +759,9 @@ export const projectsData = [
     location: "UK",
     image: `${import.meta.env.VITE_SERVER}/loopiq/loopiq-web%20(1).png`,
     category: "SaaS",
-    tags: ["SAAS", "WEB DEVELOPMENT", "UI/UX"],
+    tags: ["SAAS", "CUSTOMER ENGAGEMENT", "WORKFLOW AUTOMATION", "ANALYTICS"],
     overview:
-      "Loopiq is a comprehensive SaaS platform designed for businesses to manage customer loops and engagement cycles. The platform provides real-time analytics, automated workflows, and customer journey mapping tools. Built for data-driven marketing teams, Loopiq helps businesses optimize their customer engagement strategies and drive measurable results.",
+      "Loopiq is a customer engagement SaaS designed to help businesses manage customer journeys and engagement cycles. The platform focuses on automated workflows, journey mapping, and analytics dashboards for marketing and customer success teams looking to consolidate engagement tooling into a single workspace.",
     designProcess: [
       {
         phase: "Discovery",
@@ -521,9 +806,9 @@ export const projectsData = [
       `${import.meta.env.VITE_SERVER}/loopiq/loopiq-mob%20(2).png`,
     ],
     challenge:
-      "The primary challenge was visualizing complex customer engagement loops in an intuitive manner while presenting actionable analytics. We needed to make sophisticated data accessible to users with varying technical backgrounds without sacrificing depth.",
+      "The challenge was visualising complex customer engagement loops in an intuitive way while presenting actionable analytics — making sophisticated journey data accessible to non-technical operators without sacrificing depth for power users.",
     impact:
-      "Loopiq now serves over 5,000 businesses across multiple industries, processing millions of customer interactions daily. Clients report an average 38% improvement in customer engagement metrics and 52% increase in retention rates after implementing Loopiq.",
+      "Loopiq helps marketing and customer success teams automate repetitive engagement workflows and surface insights from their customer data without manual analysis or stitching together multiple point tools.",
     gallery: [`${import.meta.env.VITE_SERVER}/loopiq/cover.png`],
     responsive: [
       `${import.meta.env.VITE_SERVER}/loopiq/loopiq-mob%20(1).png`,
@@ -544,6 +829,8 @@ export const projectsData = [
       "PostgreSQL",
       "GraphQL",
       "AWS",
+      "Vercel",
+      "Tailwind CSS",
     ],
     liveUrl: "https://loop-iq-prod.vercel.app/",
   },
@@ -569,10 +856,10 @@ export const projectsData = [
     date: "Jul 2024",
     location: "Global",
     image: `${import.meta.env.VITE_SERVER}/rallytyper/rally-web%20(1).png`,
-    category: "Mobile App",
-    tags: ["GAME", "MOBILE", "UI/UX"],
+    category: "Mobile",
+    tags: ["TYPING GAME", "CASUAL GAME", "EDUCATION", "MULTIPLAYER"],
     overview:
-      "RallyTyper is a high-energy typing game that challenges players to increase their speed and accuracy while racing in dynamic 3D tracks. The app blends gamification with training to make typing practice fun and competitive.",
+      "RallyTyper is a browser-based casual typing game where players race cars by typing words as fast and accurately as possible. The game features real-time WPM and accuracy feedback, multiplayer racing against other players, and difficulty levels from beginner to advanced — combining gamification with practical typing practice in a free, no-download format.",
     designProcess: [
       {
         phase: "Discovery",
@@ -604,9 +891,9 @@ export const projectsData = [
       `${import.meta.env.VITE_SERVER}/rallytyper/rally-phone%20(3).png`,
     ],
     challenge:
-      "Designing high-performance mobile gameplay while keeping input reliable across devices and keyboards was the key challenge. We optimized input handling and latency to make gameplay fair and responsive.",
+      "Designing high-performance browser gameplay while keeping input reliable across devices, browsers, and keyboards was the key challenge. We optimised input handling and network latency to make multiplayer races feel fair and responsive on commodity hardware.",
     impact:
-      "RallyTyper engaged thousands of players during beta and demonstrated significant retention through short, repeatable gameplay loops.",
+      "RallyTyper engages players through short, repeatable gameplay loops and competitive multiplayer races — making typing practice feel competitive rather than rote, with strong retention from beginner to advanced typists.",
     gallery: [`${import.meta.env.VITE_SERVER}/rallytyper/cover.png`],
     responsive: [
       `${import.meta.env.VITE_SERVER}/rallytyper/rally-phone%20(1).png`,
@@ -620,8 +907,15 @@ export const projectsData = [
       `${import.meta.env.VITE_SERVER}/rallytyper/rally-phone%20(9).png`,
       `${import.meta.env.VITE_SERVER}/rallytyper/rally-phone%20(10).png`,
     ],
-    techStack: ["Unity", "TypeScript", "React Native", "Figma"],
-    liveUrl: "https://rallytyper.example.com",
+    techStack: [
+      "Unity",
+      "WebGL",
+      "TypeScript",
+      "Real-time Multiplayer",
+      "WebSockets",
+      "Figma",
+    ],
+    liveUrl: "http://rallytyper.com/",
   },
   {
     id: "fyno",
@@ -646,9 +940,9 @@ export const projectsData = [
     location: "Remote",
     image: `${import.meta.env.VITE_SERVER}/fyno/fyno-web%20(2).png`,
     category: "SaaS",
-    tags: ["SAAS", "E-SIGN", "UI/UX"],
+    tags: ["E-SIGNATURE", "DOCUMENT WORKFLOWS", "SAAS", "SECURITY"],
     overview:
-      "FynoSign is a secure e-signature and document workflow platform built for teams and small businesses. It streamlines signing, templates, and document management with a clean, user-friendly interface.",
+      "FynoSign is a secure e-signature and document workflow platform built for teams and small businesses. It streamlines document signing, reusable templates, and access controls with a focus on security, compliance, and ease-of-use — designed to reduce document turnaround time without the overhead of legacy e-signature platforms.",
     designProcess: [
       {
         phase: "Discovery",
@@ -680,9 +974,9 @@ export const projectsData = [
       `${import.meta.env.VITE_SERVER}/fyno/fyno-web%20(11).png`,
     ],
     challenge:
-      "Balancing security and ease-of-use for e-signature workflows while meeting regional compliance requirements was a major focus. We implemented best-practice encryption and audit trails.",
+      "Balancing security and ease-of-use for e-signature workflows while meeting regional compliance requirements was a major focus. We implemented best-practice encryption, signed audit trails, and granular access controls without making the signing experience feel heavy for end users.",
     impact:
-      "FynoSign reduced document turnaround times for early adopters by over 60% and increased signatures completed on mobile devices.",
+      "FynoSign enables teams to send, sign, and manage documents securely without the overhead of legacy e-signature platforms — reducing document turnaround time and increasing the share of signatures completed on mobile.",
     gallery: [`${import.meta.env.VITE_SERVER}/fyno/fyonosign%20whole.png`],
     responsive: [
       `${import.meta.env.VITE_SERVER}/fyno/fyno-mob%20(1).png`,
@@ -696,7 +990,15 @@ export const projectsData = [
       `${import.meta.env.VITE_SERVER}/fyno/fyno-mob%20(9).png`,
       `${import.meta.env.VITE_SERVER}/fyno/fyno-mob%20(10).png`,
     ],
-    techStack: ["React", "Node.js", "PostgreSQL", "AWS", "Figma"],
+    techStack: [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "AWS",
+      "Encryption Libraries",
+      "Tailwind CSS",
+      "Figma",
+    ],
     liveUrl: "https://fynosign.com",
   },
 ];

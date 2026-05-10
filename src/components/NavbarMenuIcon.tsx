@@ -68,6 +68,7 @@ interface ServiceLink {
   name: string;
   slug: string;
   subs: string[];
+  trending?: boolean;
 }
 
 const serviceLinks: ServiceLink[] = [
@@ -75,6 +76,7 @@ const serviceLinks: ServiceLink[] = [
     name: "AI/ML Development",
     slug: "ai-ml",
     subs: ["AI Consulting", "Custom AI and ML Solutions", "Proof of Value / AI Prototype", "Generative AI & LLM-based Solutions", "Predictive Analytics & Forecasting", "AI-Powered Product Integrations"],
+    trending: true,
   },
   {
     name: "Enterprise Software",
@@ -115,16 +117,19 @@ const serviceLinks: ServiceLink[] = [
     name: "Paid Ads",
     slug: "paid-ads",
     subs: ["Google Search & PMax", "Paid Social (Meta, TikTok, LinkedIn)", "Retargeting & Remarketing", "Local Service Ads (LSA)", "Conversion Tracking & API", "Landing Page CRO"],
+    trending: true,
   },
   {
     name: "Google Ads",
     slug: "google-ads",
     subs: ["Google Search Ads", "Performance Max (PMax)", "YouTube Ads", "Display & Discovery", "Local Service Ads", "Google Shopping"],
+    trending: true,
   },
   {
     name: "Meta Ads",
     slug: "meta-ads",
     subs: ["Facebook & Instagram Ads", "Lookalike & Custom Audiences", "Creative Production & Testing", "Conversion API (CAPI)", "Retargeting Funnels", "Reporting & Attribution"],
+    trending: true,
   },
 ];
 
@@ -183,6 +188,11 @@ const ServiceItem = ({ service, onNavigate }: { service: ServiceLink; onNavigate
         >
           {service.name}
         </a>
+        {service.trending && (
+          <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-[#00d4aa]/15 text-[#00d4aa] font-semibold uppercase tracking-wider border border-[#00d4aa]/30">
+            Trending
+          </span>
+        )}
         <button
           onMouseEnter={() => setOpen(true)}
           onClick={() => setOpen(!open)}

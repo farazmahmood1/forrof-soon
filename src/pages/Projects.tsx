@@ -8,9 +8,10 @@ import { usePageMetadata } from "@/hooks/usePageMetadata";
 
 const projectFilters = [
   "All Projects",
-  "Web Development",
-  "Mobile App",
+  "AI Platforms",
   "SaaS",
+  "Mobile",
+  "Paid Ads",
 ];
 
 const countryMap: Record<string, string> = {
@@ -161,7 +162,7 @@ const ProjectsPage = () => {
               animate={{ y: 0, backgroundPosition: "100% 50%" }}
               transition={{
                 y: { duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.15 },
-                backgroundPosition: { duration: 3, ease: "easeInOut", delay: 1, repeat: Infinity, repeatType: "reverse" },
+                backgroundPosition: { duration: 3, ease: "easeInOut", delay: 1 },
               }}
             >
               Our Portfolio
@@ -200,11 +201,15 @@ const ProjectsPage = () => {
                       ? "bg-foreground text-background border-foreground"
                       : "border-border text-muted-foreground hover:text-foreground hover:border-foreground"
                   }`}
-                  onClick={() =>
+                  onClick={() => {
+                    if (filter === "Paid Ads") {
+                      navigate("/services/paid-ads#client-wins");
+                      return;
+                    }
                     setActiveFilter(
                       activeFilter === filter ? "All Projects" : filter
-                    )
-                  }
+                    );
+                  }}
                   initial={{ opacity: 0, y: 15 }}
                   animate={filterInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: 0.1 + index * 0.06 }}
@@ -212,7 +217,9 @@ const ProjectsPage = () => {
                   whileTap={{ scale: 0.96 }}
                 >
                   {filter}
-                  {activeFilter === "All Projects" && filter === "All Projects"
+                  {filter === "Paid Ads"
+                    ? ""
+                    : activeFilter === "All Projects" && filter === "All Projects"
                     ? ` (${projectsData.length})`
                     : filter !== "All Projects"
                     ? ` (${

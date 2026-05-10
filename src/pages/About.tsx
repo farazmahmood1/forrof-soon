@@ -365,15 +365,15 @@ const About = () => {
 
             {/* 1. Projects by Field - Donut */}
             <motion.div
-              className="border border-foreground/[0.06] rounded-2xl p-8 bg-foreground/[0.02]"
+              className="border border-foreground/[0.06] rounded-2xl p-5 md:p-8 bg-foreground/[0.02]"
               initial={{ opacity: 0, y: 40 }}
               animate={chartsInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <h3 className="text-sm font-semibold mb-8 pb-3 border-b border-foreground/10">Projects by Field</h3>
-              <div className="flex items-center gap-8">
+              <h3 className="text-sm font-semibold mb-6 md:mb-8 pb-3 border-b border-foreground/10">Projects by Field</h3>
+              <div className="flex items-center gap-4 md:gap-8">
                 {/* Donut chart SVG */}
-                <div className="relative w-32 h-32 flex-shrink-0">
+                <div className="relative w-28 h-28 md:w-32 md:h-32 flex-shrink-0">
                   <svg viewBox="0 0 120 120" className="w-full h-full -rotate-90">
                     {[
                       { value: 52, color: "#0a3d3a", offset: 0 },
@@ -400,17 +400,17 @@ const About = () => {
                   </div>
                 </div>
                 {/* Legend */}
-                <div className="space-y-3">
+                <div className="space-y-3 flex-1 min-w-0">
                   {[
                     { label: "AI/ML", value: 52, color: "#0a3d3a" },
                     { label: "Enterprise", value: 38, color: "#126b66" },
                     { label: "SaaS", value: 25, color: "#00d4aa" },
-                    { label: "MVP/Strategy", value: 37, color: "#48f0e7" },
+                    { label: "Paid Ads", value: 37, color: "#48f0e7" },
                   ].map((item) => (
                     <div key={item.label} className="flex items-center gap-2">
                       <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: item.color }} />
-                      <span className="text-sm text-muted-foreground">{item.label}</span>
-                      <span className="text-sm font-semibold ml-auto">{item.value}</span>
+                      <span className="text-xs md:text-sm text-muted-foreground truncate">{item.label}</span>
+                      <span className="text-xs md:text-sm font-semibold ml-auto pl-1">{item.value}</span>
                     </div>
                   ))}
                 </div>
@@ -420,12 +420,12 @@ const About = () => {
 
             {/* 2. Projects Launched - Bar Chart */}
             <motion.div
-              className="border border-foreground/[0.06] rounded-2xl p-8 bg-foreground/[0.02]"
+              className="border border-foreground/[0.06] rounded-2xl p-5 md:p-8 bg-foreground/[0.02]"
               initial={{ opacity: 0, y: 40 }}
               animate={chartsInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h3 className="text-sm font-semibold mb-8 pb-3 border-b border-foreground/10">Project Launched</h3>
+              <h3 className="text-sm font-semibold mb-6 md:mb-8 pb-3 border-b border-foreground/10">Project Launched</h3>
               <div className="flex items-end justify-between gap-2 h-[180px]">
                 {[
                   { year: "2020", value: 15 },
@@ -456,12 +456,12 @@ const About = () => {
 
             {/* 3. People per Project */}
             <motion.div
-              className="border border-foreground/[0.06] rounded-2xl p-8 bg-foreground/[0.02]"
+              className="border border-foreground/[0.06] rounded-2xl p-5 md:p-8 bg-foreground/[0.02]"
               initial={{ opacity: 0, y: 40 }}
               animate={chartsInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <h3 className="text-sm font-semibold mb-8 pb-3 border-b border-foreground/10">People per Project</h3>
+              <h3 className="text-sm font-semibold mb-6 md:mb-8 pb-3 border-b border-foreground/10">People per Project</h3>
               <div className="mb-6">
                 <span className="text-5xl font-bold text-accent">30</span>
                 <span className="text-xl text-muted-foreground ml-2">/ 48 team members</span>

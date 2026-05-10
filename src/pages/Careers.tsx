@@ -72,7 +72,7 @@ const Careers = () => {
                             animate={{ y: 0, backgroundPosition: "100% 50%" }}
                             transition={{
                                 y: { duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 },
-                                backgroundPosition: { duration: 3, ease: "easeInOut", delay: 1, repeat: Infinity, repeatType: "reverse" },
+                                backgroundPosition: { duration: 3, ease: "easeInOut", delay: 1 },
                             }}
                         >
                             Join the Team

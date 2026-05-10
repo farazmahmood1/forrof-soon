@@ -163,7 +163,7 @@ export default function FintechFinancePage() {
               style={{ background: "linear-gradient(135deg, #ffffff 0%, #48f0e7 30%, #00d4aa 60%, #126b66 100%)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent", backgroundSize: "200% 200%" }}
               initial={{ y: "110%", backgroundPosition: "0% 50%" }}
               animate={{ y: 0, backgroundPosition: "100% 50%" }}
-              transition={{ y: { duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }, backgroundPosition: { duration: 3, ease: "easeInOut", delay: 1, repeat: Infinity, repeatType: "reverse" } }}
+              transition={{ y: { duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }, backgroundPosition: { duration: 3, ease: "easeInOut", delay: 1 } }}
             >
               Custom FinTech Software Development
             </motion.h1>

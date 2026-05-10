@@ -143,7 +143,7 @@ const BusinessDonut = ({
   );
 
   return (
-    <div className="relative w-[300px] h-[300px] md:w-[380px] md:h-[380px] lg:w-[420px] lg:h-[420px]">
+    <div className="relative w-[min(85vw,300px)] aspect-square md:w-[380px] md:h-[380px] lg:w-[420px] lg:h-[420px]">
       <svg viewBox="0 0 400 400" className="w-full h-full">
         <defs>
           <radialGradient id="center-dark-gradient" cx="50%" cy="50%" r="50%">

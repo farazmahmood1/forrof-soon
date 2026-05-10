@@ -8,7 +8,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { projectsData } from "@/data/projects";
 
-const projectFilters = ["All Projects", "Web Development", "Mobile App", "SaaS"];
+const projectFilters = ["All Projects", "AI Platforms", "SaaS", "Mobile", "Paid Ads"];
 
 const countryMap: Record<string, string> = {
   "Global": "un",
@@ -107,9 +107,13 @@ export const ProjectsSection = () => {
                       ? "bg-foreground text-background border-foreground"
                       : "border-border text-muted-foreground hover:text-foreground hover:border-foreground"
                       }`}
-                    onClick={() =>
-                      setActiveFilter(activeFilter === filter ? null : filter)
-                    }
+                    onClick={() => {
+                      if (filter === "Paid Ads") {
+                        navigate("/services/paid-ads#client-wins");
+                        return;
+                      }
+                      setActiveFilter(activeFilter === filter ? null : filter);
+                    }}
                     initial={{ opacity: 0, y: 15 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 0.7 + index * 0.08 }}

@@ -386,7 +386,7 @@ export const projectsData = [
     date: "Nov 2024",
     location: "UK",
     image: `${import.meta.env.VITE_SERVER}/olio/olio-phone%20(3).png`,
-    category: "Mobile",
+    category: "Web",
     tags: ["MOBILE APP", "SHARING ECONOMY", "FOOD WASTE", "COMMUNITY"],
     overview:
       "Olio is a community sharing app where neighbours and local businesses give away surplus food and household items for free. The platform combines a mobile-first listing experience, a Food Waste Heroes volunteer programme that collects surplus from businesses, and partnerships with major UK retailers — including Tesco, Sainsbury's, Pret, Iceland, and ASDA — to redistribute food that would otherwise go to landfill.",
@@ -856,7 +856,7 @@ export const projectsData = [
     date: "Jul 2024",
     location: "Global",
     image: `${import.meta.env.VITE_SERVER}/rallytyper/rally-web%20(1).png`,
-    category: "Mobile",
+    category: "Web",
     tags: ["TYPING GAME", "CASUAL GAME", "EDUCATION", "MULTIPLAYER"],
     overview:
       "RallyTyper is a browser-based casual typing game where players race cars by typing words as fast and accurately as possible. The game features real-time WPM and accuracy feedback, multiplayer racing against other players, and difficulty levels from beginner to advanced — combining gamification with practical typing practice in a free, no-download format.",

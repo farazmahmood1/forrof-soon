@@ -101,7 +101,7 @@ export default function GoogleAdsService() {
             >
               Services / Google Ads
             </motion.span>
-            <div className="overflow-hidden mb-6 py-2">
+            <div className="overflow-hidden mb-6 pt-2 pb-6">
               <motion.h1
                 className="text-[13vw] md:text-[10vw] xl:text-[8vw] font-bold leading-[0.95] tracking-tighter"
                 style={{

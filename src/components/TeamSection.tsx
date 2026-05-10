@@ -49,7 +49,7 @@ export const TeamSection = () => {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          <div className="overflow-hidden">
+          <div className="overflow-hidden pb-4">
             <motion.h2
               className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.95]"
               initial={{ y: "100%" }}

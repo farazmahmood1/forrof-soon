@@ -94,8 +94,8 @@ export const InsightsSection = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            <p className="text-xl text-muted-foreground max-w-md leading-relaxed">
-              Explore expert insights on software development, UI UX design, SEO, branding, and digital transformation written by our experienced team.
+            <p className="text-xl text-muted-foreground max-w-xl leading-relaxed">
+              Expert insights on AI, LLMs, agentic systems, paid ads, and digital transformation — written by our team.
             </p>
           </motion.div>
         </div>

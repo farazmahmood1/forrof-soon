@@ -543,7 +543,7 @@ const ProjectDetails = () => {
         </div>
 
         {/* Row 1 - Auto scroll forward */}
-        <div className="overflow-hidden mb-6">
+        <div className="overflow-hidden mb-6 pb-6">
           <div className="concept-row-fwd">
             {[...project.concepts, ...project.concepts].map(
               (concept, index) => (

@@ -8,7 +8,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { projectsData } from "@/data/projects";
 
-const projectFilters = ["All Projects", "AI Platforms", "SaaS", "Mobile", "Paid Ads"];
+const projectFilters = ["All Projects", "AI Platforms", "SaaS", "Web", "Paid Ads", "Social Media"];
 
 const countryMap: Record<string, string> = {
   "Global": "un",
@@ -95,21 +95,25 @@ export const ProjectsSection = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            <p className="text-xl text-muted-foreground max-w-md leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-xl leading-relaxed">
               See how we help companies and innovators turn ideas into scalable products and technology.
             </p>
             {/* Filter Tags */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
               {projectFilters.map((filter, index) => (
                 <Magnetic key={filter} strength={0.1}>
                   <motion.button
-                    className={`px-5 py-2.5 border rounded-full text-sm transition-all duration-500 ${activeFilter === filter
+                    className={`px-4 py-2 border rounded-full text-xs md:text-sm whitespace-nowrap transition-all duration-500 ${activeFilter === filter
                       ? "bg-foreground text-background border-foreground"
                       : "border-border text-muted-foreground hover:text-foreground hover:border-foreground"
                       }`}
                     onClick={() => {
                       if (filter === "Paid Ads") {
                         navigate("/services/paid-ads#client-wins");
+                        return;
+                      }
+                      if (filter === "Social Media") {
+                        navigate("/services/social-media#client-wins");
                         return;
                       }
                       setActiveFilter(activeFilter === filter ? null : filter);
@@ -162,6 +166,14 @@ export const ProjectsSection = () => {
 
               {/* Project Info */}
               <div className="space-y-3">
+                {/* Title with Arrow */}
+                <div className="flex items-center gap-3">
+                  <h3 className="text-2xl md:text-3xl font-semibold text-primary group-hover:text-primary/80 transition-colors">
+                    {project.title}
+                  </h3>
+                  <ArrowUpRight className="text-[#00d4aa] group-hover:rotate-45 transition-transform duration-300" size={22} />
+                </div>
+
                 {/* Tags as green bordered pills */}
                 <div className="flex items-center gap-2 flex-wrap">
                   {project.tags.slice(0, 3).map((tag) => (
@@ -172,14 +184,6 @@ export const ProjectsSection = () => {
                       {tag}
                     </span>
                   ))}
-                </div>
-
-                {/* Title with Arrow */}
-                <div className="flex items-center gap-3">
-                  <h3 className="text-2xl md:text-3xl font-semibold text-primary group-hover:text-primary/80 transition-colors">
-                    {project.title}
-                  </h3>
-                  <ArrowUpRight className="text-[#00d4aa] group-hover:rotate-45 transition-transform duration-300" size={22} />
                 </div>
 
                 {/* Description */}

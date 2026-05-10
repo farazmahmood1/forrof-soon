@@ -42,7 +42,7 @@ const businessScales = [
     icon: Box,
     number: "03",
     description:
-      "For small businesses, we lead digital transformation, ship product launches and updates, automate manual processes - and run lean Google Ads, Meta Ads, and email outreach campaigns that bring a steady flow of qualified leads. Practical software and lean marketing, no overcomplications.",
+      "For small businesses, we ship product launches and updates, automate manual processes - and run lean Google Ads and Meta Ads campaigns that bring a steady flow of qualified leads. Practical software and lean marketing, no overcomplications.",
     focus: [
       "Simple and practical solutions;",
       "Process automation that saves real hours;",

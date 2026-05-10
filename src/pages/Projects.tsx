@@ -10,8 +10,9 @@ const projectFilters = [
   "All Projects",
   "AI Platforms",
   "SaaS",
-  "Mobile",
+  "Web",
   "Paid Ads",
+  "Social Media",
 ];
 
 const countryMap: Record<string, string> = {
@@ -57,6 +58,14 @@ const ProjectCard = ({
 
       {/* Project Info */}
       <div className="space-y-3">
+        {/* Title with Arrow */}
+        <div className="flex items-center gap-3">
+          <h3 className="text-2xl md:text-3xl font-semibold text-primary group-hover:text-primary/80 transition-colors">
+            {project.title}
+          </h3>
+          <ArrowUpRight className="text-[#00d4aa] group-hover:rotate-45 transition-transform duration-300" size={22} />
+        </div>
+
         {/* Tags */}
         <div className="flex items-center gap-2 flex-wrap">
           {project.tags.slice(0, 3).map((tag) => (
@@ -67,14 +76,6 @@ const ProjectCard = ({
               {tag}
             </span>
           ))}
-        </div>
-
-        {/* Title with Arrow */}
-        <div className="flex items-center gap-3">
-          <h3 className="text-2xl md:text-3xl font-semibold text-primary group-hover:text-primary/80 transition-colors">
-            {project.title}
-          </h3>
-          <ArrowUpRight className="text-[#00d4aa] group-hover:rotate-45 transition-transform duration-300" size={22} />
         </div>
 
         {/* Description */}
@@ -148,7 +149,7 @@ const ProjectsPage = () => {
           >
             Our Work
           </motion.span>
-          <div className="overflow-hidden mb-6">
+          <div className="overflow-hidden mb-6 pb-6">
             <motion.h1
               className="text-[13vw] md:text-[10vw] font-bold leading-[0.88] tracking-tighter"
               style={{
@@ -206,6 +207,10 @@ const ProjectsPage = () => {
                       navigate("/services/paid-ads#client-wins");
                       return;
                     }
+                    if (filter === "Social Media") {
+                      navigate("/services/social-media#client-wins");
+                      return;
+                    }
                     setActiveFilter(
                       activeFilter === filter ? "All Projects" : filter
                     );
@@ -217,7 +222,7 @@ const ProjectsPage = () => {
                   whileTap={{ scale: 0.96 }}
                 >
                   {filter}
-                  {filter === "Paid Ads"
+                  {filter === "Paid Ads" || filter === "Social Media"
                     ? ""
                     : activeFilter === "All Projects" && filter === "All Projects"
                     ? ` (${projectsData.length})`

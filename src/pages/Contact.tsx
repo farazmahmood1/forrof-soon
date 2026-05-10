@@ -128,7 +128,7 @@ export default function ContactPage() {
           >
             Get in touch
           </motion.span>
-          <div className="overflow-hidden mb-6">
+          <div className="overflow-hidden mb-6 pb-6">
             <motion.h1
               className="text-[13vw] md:text-[10vw] font-bold leading-[0.88] tracking-tighter"
               style={{

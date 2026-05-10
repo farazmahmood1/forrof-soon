@@ -133,7 +133,7 @@ export default function GovernmentPage() {
           <motion.span className="inline-block text-xs uppercase tracking-[0.3em] mb-8" style={{ color: "#00d4aa" }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
             Industries / Government &amp; Public Sector
           </motion.span>
-          <div className="overflow-hidden mb-6 py-2">
+          <div className="overflow-hidden mb-6 pt-2 pb-6">
             <motion.h1
               className="text-[10vw] md:text-[7vw] font-bold leading-[0.95] tracking-tighter"
               style={{ background: "linear-gradient(135deg, #ffffff 0%, #48f0e7 30%, #00d4aa 60%, #126b66 100%)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent", backgroundSize: "200% 200%" }}

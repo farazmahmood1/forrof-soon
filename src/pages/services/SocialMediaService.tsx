@@ -1,11 +1,11 @@
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { LineReveal, Magnetic } from "@/components/AnimationComponents";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { GlowCard } from "@/components/InteractiveElements";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { SocialMediaTerminalBlock } from "@/components/AiMlVisuals";
 
 const services = [
@@ -51,6 +51,33 @@ const whyUsItems = [
   },
 ];
 
+const clientWins = [
+  {
+    name: "Pêche",
+    logo: "/clients/peche-logo.png",
+    image:
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&q=70&auto=format&fit=crop",
+    headline: "Scaled Pêche From Niche Fashion Brand Into a Cross-Platform Powerhouse.",
+    stats: [
+      { value: "26.5K+", label: "Instagram Followers" },
+      { value: "94K+", label: "Pinterest Impressions" },
+      { value: "+777%", label: "Reach Growth" },
+    ],
+  },
+  {
+    name: "Nourishing Biologicals",
+    logo: "/clients/nourishing-logo.png",
+    image:
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1200&q=70&auto=format&fit=crop",
+    headline: "Grew a Doctor-Led Skincare Brand Into a 160K+ Reach Community.",
+    stats: [
+      { value: "160K", label: "Accounts Reached" },
+      { value: "+96.7%", label: "Reach Growth" },
+      { value: "9.5K+", label: "Total Followers" },
+    ],
+  },
+];
+
 export default function SocialMediaService() {
   usePageMetadata({
     title: "Social Media Marketing Services | Forrof",
@@ -59,13 +86,45 @@ export default function SocialMediaService() {
   });
 
   const navigate = useNavigate();
+  const location = useLocation();
   const [expandedWhy, setExpandedWhy] = useState<number | null>(null);
+  const [activeWin, setActiveWin] = useState(0);
+  const [winsPaused, setWinsPaused] = useState(false);
+
+  // Scroll to hash target (e.g. /services/social-media#client-wins) after mount.
+  useEffect(() => {
+    if (!location.hash) return;
+    const id = location.hash.slice(1);
+    const tryScroll = () => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+    const t = setTimeout(tryScroll, 80);
+    return () => clearTimeout(t);
+  }, [location.hash]);
+
+  useEffect(() => {
+    if (winsPaused) return;
+    const id = setInterval(() => {
+      setActiveWin((prev) => (prev + 1) % clientWins.length);
+    }, 5500);
+    return () => clearInterval(id);
+  }, [winsPaused]);
+
+  // Preload carousel images so slide transitions don't wait on fetch
+  useEffect(() => {
+    clientWins.forEach((w) => {
+      const img = new Image();
+      img.src = w.image;
+    });
+  }, []);
 
   const heroRef = useRef(null);
   const sec1Ref = useRef(null);
   const sec2Ref = useRef(null);
   const sec3Ref = useRef(null);
   const sec4Ref = useRef(null);
+  const winsRef = useRef(null);
   const ctaRef = useRef(null);
 
 
@@ -73,6 +132,7 @@ export default function SocialMediaService() {
   const sec2InView = useInView(sec2Ref, { once: true, margin: "-100px" });
   const sec3InView = useInView(sec3Ref, { once: true, margin: "-100px" });
   const sec4InView = useInView(sec4Ref, { once: true, margin: "-100px" });
+  const winsInView = useInView(winsRef, { once: true, margin: "-100px" });
   const ctaInView = useInView(ctaRef, { once: true, margin: "-100px" });
 
   return (
@@ -103,7 +163,7 @@ export default function SocialMediaService() {
             >
               Services / Social Media
             </motion.span>
-            <div className="overflow-hidden mb-6 py-2">
+            <div className="overflow-hidden mb-6 pt-2 pb-6">
               <motion.h1
                 className="text-[13vw] md:text-[10vw] xl:text-[8vw] font-bold leading-[0.95] tracking-tighter"
                 style={{
@@ -319,6 +379,110 @@ export default function SocialMediaService() {
       <section ref={sec4Ref} className="section-forced-dark section-padding py-32">
         <div className="max-w-[1800px] mx-auto">
           <ProcessTimeline steps={processSteps} inView={sec4InView} sectionLabel="/04" />
+        </div>
+      </section>
+
+      {/* SECTION 5 - Client Wins */}
+      <section id="client-wins" ref={winsRef} className="section-forced-dark section-padding py-32 scroll-mt-20">
+        <div className="max-w-[1800px] mx-auto">
+          <motion.div
+            className="flex items-center gap-4 mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={winsInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="number-label">/05</span>
+            <LineReveal className="h-px bg-border flex-1" delay={0.3} />
+            <span className="text-xs text-muted-foreground uppercase tracking-widest">Client Wins</span>
+          </motion.div>
+
+          <motion.h2
+            className="text-4xl md:text-6xl font-bold tracking-tighter mb-16 max-w-4xl"
+            initial={{ opacity: 0, y: 40 }}
+            animate={winsInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.1 }}
+          >
+            Real Campaigns, Real Growth
+          </motion.h2>
+
+          <motion.div
+            className="relative overflow-hidden rounded-3xl min-h-[360px] md:min-h-[420px] bg-foreground/5 border border-border/40"
+            initial={{ opacity: 0, y: 60 }}
+            animate={winsInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            onMouseEnter={() => setWinsPaused(true)}
+            onMouseLeave={() => setWinsPaused(false)}
+          >
+            <AnimatePresence mode="wait">
+              {clientWins.map((win, i) =>
+                i === activeWin ? (
+                  <motion.div
+                    key={win.name}
+                    className="absolute inset-0"
+                    initial={{ opacity: 0, x: 60 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -60 }}
+                    transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+                  >
+                    <img
+                      src={win.image}
+                      alt={`${win.name} campaign`}
+                      loading="lazy"
+                      decoding="async"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        background:
+                          "linear-gradient(90deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0.25) 65%, rgba(0,0,0,0) 95%)",
+                      }}
+                    />
+                    <div className="relative z-10 flex flex-col justify-between h-full min-h-[360px] md:min-h-[420px] p-8 md:p-12 max-w-2xl">
+                      <img
+                        src={win.logo}
+                        alt={`${win.name} logo`}
+                        className="h-9 md:h-10 w-auto object-contain self-start brightness-0 invert"
+                      />
+                      <div>
+                        <h3 className="text-xl md:text-3xl font-bold text-white leading-tight tracking-tight mb-8 max-w-xl">
+                          {win.headline}
+                        </h3>
+                        <div className="flex flex-wrap gap-x-8 md:gap-x-12 gap-y-5">
+                          {win.stats.map((stat) => (
+                            <div key={stat.label}>
+                              <div className="text-2xl md:text-4xl font-bold text-white leading-none mb-1.5 tracking-tight">
+                                {stat.value}
+                              </div>
+                              <div className="text-[11px] md:text-xs text-white/70 uppercase tracking-wider">
+                                {stat.label}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ) : null
+              )}
+            </AnimatePresence>
+          </motion.div>
+
+          {/* Carousel dots */}
+          <div className="flex items-center justify-center gap-3 mt-8">
+            {clientWins.map((win, i) => (
+              <button
+                key={win.name}
+                onClick={() => setActiveWin(i)}
+                aria-label={`Show ${win.name} case study`}
+                className={`h-1.5 rounded-full transition-all duration-500 ${
+                  i === activeWin
+                    ? "w-10 bg-foreground"
+                    : "w-5 bg-foreground/25 hover:bg-foreground/50"
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </section>
 

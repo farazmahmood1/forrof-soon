@@ -142,7 +142,7 @@ export default function IndustrialSectorPage() {
           >
             Industries / Industrial Sector
           </motion.span>
-          <div className="overflow-hidden mb-6 py-2">
+          <div className="overflow-hidden mb-6 pt-2 pb-6">
             <motion.h1
               className="text-[10vw] md:text-[7vw] font-bold leading-[0.95] tracking-tighter"
               style={{

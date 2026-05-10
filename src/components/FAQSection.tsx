@@ -8,7 +8,7 @@ const faqs = [
   {
     question: "What software, AI, and marketing services does Forrof provide?",
     answer:
-      "Forrof is a full-service agency. On the product side: custom software development, AI/ML solutions, SaaS platforms, mobile apps, branding, UI/UX design, cloud solutions, automation, cybersecurity, and digital transformation. On the growth side: Google Ads, Meta Ads, LinkedIn ads, TikTok ads, SEO, social media marketing, and B2B email and LinkedIn outreach campaigns.",
+      "Forrof is a full-service agency. On the product side: custom software development, AI/ML solutions, SaaS platforms, mobile apps, branding, UI/UX design, and automation. On the growth side: Google Ads, Meta Ads, LinkedIn ads, TikTok ads, SEO, and social media marketing.",
   },
   {
     question: "Do you run paid ad campaigns on Google, Meta, and LinkedIn?",
@@ -19,16 +19,6 @@ const faqs = [
     question: "How long until we see ROI from your ad campaigns?",
     answer:
       "Most clients see qualified leads within the first 2-3 weeks of launch. Strong ROAS typically stabilizes by month 2-3 once tracking is mature and we've identified winning audiences and creative. Scaling phase usually begins from month 3 onward as the algorithm learns from clean conversion signals.",
-  },
-  {
-    question: "Do you handle B2B cold email and LinkedIn outreach?",
-    answer:
-      "Yes. We build ICP-precise lead lists, write multi-step email and LinkedIn cadences, engineer deliverability (SPF/DKIM/DMARC, sender warm-up, inbox rotation), staff a real human reply desk, and report on opens, replies, meetings booked, and pipeline generated each week.",
-  },
-  {
-    question: "How long does a custom software or web development project take?",
-    answer:
-      "Project timelines depend on scope and complexity. UI UX design and branding projects typically take 4 to 6 weeks, while custom web development, SaaS platforms, and mobile applications usually take 8 to 12 weeks. A detailed timeline is shared after project discovery.",
   },
   {
     question: "How much does custom software development cost at Forrof?",
@@ -85,7 +75,7 @@ export const FAQSection = () => {
               ease: [0.25, 0.1, 0.25, 1],
             }}
           >
-            <div className="overflow-hidden mb-8">
+            <div className="overflow-hidden mb-8 pb-3">
               <motion.h2
                 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[0.95]"
                 initial={{ y: "100%" }}

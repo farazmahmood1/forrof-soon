@@ -86,7 +86,7 @@ const Articles = () => {
           >
             Our insights
           </motion.span>
-          <div className="overflow-hidden mb-6">
+          <div className="overflow-hidden mb-6 pb-6">
             <motion.h1
               className="text-[10vw] md:text-[10vw] font-bold leading-[0.88] tracking-tighter"
               style={{

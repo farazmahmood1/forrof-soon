@@ -2,7 +2,7 @@ import { memo, useEffect, useRef, useState } from "react";
 
 const paths = Array.from(
   { length: 23 },
-  (_, i) => `https://dev.gemseeroo.com/logos/${i + 1}.png`
+  (_, i) => `https://dev.gemseeroo.com/logo/${i + 1}.png`
 );
 const names = Array.from({ length: 23 }, (_, i) => `Client ${i + 1}`);
 const mid = Math.ceil(paths.length / 2);

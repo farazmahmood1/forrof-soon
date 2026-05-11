@@ -54,7 +54,7 @@ const whyUsItems = [
 const clientWins = [
   {
     name: "Pêche",
-    logo: "/clients/peche-logo.png",
+    logo: "https://dev.gemseeroo.com/logo/22.png",
     image:
       "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&q=70&auto=format&fit=crop",
     headline: "Scaled Pêche From Niche Fashion Brand Into a Cross-Platform Powerhouse.",
@@ -66,7 +66,7 @@ const clientWins = [
   },
   {
     name: "Nourishing Biologicals",
-    logo: "/clients/nourishing-logo.png",
+    logo: "https://dev.gemseeroo.com/logo/21.png",
     image:
       "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1200&q=70&auto=format&fit=crop",
     headline: "Grew a Doctor-Led Skincare Brand Into a 160K+ Reach Community.",

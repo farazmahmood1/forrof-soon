@@ -36,7 +36,7 @@ const processSteps = [
 const clientWins = [
   {
     name: "GreenWorks",
-    logo: "/clients/greenworks-logo.png",
+    logo: "https://dev.gemseeroo.com/logo/18.png",
     image:
       "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80&auto=format&fit=crop",
     headline: "Rebuilt Campaign Structure To Support High-Volume, Cost-Efficient Growth.",
@@ -48,7 +48,7 @@ const clientWins = [
   },
   {
     name: "Linkhorn Inspection Group",
-    logo: "/clients/linkhorn-logo.png",
+    logo: "https://dev.gemseeroo.com/logo/13.png",
     image:
       "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80&auto=format&fit=crop",
     headline: "Turned Strategic Campaign Precision Into Measurable Revenue Growth.",
@@ -60,7 +60,7 @@ const clientWins = [
   },
   {
     name: "RedFish Inspections",
-    logo: "/clients/redfish-logo.png",
+    logo: "https://dev.gemseeroo.com/logo/20.png",
     image:
       "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80&auto=format&fit=crop",
     headline: "Scaled Local Inspection Demand Into Predictable Pipeline Growth.",

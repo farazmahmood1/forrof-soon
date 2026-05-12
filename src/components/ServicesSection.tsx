@@ -96,11 +96,11 @@ export const ServicesSection = () => {
           </motion.span>
         </motion.div>
 
-        {/* Title Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        {/* Title + description stacked */}
+        <div className="mb-16">
           <div className="overflow-hidden">
             <motion.h2
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl pb-2 font-bold leading-[0.95]"
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl pb-2 font-bold leading-[0.95] tracking-tight max-w-5xl"
               initial={{ y: "100%" }}
               animate={isInView ? { y: 0 } : {}}
               transition={{
@@ -112,16 +112,14 @@ export const ServicesSection = () => {
               Tech & Growth Solutions for Companies
             </motion.h2>
           </div>
-          <motion.div
-            className="flex items-end"
-            initial={{ opacity: 0, y: 40 }}
+          <motion.p
+            className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mt-6 md:mt-8"
+            initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            <p className="text-xl text-muted-foreground max-w-md leading-relaxed">
-              We partner with founders and growing teams to build AI‑powered products, intelligent systems, scalable software platforms, and marketing engines that drive measurable revenue.
-            </p>
-          </motion.div>
+            We partner with founders and growing teams to build AI‑powered products, intelligent systems, scalable software platforms, and marketing engines that drive measurable revenue.
+          </motion.p>
         </div>
 
         {/* Services List with Hover Image Effect */}

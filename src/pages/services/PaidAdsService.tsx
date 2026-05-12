@@ -447,7 +447,7 @@ export default function PaidAdsService() {
                       <img
                         src={win.logo}
                         alt={`${win.name} logo`}
-                        className="h-9 md:h-10 w-auto object-contain self-start brightness-0 invert"
+                        className="h-10 md:h-12 w-auto object-contain self-start bg-white rounded-md px-2 py-1"
                       />
                       <div>
                         <h3 className="text-xl md:text-3xl font-bold text-white leading-tight tracking-tight mb-8 max-w-xl">

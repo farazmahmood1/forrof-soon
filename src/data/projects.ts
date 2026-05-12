@@ -61,8 +61,11 @@ export const projectsData = [
       "https://dev.gemseeroo.com/sigma/sigma%20(3).png",
       "https://dev.gemseeroo.com/sigma/sigma%20(4).png",
       "https://dev.gemseeroo.com/sigma/sigma%20(5).png",
+      "https://dev.gemseeroo.com/sigma/sigma%20(6).png",
       "https://dev.gemseeroo.com/sigma/sigma%20(7).png",
       "https://dev.gemseeroo.com/sigma/sigma%20(8).png",
+      "https://dev.gemseeroo.com/sigma/sigma%20(9).png",
+      "https://dev.gemseeroo.com/sigma/sigma%20(10).png",
     ],
     challenge:
       "The challenge was building institutional-grade quantitative research tools that retail investors can operate without writing code — keeping live data, backtesting, and multi-factor signal generation accurate and fast enough to support real trading decisions, while exposing complex strategy logic through a clean no-code interface.",
@@ -164,7 +167,7 @@ export const projectsData = [
     impact:
       "Quidget AI helps support teams automate roughly 80% of repetitive questions, hand off complex cases to humans with full chat context, and serve customers 24/7 across web, voice, email, and messaging channels — improving response time and reducing manual ticket load without sacrificing trust.",
     gallery: [
-      "https://dev.gemseeroo.com/quidget/quidet%20(15).png",
+      "https://dev.gemseeroo.com/quidget/quidet%20(14).png",
     ],
     responsive: [
       "https://dev.gemseeroo.com/quidget/quidet%20(7).png",
@@ -251,6 +254,12 @@ export const projectsData = [
       "https://dev.gemseeroo.com/saleshero/saleshero%20(5).png",
       "https://dev.gemseeroo.com/saleshero/saleshero%20(6).png",
       "https://dev.gemseeroo.com/saleshero/saleshero%20(7).png",
+      "https://dev.gemseeroo.com/saleshero/saleshero%20(8).png",
+      "https://dev.gemseeroo.com/saleshero/saleshero%20(9).png",
+      "https://dev.gemseeroo.com/saleshero/saleshero%20(10).png",
+      "https://dev.gemseeroo.com/saleshero/saleshero%20(17).png",
+      "https://dev.gemseeroo.com/saleshero/saleshero%20(18).png",
+      "https://dev.gemseeroo.com/saleshero/saleshero%20(19).png",
     ],
     challenge:
       "The biggest challenge was generating sales messages that read as genuinely written by a human — pulled from each prospect's actual recent LinkedIn activity rather than templates — while keeping outreach compliant with LinkedIn's automation policies and the operating surface light enough to live entirely inside a Chrome extension.",

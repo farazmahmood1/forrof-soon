@@ -69,10 +69,7 @@ export const projectsData = [
     impact:
       "Signal Sigma gives independent investors access to multi-factor strategies, custom backtesting, and live trade alerts that previously required a Bloomberg terminal or quant desk — democratising sophisticated investment workflows through a single subscription product.",
     gallery: [
-      "https://dev.gemseeroo.com/sigma/sigma%20(9).png",
-      "https://dev.gemseeroo.com/sigma/sigma%20(10).png",
       "https://dev.gemseeroo.com/sigma/sigma%20(15).png",
-      "https://dev.gemseeroo.com/sigma/sigma%20(6).png",
     ],
     responsive: [
       "https://dev.gemseeroo.com/sigma/sigma%20(11).png",
@@ -158,16 +155,16 @@ export const projectsData = [
       "https://dev.gemseeroo.com/quidget/quidet%20(1).png",
       "https://dev.gemseeroo.com/quidget/quidet%20(2).png",
       "https://dev.gemseeroo.com/quidget/quidet%20(3).png",
+      "https://dev.gemseeroo.com/quidget/quidet%20(4).png",
+      "https://dev.gemseeroo.com/quidget/quidet%20(5).png",
+      "https://dev.gemseeroo.com/quidget/quidet%20(6).png",
     ],
     challenge:
       "The core challenge was building a chatbot that delivers accurate, context-aware answers from each customer's own knowledge base while refusing to hallucinate outside its training scope — and keeping configuration simple enough for non-technical support teams to launch in minutes. Achieving consistent quality across 45+ languages and multiple integration surfaces (web, voice, email, messaging) added significant complexity.",
     impact:
       "Quidget AI helps support teams automate roughly 80% of repetitive questions, hand off complex cases to humans with full chat context, and serve customers 24/7 across web, voice, email, and messaging channels — improving response time and reducing manual ticket load without sacrificing trust.",
     gallery: [
-      "https://dev.gemseeroo.com/quidget/quidet%20(14).png",
-      "https://dev.gemseeroo.com/quidget/quidet%20(4).png",
-      "https://dev.gemseeroo.com/quidget/quidet%20(5).png",
-      "https://dev.gemseeroo.com/quidget/quidet%20(6).png",
+      "https://dev.gemseeroo.com/quidget/quidet%20(15).png",
     ],
     responsive: [
       "https://dev.gemseeroo.com/quidget/quidet%20(7).png",
@@ -194,7 +191,7 @@ export const projectsData = [
   {
     id: "saleshero",
     title: "SalesHero",
-    metaTitle: "SalesHero | AI LinkedIn Outreach Automation – Forrof",
+    metaTitle: "SalesHero | AI LinkedIn Oureach Automation – Forrof",
     metaDescription: "SalesHero is an AI-powered LinkedIn outreach platform that finds prospects, drafts hyper-personalised messages from each prospect's actual profile and posts, and runs drip campaigns through a Chrome extension.",
     schema: {
       "@context": "https://schema.org",
@@ -260,12 +257,6 @@ export const projectsData = [
     impact:
       "SalesHero replaces template-based outreach with personalised, AI-drafted messages tied to each prospect's real LinkedIn activity, helping B2B sales teams improve reply rates and reducing the manual research time required per prospect.",
     gallery: [
-      "https://dev.gemseeroo.com/saleshero/saleshero%20(8).png",
-      "https://dev.gemseeroo.com/saleshero/saleshero%20(9).png",
-      "https://dev.gemseeroo.com/saleshero/saleshero%20(10).png",
-      "https://dev.gemseeroo.com/saleshero/saleshero%20(17).png",
-      "https://dev.gemseeroo.com/saleshero/saleshero%20(18).png",
-      "https://dev.gemseeroo.com/saleshero/saleshero%20(19).png",
       "https://dev.gemseeroo.com/saleshero/saleshero%20(20).png",
     ],
     responsive: [

@@ -69,10 +69,27 @@
       "WebFetch(domain:rallytyper.com)",
       "Bash(curl -sI \"https://dev.gemseeroo.com/logos/1.png\")",
       "Bash(curl -sI --max-time 10 \"https://dev.gemseeroo.com/logos/1.png\")",
-      "Bash(curl -sIL --max-time 15 -o /dev/null -w \"HTTP %{http_code} | content-type: %{content_type} | size: %{size_download}\\\\n\" \"https://dev.gemseeroo.com/logos/1.png\")"
+      "Bash(curl -sIL --max-time 15 -o /dev/null -w \"HTTP %{http_code} | content-type: %{content_type} | size: %{size_download}\\\\n\" \"https://dev.gemseeroo.com/logos/1.png\")",
+      "Bash(curl -sIL --max-time 10 -o /dev/null -w \"HTTP %{http_code} | content-type: %{content_type} | size: %{size_download}\\\\n\" \"https://dev.gemseeroo.com/logo/1.png\")",
+      "Bash(curl -sIL --max-time 8 -o /dev/null -w \"HTTP %{http_code} | size: %{size_download} | type: %{content_type}\\\\n\" \"https://dev.gemseeroo.com/logo/13.png\")",
+      "Bash(curl -sL --max-time 10 -o /tmp/logo13.png \"https://dev.gemseeroo.com/logo/13.png\")",
+      "Read(//tmp/**)",
+      "Read(//c/tmp/**)",
+      "Bash(cp /tmp/logo13.png \"C:/animated-ui/brian-tracy/logo13_preview.png\"; ls -la \"C:/animated-ui/brian-tracy/logo13_preview.png\")",
+      "Bash(curl -sL --max-time 10 -o \"C:/animated-ui/brian-tracy/logo18_preview.png\" \"https://dev.gemseeroo.com/logo/18.png\")",
+      "Bash(curl -sL --max-time 10 -o \"C:/animated-ui/brian-tracy/logo20_preview.png\" \"https://dev.gemseeroo.com/logo/20.png\")",
+      "Bash(curl -sL --max-time 10 -o \"C:/animated-ui/brian-tracy/logo21_preview.png\" \"https://dev.gemseeroo.com/logo/21.png\")",
+      "Bash(curl -sL --max-time 10 -o \"C:/animated-ui/brian-tracy/logo22_preview.png\" \"https://dev.gemseeroo.com/logo/22.png\")",
+      "Bash(curl -sIL --max-time 10 -o /dev/null -w \"HTTP %{http_code} | size: %{size_download} | type: %{content_type}\\\\n\" \"https://dev.gemseeroo.com/quidget/quidet%20\\(14\\).png\")",
+      "Bash(curl -sIL --max-time 10 -o /dev/null -w \"1.jpeg: %{http_code} %{size_download}b\\\\n\" \"https://dev.gemseeroo.com/quidget/quidet%20\\(1\\).jpeg\")",
+      "Bash(curl -sIL --max-time 10 -o /dev/null -w \"1.png: %{http_code} %{size_download}b\\\\n\" \"https://dev.gemseeroo.com/quidget/quidet%20\\(1\\).png\")",
+      "Bash(curl -sIL --max-time 10 -o /dev/null -w \"13.png: %{http_code} %{size_download}b\\\\n\" \"https://dev.gemseeroo.com/quidget/quidet%20\\(13\\).png\")",
+      "Bash(curl -sIL --max-time 10 -o /dev/null -w \"14.png: %{http_code} %{size_download}b\\\\n\" \"https://dev.gemseeroo.com/quidget/quidet%20\\(14\\).png\")",
+      "Bash(curl -sL --max-time 10 -o /tmp/q14.png \"https://dev.gemseeroo.com/quidget/quidet%20\\(14\\).png\")"
     ],
     "additionalDirectories": [
-      "C:\\animated-ui\\brian-tracy\\src\\pages\\services"
+      "C:\\animated-ui\\brian-tracy\\src\\pages\\services",
+      "\\tmp"
     ]
   }
 }
